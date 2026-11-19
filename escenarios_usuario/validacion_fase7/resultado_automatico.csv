@@ -1,0 +1,25 @@
+﻿sesion,materia,grupo,docente,dia,inicio,fin,salon,violacion_dura
+C0001-S1,Materia 0001,G001,Docente 001,Martes,16:00,17:00,LAB002,NO
+C0001-S2,Materia 0001,G001,Docente 001,Jueves,11:00,12:00,LAB002,NO
+C0002-S1,Materia 0002,G002,Docente 002,Martes,10:00,11:00,A007,NO
+C0002-S2,Materia 0002,G002,Docente 002,Miércoles,07:00,08:00,A007,NO
+C0003-S1,Materia 0003,G003,Docente 003,Martes,09:00,10:00,A008,NO
+C0003-S2,Materia 0003,G003,Docente 003,Jueves,13:00,14:00,A008,NO
+C0004-S1,Materia 0004,G004,Docente 004,Miércoles,09:00,10:00,LAB002,NO
+C0004-S2,Materia 0004,G004,Docente 004,Jueves,15:00,16:00,LAB002,NO
+C0005-S1,Materia 0005,G005,Docente 005,Jueves,14:00,15:00,A004,NO
+C0005-S2,Materia 0005,G005,Docente 005,Martes,10:00,11:00,A005,NO
+C0006-S1,Materia 0006,G006,Docente 006,Jueves,10:00,11:00,A007,NO
+C0006-S2,Materia 0006,G006,Docente 006,Miércoles,09:00,10:00,A004,NO
+C0007-S1,Materia 0007,G007,Docente 007,Jueves,16:00,17:00,LAB002,NO
+C0007-S2,Materia 0007,G007,Docente 007,Miércoles,16:00,17:00,LAB002,NO
+C0008-S1,Materia 0008,G008,Docente 008,Jueves,17:00,18:00,A005,NO
+C0008-S2,Materia 0008,G008,Docente 008,Jueves,16:00,17:00,A006,NO
+C0009-S1,Materia 0009,G009,Docente 009,Jueves,09:00,10:00,A008,NO
+C0009-S2,Materia 0009,G009,Docente 009,Martes,10:00,11:00,A008,NO
+C0010-S1,Materia 0010,G010,Docente 010,Jueves,07:00,08:00,LAB002,NO
+C0010-S2,Materia 0010,G010,Docente 010,Miércoles,14:00,15:00,LAB002,NO
+C0011-S1,Materia 0011,G001,Docente 011,Miércoles,11:00,12:00,A008,NO
+C0011-S2,Materia 0011,G001,Docente 011,Martes,15:00,16:00,A008,NO
+C0012-S1,Materia 0012,G002,Docente 012,Viernes,11:00,12:00,A004,NO
+C0012-S2,Materia 0012,G002,Docente 012,Jueves,08:00,09:00,A006,NO

@@ -1,0 +1,4 @@
+# Gráficas integradas en la interfaz y exportación PNG.
+matplotlib>=3.8
+# Secuencias, comparación de calendarios y exportación GIF de la evolución.
+Pillow>=10

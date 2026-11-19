@@ -1,0 +1,4 @@
+﻿sesion,materia,grupo,docente,dia,inicio,fin,salon,violacion_dura
+ALG-G01-S1,Álgebra,G01,Docente Álgebra,Martes,08:00,09:00,A01,NO
+ALG-G01-S2,Álgebra,G01,Docente Álgebra,Lunes,08:00,09:00,A01,NO
+PRO-G02-S1,Programación,G02,Docente Programación,Miércoles,09:00,11:00,LAB01,NO

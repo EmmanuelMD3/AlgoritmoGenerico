@@ -1,0 +1,1126 @@
+{
+  "descripcion": "Validación funcional B",
+  "dias": [
+    "Lunes",
+    "Martes",
+    "Miércoles",
+    "Jueves",
+    "Viernes"
+  ],
+  "horas": [
+    "07:00",
+    "08:00",
+    "09:00",
+    "10:00",
+    "11:00",
+    "12:00",
+    "13:00",
+    "14:00",
+    "15:00",
+    "16:00",
+    "17:00"
+  ],
+  "salones": [
+    {
+      "id": "LAB001",
+      "nombre": "Laboratorio 001",
+      "capacidad": 44,
+      "tipo": "laboratorio"
+    },
+    {
+      "id": "LAB002",
+      "nombre": "Laboratorio 002",
+      "capacidad": 49,
+      "tipo": "laboratorio"
+    },
+    {
+      "id": "A003",
+      "nombre": "Aula 003",
+      "capacidad": 54,
+      "tipo": "aula"
+    },
+    {
+      "id": "A004",
+      "nombre": "Aula 004",
+      "capacidad": 44,
+      "tipo": "aula"
+    },
+    {
+      "id": "A005",
+      "nombre": "Aula 005",
+      "capacidad": 49,
+      "tipo": "aula"
+    },
+    {
+      "id": "A006",
+      "nombre": "Aula 006",
+      "capacidad": 54,
+      "tipo": "aula"
+    },
+    {
+      "id": "A007",
+      "nombre": "Aula 007",
+      "capacidad": 44,
+      "tipo": "aula"
+    },
+    {
+      "id": "A008",
+      "nombre": "Aula 008",
+      "capacidad": 49,
+      "tipo": "aula"
+    }
+  ],
+  "grupos": [
+    {
+      "id": "G001",
+      "nombre": "Grupo 001",
+      "alumnos": 28,
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00",
+          "08:00"
+        ]
+      },
+      "max_horas_consecutivas": 2
+    },
+    {
+      "id": "G002",
+      "nombre": "Grupo 002",
+      "alumnos": 27,
+      "no_disponible": {
+        "Lunes": [
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00",
+          "08:00"
+        ]
+      },
+      "max_horas_consecutivas": 2
+    },
+    {
+      "id": "G003",
+      "nombre": "Grupo 003",
+      "alumnos": 26,
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00"
+        ]
+      },
+      "max_horas_consecutivas": 2
+    },
+    {
+      "id": "G004",
+      "nombre": "Grupo 004",
+      "alumnos": 34,
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00",
+          "08:00"
+        ]
+      },
+      "max_horas_consecutivas": 2
+    },
+    {
+      "id": "G005",
+      "nombre": "Grupo 005",
+      "alumnos": 27,
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00"
+        ]
+      },
+      "max_horas_consecutivas": 2
+    },
+    {
+      "id": "G006",
+      "nombre": "Grupo 006",
+      "alumnos": 28,
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00"
+        ]
+      },
+      "max_horas_consecutivas": 2
+    },
+    {
+      "id": "G007",
+      "nombre": "Grupo 007",
+      "alumnos": 28,
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00",
+          "08:00"
+        ]
+      },
+      "max_horas_consecutivas": 2
+    },
+    {
+      "id": "G008",
+      "nombre": "Grupo 008",
+      "alumnos": 28,
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00"
+        ]
+      },
+      "max_horas_consecutivas": 2
+    },
+    {
+      "id": "G009",
+      "nombre": "Grupo 009",
+      "alumnos": 28,
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00"
+        ]
+      },
+      "max_horas_consecutivas": 2
+    },
+    {
+      "id": "G010",
+      "nombre": "Grupo 010",
+      "alumnos": 31,
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00",
+          "08:00"
+        ]
+      },
+      "max_horas_consecutivas": 2
+    }
+  ],
+  "docentes": [
+    {
+      "id": "D001",
+      "nombre": "Docente 001",
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00"
+        ]
+      },
+      "preferidos": {
+        "Martes": [
+          "17:00"
+        ],
+        "Miércoles": [
+          "10:00"
+        ]
+      },
+      "max_horas_consecutivas": 2
+    },
+    {
+      "id": "D002",
+      "nombre": "Docente 002",
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00"
+        ]
+      },
+      "preferidos": {
+        "Miércoles": [
+          "08:00"
+        ],
+        "Jueves": [
+          "16:00"
+        ]
+      },
+      "max_horas_consecutivas": 2
+    },
+    {
+      "id": "D003",
+      "nombre": "Docente 003",
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00"
+        ]
+      },
+      "preferidos": {
+        "Jueves": [
+          "08:00",
+          "12:00"
+        ]
+      },
+      "max_horas_consecutivas": 2
+    },
+    {
+      "id": "D004",
+      "nombre": "Docente 004",
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00",
+          "08:00"
+        ]
+      },
+      "preferidos": {
+        "Lunes": [
+          "09:00"
+        ],
+        "Martes": [
+          "13:00"
+        ]
+      },
+      "max_horas_consecutivas": 2
+    },
+    {
+      "id": "D005",
+      "nombre": "Docente 005",
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00"
+        ]
+      },
+      "preferidos": {
+        "Martes": [
+          "14:00"
+        ],
+        "Jueves": [
+          "15:00"
+        ]
+      },
+      "max_horas_consecutivas": 2
+    },
+    {
+      "id": "D006",
+      "nombre": "Docente 006",
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00"
+        ]
+      },
+      "preferidos": {
+        "Miércoles": [
+          "07:00"
+        ],
+        "Jueves": [
+          "16:00"
+        ]
+      },
+      "max_horas_consecutivas": 2
+    },
+    {
+      "id": "D007",
+      "nombre": "Docente 007",
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00",
+          "08:00"
+        ]
+      },
+      "preferidos": {
+        "Lunes": [
+          "14:00"
+        ],
+        "Jueves": [
+          "12:00"
+        ]
+      },
+      "max_horas_consecutivas": 2
+    },
+    {
+      "id": "D008",
+      "nombre": "Docente 008",
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00"
+        ]
+      },
+      "preferidos": {
+        "Jueves": [
+          "07:00",
+          "08:00"
+        ]
+      },
+      "max_horas_consecutivas": 2
+    },
+    {
+      "id": "D009",
+      "nombre": "Docente 009",
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00"
+        ]
+      },
+      "preferidos": {
+        "Miércoles": [
+          "17:00"
+        ],
+        "Viernes": [
+          "09:00"
+        ]
+      },
+      "max_horas_consecutivas": 2
+    },
+    {
+      "id": "D010",
+      "nombre": "Docente 010",
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00",
+          "08:00"
+        ]
+      },
+      "preferidos": {
+        "Lunes": [
+          "08:00"
+        ],
+        "Viernes": [
+          "11:00"
+        ]
+      },
+      "max_horas_consecutivas": 2
+    },
+    {
+      "id": "D011",
+      "nombre": "Docente 011",
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00",
+          "08:00"
+        ]
+      },
+      "preferidos": {
+        "Lunes": [
+          "12:00"
+        ],
+        "Martes": [
+          "10:00"
+        ]
+      },
+      "max_horas_consecutivas": 2
+    },
+    {
+      "id": "D012",
+      "nombre": "Docente 012",
+      "no_disponible": {
+        "Lunes": [
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00",
+          "08:00"
+        ]
+      },
+      "preferidos": {
+        "Lunes": [
+          "07:00"
+        ],
+        "Jueves": [
+          "14:00"
+        ]
+      },
+      "max_horas_consecutivas": 2
+    },
+    {
+      "id": "D013",
+      "nombre": "Docente 013",
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00"
+        ]
+      },
+      "preferidos": {}
+    },
+    {
+      "id": "D014",
+      "nombre": "Docente 014",
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00"
+        ]
+      },
+      "preferidos": {}
+    },
+    {
+      "id": "D015",
+      "nombre": "Docente 015",
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00"
+        ]
+      },
+      "preferidos": {}
+    }
+  ],
+  "clases": [
+    {
+      "id": "C0001",
+      "materia_id": "M0001",
+      "materia": "Materia 0001",
+      "grupo": "G001",
+      "docente": "D001",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "laboratorio",
+      "periodos_permitidos": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00",
+          "08:00",
+          "10:00",
+          "11:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00"
+        ],
+        "Miércoles": [
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Jueves": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00"
+        ],
+        "Viernes": [
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00"
+        ]
+      }
+    },
+    {
+      "id": "C0002",
+      "materia_id": "M0002",
+      "materia": "Materia 0002",
+      "grupo": "G002",
+      "docente": "D002",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C0003",
+      "materia_id": "M0003",
+      "materia": "Materia 0003",
+      "grupo": "G003",
+      "docente": "D003",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C0004",
+      "materia_id": "M0004",
+      "materia": "Materia 0004",
+      "grupo": "G004",
+      "docente": "D004",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "laboratorio",
+      "periodos_permitidos": {
+        "Lunes": [
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00",
+          "10:00",
+          "11:00",
+          "13:00",
+          "14:00",
+          "16:00",
+          "17:00"
+        ],
+        "Miércoles": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00"
+        ],
+        "Jueves": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00"
+        ],
+        "Viernes": [
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00"
+        ]
+      }
+    },
+    {
+      "id": "C0005",
+      "materia_id": "M0005",
+      "materia": "Materia 0005",
+      "grupo": "G005",
+      "docente": "D005",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C0006",
+      "materia_id": "M0006",
+      "materia": "Materia 0006",
+      "grupo": "G006",
+      "docente": "D006",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C0007",
+      "materia_id": "M0007",
+      "materia": "Materia 0007",
+      "grupo": "G007",
+      "docente": "D007",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "laboratorio",
+      "periodos_permitidos": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00"
+        ],
+        "Miércoles": [
+          "07:00",
+          "08:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "15:00",
+          "16:00",
+          "17:00"
+        ],
+        "Jueves": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "16:00",
+          "17:00"
+        ],
+        "Viernes": [
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00"
+        ]
+      }
+    },
+    {
+      "id": "C0008",
+      "materia_id": "M0008",
+      "materia": "Materia 0008",
+      "grupo": "G008",
+      "docente": "D008",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C0009",
+      "materia_id": "M0009",
+      "materia": "Materia 0009",
+      "grupo": "G009",
+      "docente": "D009",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C0010",
+      "materia_id": "M0010",
+      "materia": "Materia 0010",
+      "grupo": "G010",
+      "docente": "D010",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "laboratorio",
+      "periodos_permitidos": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "15:00",
+          "17:00"
+        ],
+        "Martes": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00"
+        ],
+        "Miércoles": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00"
+        ],
+        "Jueves": [
+          "07:00",
+          "08:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "15:00",
+          "16:00",
+          "17:00"
+        ],
+        "Viernes": [
+          "08:00",
+          "09:00",
+          "11:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00"
+        ]
+      }
+    },
+    {
+      "id": "C0011",
+      "materia_id": "M0011",
+      "materia": "Materia 0011",
+      "grupo": "G001",
+      "docente": "D011",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C0012",
+      "materia_id": "M0012",
+      "materia": "Materia 0012",
+      "grupo": "G002",
+      "docente": "D012",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    }
+  ],
+  "restricciones": {
+    "franjas_no_lectivas": {
+      "Lunes": [
+        "16:00"
+      ],
+      "Martes": [
+        "12:00"
+      ],
+      "Miércoles": [
+        "13:00"
+      ],
+      "Viernes": [
+        "07:00",
+        "12:00",
+        "17:00"
+      ]
+    },
+    "umbral_jornada_larga": 8
+  },
+  "metadatos": {
+    "nombre": "Validación automática mediana Fase 7",
+    "tipo": "automatico_moderado",
+    "semilla": 1707,
+    "generador": "HorariosGeneticos-Fase7",
+    "duracion_bloque_minutos": 60,
+    "factibilidad_testigo_validada": true,
+    "parametros_generacion": {
+      "nombre": "Validación automática mediana Fase 7",
+      "descripcion": "Validación funcional B",
+      "modo": "automatico",
+      "perfil": "moderado",
+      "docentes": 15,
+      "grupos": 10,
+      "materias": 12,
+      "salones": 8,
+      "sesiones_por_asignacion": 2,
+      "duracion_sesion": 1,
+      "estudiantes_por_grupo": 30,
+      "dias_lectivos": 5,
+      "hora_inicio": "07:00",
+      "hora_fin": "18:00",
+      "duracion_bloque_minutos": 60,
+      "semilla": 1707,
+      "porcentaje_disponible": null,
+      "proporcion_laboratorios": null,
+      "coincidencia_disponibilidades": null,
+      "cantidad_restricciones": 2,
+      "factibilidad_conocida": true,
+      "estres": false
+    }
+  }
+}

@@ -1,0 +1,22 @@
+﻿metodo,metrica,n,media,mediana,desviacion,minimo,maximo,p25,p75
+Algoritmo genético,violaciones_duras,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Algoritmo genético,penalizacion_blanda_factible,5,260.4,248.0,31.189741903388686,224.0,296.0,244.0,290.0
+Algoritmo genético,fitness_factible,5,739.6,752.0,31.189741903388686,704.0,776.0,710.0,756.0
+Algoritmo genético,tiempo,5,0.6541031999746337,0.6592398999491706,0.022446170367052907,0.6199148999876343,0.6735892999568023,0.6448389000142924,0.6729329999652691
+Algoritmo genético,evaluaciones,5,3918.4,3961.0,123.60946565696334,3718.0,4042.0,3895.0,3976.0
+Algoritmo genético,evaluaciones_factibilidad,5,634.2,634.0,64.19657311726226,548.0,726.0,614.0,649.0
+Algoritmo genético,generaciones,5,40.0,40.0,0.0,40.0,40.0,40.0,40.0
+Búsqueda aleatoria,violaciones_duras,5,7.4,7.0,1.140175425099138,6.0,9.0,7.0,8.0
+Búsqueda aleatoria,penalizacion_blanda_factible,0,,,,,,,
+Búsqueda aleatoria,fitness_factible,0,,,,,,,
+Búsqueda aleatoria,tiempo,5,0.6362079599988647,0.6395901999785565,0.021535683902815416,0.6020917000132613,0.657141599978786,0.6312709000194445,0.6509454000042751
+Búsqueda aleatoria,evaluaciones,5,3918.4,3961.0,123.60946565696334,3718.0,4042.0,3895.0,3976.0
+Búsqueda aleatoria,evaluaciones_factibilidad,0,,,,,,,
+Búsqueda aleatoria,generaciones,0,,,,,,,
+Heurística constructiva,violaciones_duras,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Heurística constructiva,penalizacion_blanda_factible,5,53.2,58.0,15.13935269422045,34.0,72.0,42.0,60.0
+Heurística constructiva,fitness_factible,5,946.8,942.0,15.13935269422045,928.0,966.0,940.0,958.0
+Heurística constructiva,tiempo,5,0.5284419000032358,0.5339320999919437,0.017843889800227983,0.5004984000115655,0.545941699994728,0.5224297000095248,0.5394076000084169
+Heurística constructiva,evaluaciones,5,3918.4,3961.0,123.60946565696334,3718.0,4042.0,3895.0,3976.0
+Heurística constructiva,evaluaciones_factibilidad,5,2451.8,2404.0,184.34939652735508,2244.0,2645.0,2323.0,2643.0
+Heurística constructiva,generaciones,0,,,,,,,

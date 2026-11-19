@@ -1,0 +1,377 @@
+{
+  "descripcion": "Dataset ficticio para el proyecto de computo evolutivo. No representa horarios reales.",
+  "dias": [
+    "Lunes",
+    "Martes",
+    "Miércoles",
+    "Jueves",
+    "Viernes"
+  ],
+  "horas": [
+    "07:00",
+    "08:00",
+    "09:00",
+    "10:00",
+    "11:00",
+    "12:00",
+    "13:00",
+    "14:00"
+  ],
+  "restricciones": {
+    "franjas_no_lectivas": {
+      "Miércoles": [
+        "12:00"
+      ]
+    },
+    "max_horas_consecutivas_grupo": 4,
+    "max_horas_consecutivas_docente": 4,
+    "umbral_jornada_larga": 6
+  },
+  "salones": [
+    {
+      "id": "A1",
+      "capacidad": 36,
+      "tipo": "aula"
+    },
+    {
+      "id": "A2",
+      "capacidad": 40,
+      "tipo": "aula"
+    },
+    {
+      "id": "LAB1",
+      "capacidad": 36,
+      "tipo": "laboratorio"
+    },
+    {
+      "id": "LAB2",
+      "capacidad": 35,
+      "tipo": "laboratorio"
+    }
+  ],
+  "grupos": [
+    {
+      "id": "ISC-301",
+      "alumnos": 28,
+      "no_disponible": {
+        "Martes": [
+          "07:00"
+        ]
+      }
+    },
+    {
+      "id": "ISC-302",
+      "alumnos": 32
+    },
+    {
+      "id": "ISC-303",
+      "alumnos": 26
+    }
+  ],
+  "docentes": [
+    {
+      "id": "D1",
+      "nombre": "Docente A",
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00"
+        ],
+        "Viernes": [
+          "13:00",
+          "14:00"
+        ]
+      },
+      "preferidos": {
+        "Lunes": [
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00"
+        ],
+        "Martes": [
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00"
+        ],
+        "Miércoles": [
+          "09:00",
+          "10:00",
+          "11:00"
+        ],
+        "Jueves": [
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00"
+        ]
+      }
+    },
+    {
+      "id": "D2",
+      "nombre": "Docente B",
+      "no_disponible": {
+        "Martes": [
+          "07:00",
+          "08:00"
+        ],
+        "Jueves": [
+          "13:00",
+          "14:00"
+        ]
+      }
+    },
+    {
+      "id": "D3",
+      "nombre": "Docente C",
+      "no_disponible": {
+        "Miércoles": [
+          "07:00",
+          "08:00"
+        ]
+      }
+    },
+    {
+      "id": "D4",
+      "nombre": "Docente D",
+      "no_disponible": {
+        "Lunes": [
+          "13:00",
+          "14:00"
+        ],
+        "Viernes": [
+          "07:00",
+          "08:00"
+        ]
+      }
+    },
+    {
+      "id": "D5",
+      "nombre": "Docente E",
+      "no_disponible": {
+        "Martes": [
+          "13:00",
+          "14:00"
+        ]
+      }
+    },
+    {
+      "id": "D6",
+      "nombre": "Docente F",
+      "no_disponible": {
+        "Jueves": [
+          "07:00",
+          "08:00"
+        ]
+      }
+    },
+    {
+      "id": "D7",
+      "nombre": "Docente G",
+      "no_disponible": {
+        "Viernes": [
+          "13:00",
+          "14:00"
+        ]
+      }
+    }
+  ],
+  "clases": [
+    {
+      "id": "C01",
+      "materia": "Programación",
+      "grupo": "ISC-301",
+      "docente": "D1",
+      "sesiones_semana": 2,
+      "duracion_bloques": 2,
+      "tipo_salon": "laboratorio",
+      "periodos_permitidos": {
+        "Lunes": [
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00"
+        ],
+        "Martes": [
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00"
+        ],
+        "Miércoles": [
+          "09:00",
+          "10:00",
+          "11:00",
+          "13:00",
+          "14:00"
+        ],
+        "Jueves": [
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00"
+        ]
+      }
+    },
+    {
+      "id": "C02",
+      "materia": "Bases de Datos",
+      "grupo": "ISC-301",
+      "docente": "D2",
+      "sesiones_semana": 2,
+      "duracion_bloques": 2,
+      "tipo_salon": "laboratorio"
+    },
+    {
+      "id": "C03",
+      "materia": "Matemáticas",
+      "grupo": "ISC-301",
+      "docente": "D3",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C04",
+      "materia": "Redes",
+      "grupo": "ISC-301",
+      "docente": "D4",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "laboratorio"
+    },
+    {
+      "id": "C05",
+      "materia": "Sistemas Operativos",
+      "grupo": "ISC-301",
+      "docente": "D5",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "laboratorio"
+    },
+    {
+      "id": "C06",
+      "materia": "Inglés",
+      "grupo": "ISC-301",
+      "docente": "D6",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C07",
+      "materia": "Programación II",
+      "grupo": "ISC-302",
+      "docente": "D1",
+      "sesiones_semana": 2,
+      "duracion_bloques": 2,
+      "tipo_salon": "laboratorio"
+    },
+    {
+      "id": "C08",
+      "materia": "Bases de Datos II",
+      "grupo": "ISC-302",
+      "docente": "D2",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "laboratorio"
+    },
+    {
+      "id": "C09",
+      "materia": "Estadística",
+      "grupo": "ISC-302",
+      "docente": "D3",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C10",
+      "materia": "Redes II",
+      "grupo": "ISC-302",
+      "docente": "D4",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "laboratorio"
+    },
+    {
+      "id": "C11",
+      "materia": "Arquitectura",
+      "grupo": "ISC-302",
+      "docente": "D7",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C12",
+      "materia": "Inglés II",
+      "grupo": "ISC-302",
+      "docente": "D6",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C13",
+      "materia": "Ing. de Software",
+      "grupo": "ISC-303",
+      "docente": "D5",
+      "sesiones_semana": 2,
+      "duracion_bloques": 2,
+      "tipo_salon": "laboratorio"
+    },
+    {
+      "id": "C14",
+      "materia": "Inteligencia Artificial",
+      "grupo": "ISC-303",
+      "docente": "D1",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "laboratorio"
+    },
+    {
+      "id": "C15",
+      "materia": "Investigación",
+      "grupo": "ISC-303",
+      "docente": "D7",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C16",
+      "materia": "Física",
+      "grupo": "ISC-303",
+      "docente": "D3",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C17",
+      "materia": "Bases de Datos",
+      "grupo": "ISC-303",
+      "docente": "D2",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "laboratorio"
+    },
+    {
+      "id": "C18",
+      "materia": "Arquitectura de Computadoras",
+      "grupo": "ISC-303",
+      "docente": "D4",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    }
+  ]
+}

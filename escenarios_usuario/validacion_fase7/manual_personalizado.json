@@ -1,0 +1,132 @@
+{
+  "descripcion": "Validación funcional A — escenario manual personalizado",
+  "dias": [
+    "Lunes",
+    "Martes",
+    "Miércoles"
+  ],
+  "horas": [
+    "08:00",
+    "09:00",
+    "10:00",
+    "11:00"
+  ],
+  "salones": [
+    {
+      "id": "A01",
+      "nombre": "Aula Norte",
+      "capacidad": 35,
+      "tipo": "aula"
+    },
+    {
+      "id": "LAB01",
+      "nombre": "Laboratorio de cómputo",
+      "capacidad": 30,
+      "tipo": "laboratorio"
+    }
+  ],
+  "grupos": [
+    {
+      "id": "G01",
+      "nombre": "Ingeniería 1",
+      "alumnos": 28,
+      "no_disponible": {
+        "Miércoles": [
+          "11:00"
+        ]
+      },
+      "max_horas_consecutivas": 3
+    },
+    {
+      "id": "G02",
+      "nombre": "Ingeniería 3",
+      "alumnos": 24,
+      "no_disponible": {
+        "Lunes": [
+          "08:00"
+        ]
+      }
+    }
+  ],
+  "docentes": [
+    {
+      "id": "D01",
+      "nombre": "Docente Álgebra",
+      "no_disponible": {
+        "Martes": [
+          "11:00"
+        ]
+      },
+      "preferidos": {
+        "Lunes": [
+          "08:00",
+          "09:00"
+        ]
+      }
+    },
+    {
+      "id": "D02",
+      "nombre": "Docente Programación",
+      "no_disponible": {
+        "Lunes": [
+          "08:00"
+        ]
+      },
+      "preferidos": {
+        "Miércoles": [
+          "09:00",
+          "10:00"
+        ]
+      }
+    }
+  ],
+  "clases": [
+    {
+      "id": "ALG-G01",
+      "materia_id": "MAT-ALG",
+      "materia": "Álgebra",
+      "grupo": "G01",
+      "docente": "D01",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "PRO-G02",
+      "materia_id": "MAT-PRO",
+      "materia": "Programación",
+      "grupo": "G02",
+      "docente": "D02",
+      "sesiones_semana": 1,
+      "duracion_bloques": 2,
+      "tipo_salon": "laboratorio",
+      "periodos_permitidos": {
+        "Martes": [
+          "08:00",
+          "09:00",
+          "10:00"
+        ],
+        "Miércoles": [
+          "08:00",
+          "09:00",
+          "10:00"
+        ]
+      }
+    }
+  ],
+  "restricciones": {
+    "franjas_no_lectivas": {
+      "Martes": [
+        "10:00"
+      ]
+    },
+    "max_horas_consecutivas_docente": 3,
+    "umbral_jornada_larga": 3
+  },
+  "metadatos": {
+    "nombre": "Validación manual Fase 7",
+    "tipo": "manual",
+    "duracion_bloque_minutos": 60,
+    "generador": "Validación funcional Fase 7"
+  }
+}

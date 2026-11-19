@@ -1,0 +1,7987 @@
+{
+  "id": "exp-5832e861bdad",
+  "inicio": "2026-11-16T17:42:43-06:00",
+  "fin": "2026-11-16T17:42:49-06:00",
+  "estado": "completado",
+  "duracion": 6.010395899997093,
+  "huella_escenario_sha256": "a301536c83fdc524d6380f52ce857d3310d7063487dfba2d0090363e9c347f2b",
+  "estadisticas": [
+    {
+      "metodo": "Algoritmo genético",
+      "ejecuciones": 5,
+      "muestras_validas": 5,
+      "errores": 0,
+      "factibles": 5,
+      "no_factibles": 0,
+      "tasa_factibilidad": 100.0,
+      "violaciones_duras": {
+        "n": 5,
+        "media": 0.0,
+        "mediana": 0.0,
+        "desviacion": 0.0,
+        "minimo": 0.0,
+        "maximo": 0.0,
+        "p25": 0.0,
+        "p75": 0.0
+      },
+      "penalizacion_blanda_factible": {
+        "n": 5,
+        "media": 476.4,
+        "mediana": 500.0,
+        "desviacion": 51.98846025802265,
+        "minimo": 384.0,
+        "maximo": 506.0,
+        "p25": 490.0,
+        "p75": 502.0
+      },
+      "fitness_factible": {
+        "n": 5,
+        "media": 523.6,
+        "mediana": 500.0,
+        "desviacion": 51.98846025802265,
+        "minimo": 494.0,
+        "maximo": 616.0,
+        "p25": 498.0,
+        "p75": 510.0
+      },
+      "tiempo": {
+        "n": 5,
+        "media": 0.2834331799764186,
+        "mediana": 0.2822026999783702,
+        "desviacion": 0.002782175819961563,
+        "minimo": 0.2813520999625325,
+        "maximo": 0.28823839995311573,
+        "p25": 0.2820112999761477,
+        "p75": 0.2833614000119269
+      },
+      "evaluaciones": {
+        "n": 5,
+        "media": 1640.0,
+        "mediana": 1640.0,
+        "desviacion": 0.0,
+        "minimo": 1640.0,
+        "maximo": 1640.0,
+        "p25": 1640.0,
+        "p75": 1640.0
+      },
+      "evaluaciones_factibilidad": {
+        "n": 5,
+        "media": 579.4,
+        "mediana": 575.0,
+        "desviacion": 58.18333094624267,
+        "minimo": 504.0,
+        "maximo": 663.0,
+        "p25": 557.0,
+        "p75": 598.0
+      },
+      "generaciones": {
+        "n": 5,
+        "media": 17.2,
+        "mediana": 17.0,
+        "desviacion": 0.8366600265340756,
+        "minimo": 16.0,
+        "maximo": 18.0,
+        "p25": 17.0,
+        "p75": 18.0
+      }
+    },
+    {
+      "metodo": "Algoritmo genético híbrido",
+      "ejecuciones": 5,
+      "muestras_validas": 5,
+      "errores": 0,
+      "factibles": 5,
+      "no_factibles": 0,
+      "tasa_factibilidad": 100.0,
+      "violaciones_duras": {
+        "n": 5,
+        "media": 0.0,
+        "mediana": 0.0,
+        "desviacion": 0.0,
+        "minimo": 0.0,
+        "maximo": 0.0,
+        "p25": 0.0,
+        "p75": 0.0
+      },
+      "penalizacion_blanda_factible": {
+        "n": 5,
+        "media": 338.4,
+        "mediana": 364.0,
+        "desviacion": 70.6738990009749,
+        "minimo": 250.0,
+        "maximo": 426.0,
+        "p25": 284.0,
+        "p75": 368.0
+      },
+      "fitness_factible": {
+        "n": 5,
+        "media": 661.6,
+        "mediana": 636.0,
+        "desviacion": 70.6738990009749,
+        "minimo": 574.0,
+        "maximo": 750.0,
+        "p25": 632.0,
+        "p75": 716.0
+      },
+      "tiempo": {
+        "n": 5,
+        "media": 0.43484729998745025,
+        "mediana": 0.4357517999596894,
+        "desviacion": 0.0018096608158143011,
+        "minimo": 0.43178899999475107,
+        "maximo": 0.43618309998419136,
+        "p25": 0.43462020001607016,
+        "p75": 0.43589239998254925
+      },
+      "evaluaciones": {
+        "n": 5,
+        "media": 1640.0,
+        "mediana": 1640.0,
+        "desviacion": 0.0,
+        "minimo": 1640.0,
+        "maximo": 1640.0,
+        "p25": 1640.0,
+        "p75": 1640.0
+      },
+      "evaluaciones_factibilidad": {
+        "n": 5,
+        "media": 6.0,
+        "mediana": 4.0,
+        "desviacion": 3.7416573867739413,
+        "minimo": 3.0,
+        "maximo": 11.0,
+        "p25": 3.0,
+        "p75": 9.0
+      },
+      "generaciones": {
+        "n": 5,
+        "media": 14.4,
+        "mediana": 14.0,
+        "desviacion": 0.5477225575051661,
+        "minimo": 14.0,
+        "maximo": 15.0,
+        "p25": 14.0,
+        "p75": 15.0
+      }
+    },
+    {
+      "metodo": "Búsqueda aleatoria",
+      "ejecuciones": 5,
+      "muestras_validas": 5,
+      "errores": 0,
+      "factibles": 0,
+      "no_factibles": 5,
+      "tasa_factibilidad": 0.0,
+      "violaciones_duras": {
+        "n": 5,
+        "media": 8.6,
+        "mediana": 9.0,
+        "desviacion": 0.5477225575051661,
+        "minimo": 8.0,
+        "maximo": 9.0,
+        "p25": 8.0,
+        "p75": 9.0
+      },
+      "penalizacion_blanda_factible": {
+        "media": null,
+        "mediana": null,
+        "desviacion": null,
+        "minimo": null,
+        "maximo": null,
+        "p25": null,
+        "p75": null,
+        "n": 0
+      },
+      "fitness_factible": {
+        "media": null,
+        "mediana": null,
+        "desviacion": null,
+        "minimo": null,
+        "maximo": null,
+        "p25": null,
+        "p75": null,
+        "n": 0
+      },
+      "tiempo": {
+        "n": 5,
+        "media": 0.26453292001970113,
+        "mediana": 0.26287660002708435,
+        "desviacion": 0.0038649273753645894,
+        "minimo": 0.2608303000451997,
+        "maximo": 0.26893620000919327,
+        "p25": 0.26158639998175204,
+        "p75": 0.26843510003527626
+      },
+      "evaluaciones": {
+        "n": 5,
+        "media": 1640.0,
+        "mediana": 1640.0,
+        "desviacion": 0.0,
+        "minimo": 1640.0,
+        "maximo": 1640.0,
+        "p25": 1640.0,
+        "p75": 1640.0
+      },
+      "evaluaciones_factibilidad": {
+        "media": null,
+        "mediana": null,
+        "desviacion": null,
+        "minimo": null,
+        "maximo": null,
+        "p25": null,
+        "p75": null,
+        "n": 0
+      },
+      "generaciones": {
+        "media": null,
+        "mediana": null,
+        "desviacion": null,
+        "minimo": null,
+        "maximo": null,
+        "p25": null,
+        "p75": null,
+        "n": 0
+      }
+    },
+    {
+      "metodo": "Heurística constructiva",
+      "ejecuciones": 5,
+      "muestras_validas": 5,
+      "errores": 0,
+      "factibles": 0,
+      "no_factibles": 5,
+      "tasa_factibilidad": 0.0,
+      "violaciones_duras": {
+        "n": 5,
+        "media": 3.6,
+        "mediana": 3.0,
+        "desviacion": 1.51657508881031,
+        "minimo": 2.0,
+        "maximo": 6.0,
+        "p25": 3.0,
+        "p75": 4.0
+      },
+      "penalizacion_blanda_factible": {
+        "media": null,
+        "mediana": null,
+        "desviacion": null,
+        "minimo": null,
+        "maximo": null,
+        "p25": null,
+        "p75": null,
+        "n": 0
+      },
+      "fitness_factible": {
+        "media": null,
+        "mediana": null,
+        "desviacion": null,
+        "minimo": null,
+        "maximo": null,
+        "p25": null,
+        "p75": null,
+        "n": 0
+      },
+      "tiempo": {
+        "n": 5,
+        "media": 0.21877921998966485,
+        "mediana": 0.21861670003272593,
+        "desviacion": 0.0009346594477487823,
+        "minimo": 0.2180561000132002,
+        "maximo": 0.2203680999809876,
+        "p25": 0.2181332999607548,
+        "p75": 0.21872189996065572
+      },
+      "evaluaciones": {
+        "n": 5,
+        "media": 1640.0,
+        "mediana": 1640.0,
+        "desviacion": 0.0,
+        "minimo": 1640.0,
+        "maximo": 1640.0,
+        "p25": 1640.0,
+        "p75": 1640.0
+      },
+      "evaluaciones_factibilidad": {
+        "media": null,
+        "mediana": null,
+        "desviacion": null,
+        "minimo": null,
+        "maximo": null,
+        "p25": null,
+        "p75": null,
+        "n": 0
+      },
+      "generaciones": {
+        "media": null,
+        "mediana": null,
+        "desviacion": null,
+        "minimo": null,
+        "maximo": null,
+        "p25": null,
+        "p75": null,
+        "n": 0
+      }
+    }
+  ],
+  "conclusiones": "Interpretación descriptiva; no constituye una prueba de superioridad estadística.\nMayor tasa de factibilidad observada: 100.0% (Algoritmo genético, Algoritmo genético híbrido).\nMenor mediana de penalización entre soluciones factibles: 364.00 (Algoritmo genético híbrido).\nEl tiempo es secundario y puede variar según el equipo y la carga del sistema.",
+  "ejecuciones": [
+    {
+      "id": "b67c992a-9864-4344-be44-00312c0679ba",
+      "fecha": "2026-11-16T17:42:43-06:00",
+      "metodo": "genetico",
+      "etiqueta_metodo": "Algoritmo genético",
+      "escenario": "pequeno",
+      "repeticion": 1,
+      "semilla": 42,
+      "configuracion": {
+        "poblacion": 40,
+        "generaciones": 40,
+        "prob_cruza": 0.85,
+        "prob_mutacion": 0.08,
+        "elitismo": 4,
+        "torneo": 4,
+        "semilla": 42,
+        "mutacion_dirigida": 0.35,
+        "prob_reparacion": 0.25,
+        "inmigrantes": 0.03,
+        "parada_sin_mejora": 0,
+        "objetivo_penalizacion_blanda": 0,
+        "variante": "clasico",
+        "inicializacion_heuristica": false,
+        "porcentaje_inicializacion_heuristica": 0.3,
+        "busqueda_local": false,
+        "estrategia_busqueda_local": "mejores",
+        "vecindario_busqueda_local": "mixta",
+        "criterio_busqueda_local": "primera",
+        "frecuencia_busqueda_local": 5,
+        "porcentaje_busqueda_local": 0.2,
+        "evaluaciones_busqueda_local": 12,
+        "mejoras_busqueda_local": 2,
+        "mutacion_adaptativa": false,
+        "mutacion_min": 0.02,
+        "mutacion_max": 0.25,
+        "estancamiento_mutacion": 10,
+        "umbral_diversidad": 0.25,
+        "factor_incremento_mutacion": 1.5,
+        "factor_recuperacion_mutacion": 0.85,
+        "presupuesto_evaluaciones": 1640
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 1640,
+      "duracion": 0.28823839995311573,
+      "motivo_parada": "presupuesto_evaluaciones",
+      "factible": true,
+      "duras": 0,
+      "penalizacion_blanda": 506,
+      "fitness": 494,
+      "evaluaciones_hasta_factible": 504,
+      "generacion_primera_factible": 6,
+      "generaciones_ejecutadas": 17,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 0,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 16,
+        "Extensión de jornada": 2,
+        "Sesiones aisladas al final": 0,
+        "Desequilibrio semanal": 12,
+        "Cambios innecesarios de salón": 7,
+        "Fuera de preferencia docente": 7
+      },
+      "historial": [
+        {
+          "generacion": 0,
+          "mejor_fitness": -378,
+          "media_fitness": -1493.45,
+          "conflictos_duros": 8,
+          "huecos": 22,
+          "factible": false,
+          "penalizacion_blanda": 578,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 40,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 1,
+          "mejor_fitness": -380,
+          "media_fitness": -1137.85,
+          "conflictos_duros": 7,
+          "huecos": 21,
+          "factible": false,
+          "penalizacion_blanda": 680,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 120,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 2,
+          "mejor_fitness": -104,
+          "media_fitness": -973.65,
+          "conflictos_duros": 5,
+          "huecos": 20,
+          "factible": false,
+          "penalizacion_blanda": 604,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 212,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 3,
+          "mejor_fitness": -72,
+          "media_fitness": -808.2,
+          "conflictos_duros": 3,
+          "huecos": 26,
+          "factible": false,
+          "penalizacion_blanda": 772,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 286,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 4,
+          "mejor_fitness": 190,
+          "media_fitness": -560.15,
+          "conflictos_duros": 2,
+          "huecos": 20,
+          "factible": false,
+          "penalizacion_blanda": 610,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 392,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 5,
+          "mejor_fitness": 190,
+          "media_fitness": -501.95,
+          "conflictos_duros": 2,
+          "huecos": 20,
+          "factible": false,
+          "penalizacion_blanda": 610,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 457,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 6,
+          "mejor_fitness": 214,
+          "media_fitness": -136.2,
+          "conflictos_duros": 0,
+          "huecos": 26,
+          "factible": true,
+          "penalizacion_blanda": 786,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 572,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 7,
+          "mejor_fitness": 342,
+          "media_fitness": -124.1,
+          "conflictos_duros": 0,
+          "huecos": 19,
+          "factible": true,
+          "penalizacion_blanda": 658,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 678,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 8,
+          "mejor_fitness": 342,
+          "media_fitness": -83.2,
+          "conflictos_duros": 0,
+          "huecos": 19,
+          "factible": true,
+          "penalizacion_blanda": 658,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 799,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 9,
+          "mejor_fitness": 408,
+          "media_fitness": -15.95,
+          "conflictos_duros": 0,
+          "huecos": 18,
+          "factible": true,
+          "penalizacion_blanda": 592,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 912,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 10,
+          "mejor_fitness": 408,
+          "media_fitness": -84.65,
+          "conflictos_duros": 0,
+          "huecos": 18,
+          "factible": true,
+          "penalizacion_blanda": 592,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1012,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 11,
+          "mejor_fitness": 408,
+          "media_fitness": -86.5,
+          "conflictos_duros": 0,
+          "huecos": 18,
+          "factible": true,
+          "penalizacion_blanda": 592,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1105,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 12,
+          "mejor_fitness": 458,
+          "media_fitness": -10.9,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 542,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1196,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 13,
+          "mejor_fitness": 458,
+          "media_fitness": 3.5,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 542,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1276,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 14,
+          "mejor_fitness": 458,
+          "media_fitness": 93.6,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 542,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1378,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 15,
+          "mejor_fitness": 472,
+          "media_fitness": 37.25,
+          "conflictos_duros": 0,
+          "huecos": 15,
+          "factible": true,
+          "penalizacion_blanda": 528,
+          "diversidad": 0.95,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1468,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 16,
+          "mejor_fitness": 472,
+          "media_fitness": 49.95,
+          "conflictos_duros": 0,
+          "huecos": 15,
+          "factible": true,
+          "penalizacion_blanda": 528,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1541,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 17,
+          "mejor_fitness": 494,
+          "media_fitness": 54.55,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 506,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1615,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        }
+      ],
+      "cromosoma": [
+        [
+          3,
+          6,
+          3
+        ],
+        [
+          1,
+          6,
+          3
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          1,
+          5,
+          3
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          4,
+          3,
+          3
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          3,
+          5,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          1,
+          3,
+          0
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          3,
+          6,
+          1
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          3,
+          5,
+          3
+        ],
+        [
+          2,
+          6,
+          3
+        ],
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ]
+      ],
+      "evolucion": null,
+      "error": null,
+      "evaluaciones_inicializacion": 40,
+      "evaluaciones_evolucion": 1600,
+      "evaluaciones_busqueda_local": 0,
+      "tiempo_inicializacion": 0.018089099961798638,
+      "tiempo_evolucion": 0.269116900046356,
+      "tiempo_busqueda_local": 0.0
+    },
+    {
+      "id": "2fe5509a-fcf0-4269-a5ae-9f4d48685136",
+      "fecha": "2026-11-16T17:42:43-06:00",
+      "metodo": "hibrido",
+      "etiqueta_metodo": "Algoritmo genético híbrido",
+      "escenario": "pequeno",
+      "repeticion": 1,
+      "semilla": 42,
+      "configuracion": {
+        "poblacion": 40,
+        "generaciones": 40,
+        "prob_cruza": 0.85,
+        "prob_mutacion": 0.08,
+        "elitismo": 4,
+        "torneo": 4,
+        "semilla": 42,
+        "mutacion_dirigida": 0.35,
+        "prob_reparacion": 0.25,
+        "inmigrantes": 0.03,
+        "parada_sin_mejora": 0,
+        "objetivo_penalizacion_blanda": 0,
+        "variante": "hibrido",
+        "inicializacion_heuristica": true,
+        "porcentaje_inicializacion_heuristica": 0.3,
+        "busqueda_local": true,
+        "estrategia_busqueda_local": "mejores",
+        "vecindario_busqueda_local": "mixta",
+        "criterio_busqueda_local": "primera",
+        "frecuencia_busqueda_local": 5,
+        "porcentaje_busqueda_local": 0.2,
+        "evaluaciones_busqueda_local": 12,
+        "mejoras_busqueda_local": 2,
+        "mutacion_adaptativa": true,
+        "mutacion_min": 0.02,
+        "mutacion_max": 0.25,
+        "estancamiento_mutacion": 10,
+        "umbral_diversidad": 0.25,
+        "factor_incremento_mutacion": 1.5,
+        "factor_recuperacion_mutacion": 0.85,
+        "presupuesto_evaluaciones": 1640
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 1640,
+      "duracion": 0.43589239998254925,
+      "motivo_parada": "presupuesto_evaluaciones",
+      "factible": true,
+      "duras": 0,
+      "penalizacion_blanda": 368,
+      "fitness": 632,
+      "evaluaciones_hasta_factible": 4,
+      "generacion_primera_factible": 0,
+      "generaciones_ejecutadas": 14,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 0,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 11,
+        "Extensión de jornada": 2,
+        "Sesiones aisladas al final": 0,
+        "Desequilibrio semanal": 10,
+        "Cambios innecesarios de salón": 6,
+        "Fuera de preferencia docente": 3
+      },
+      "historial": [
+        {
+          "generacion": 0,
+          "mejor_fitness": 416,
+          "media_fitness": -859.1,
+          "conflictos_duros": 0,
+          "huecos": 18,
+          "factible": true,
+          "penalizacion_blanda": 584,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 40,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 1,
+          "mejor_fitness": 416,
+          "media_fitness": -436.2,
+          "conflictos_duros": 0,
+          "huecos": 18,
+          "factible": true,
+          "penalizacion_blanda": 584,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 118,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 2,
+          "mejor_fitness": 416,
+          "media_fitness": -479.05,
+          "conflictos_duros": 0,
+          "huecos": 18,
+          "factible": true,
+          "penalizacion_blanda": 584,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 238,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 3,
+          "mejor_fitness": 416,
+          "media_fitness": -424.75,
+          "conflictos_duros": 0,
+          "huecos": 18,
+          "factible": true,
+          "penalizacion_blanda": 584,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 318,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 4,
+          "mejor_fitness": 442,
+          "media_fitness": -282.15,
+          "conflictos_duros": 0,
+          "huecos": 15,
+          "factible": true,
+          "penalizacion_blanda": 558,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 427,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 5,
+          "mejor_fitness": 476,
+          "media_fitness": -233.65,
+          "conflictos_duros": 0,
+          "huecos": 14,
+          "factible": true,
+          "penalizacion_blanda": 524,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 614,
+          "aplicaciones_busqueda_local": 8,
+          "mejoras_busqueda_local": 9,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 6,
+          "mejor_fitness": 476,
+          "media_fitness": -164.65,
+          "conflictos_duros": 0,
+          "huecos": 14,
+          "factible": true,
+          "penalizacion_blanda": 524,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 701,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 7,
+          "mejor_fitness": 476,
+          "media_fitness": 10.45,
+          "conflictos_duros": 0,
+          "huecos": 14,
+          "factible": true,
+          "penalizacion_blanda": 524,
+          "diversidad": 0.95,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 783,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 8,
+          "mejor_fitness": 476,
+          "media_fitness": -70.5,
+          "conflictos_duros": 0,
+          "huecos": 14,
+          "factible": true,
+          "penalizacion_blanda": 524,
+          "diversidad": 0.95,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 856,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 9,
+          "mejor_fitness": 528,
+          "media_fitness": 0.7,
+          "conflictos_duros": 0,
+          "huecos": 14,
+          "factible": true,
+          "penalizacion_blanda": 472,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 959,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 10,
+          "mejor_fitness": 608,
+          "media_fitness": 22.4,
+          "conflictos_duros": 0,
+          "huecos": 12,
+          "factible": true,
+          "penalizacion_blanda": 392,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1117,
+          "aplicaciones_busqueda_local": 8,
+          "mejoras_busqueda_local": 10,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 11,
+          "mejor_fitness": 608,
+          "media_fitness": 139.9,
+          "conflictos_duros": 0,
+          "huecos": 12,
+          "factible": true,
+          "penalizacion_blanda": 392,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1239,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 12,
+          "mejor_fitness": 608,
+          "media_fitness": 273.85,
+          "conflictos_duros": 0,
+          "huecos": 12,
+          "factible": true,
+          "penalizacion_blanda": 392,
+          "diversidad": 0.95,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1317,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 13,
+          "mejor_fitness": 608,
+          "media_fitness": 263.05,
+          "conflictos_duros": 0,
+          "huecos": 12,
+          "factible": true,
+          "penalizacion_blanda": 392,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1431,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 14,
+          "mejor_fitness": 632,
+          "media_fitness": 318.5,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 368,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1520,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        }
+      ],
+      "cromosoma": [
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          1,
+          5,
+          2
+        ],
+        [
+          2,
+          2,
+          3
+        ],
+        [
+          4,
+          6,
+          3
+        ],
+        [
+          2,
+          6,
+          0
+        ],
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          4,
+          5,
+          2
+        ],
+        [
+          0,
+          6,
+          3
+        ],
+        [
+          4,
+          4,
+          3
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          3,
+          1,
+          3
+        ],
+        [
+          4,
+          4,
+          2
+        ],
+        [
+          4,
+          6,
+          0
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          2,
+          6,
+          3
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          2,
+          7,
+          1
+        ],
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          3,
+          5,
+          2
+        ],
+        [
+          2,
+          3,
+          0
+        ],
+        [
+          4,
+          4,
+          1
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          4,
+          2,
+          2
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          4,
+          3,
+          0
+        ]
+      ],
+      "evolucion": null,
+      "error": null,
+      "evaluaciones_inicializacion": 40,
+      "evaluaciones_evolucion": 1374,
+      "evaluaciones_busqueda_local": 226,
+      "tiempo_inicializacion": 0.17356590001145378,
+      "tiempo_evolucion": 0.2326013999991119,
+      "tiempo_busqueda_local": 0.029491799999959767
+    },
+    {
+      "id": "1fbd5e06-63f2-4362-ba20-b3f9d09e7b33",
+      "fecha": "2026-11-16T17:42:43-06:00",
+      "metodo": "aleatorio",
+      "etiqueta_metodo": "Búsqueda aleatoria",
+      "escenario": "pequeno",
+      "repeticion": 1,
+      "semilla": 42,
+      "configuracion": {
+        "presupuesto_evaluaciones": 1640
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 1640,
+      "duracion": 0.26158639998175204,
+      "motivo_parada": "presupuesto_agotado",
+      "factible": false,
+      "duras": 8,
+      "penalizacion_blanda": 730,
+      "fitness": -530,
+      "evaluaciones_hasta_factible": null,
+      "generacion_primera_factible": null,
+      "generaciones_ejecutadas": null,
+      "desglose_duro": {
+        "Colisiones de docente": 1,
+        "Colisiones de salón": 2,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 2,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 3,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 22,
+        "Extensión de jornada": 5,
+        "Sesiones aisladas al final": 2,
+        "Desequilibrio semanal": 12,
+        "Cambios innecesarios de salón": 13,
+        "Fuera de preferencia docente": 6
+      },
+      "historial": [],
+      "cromosoma": [
+        [
+          3,
+          6,
+          2
+        ],
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          2,
+          6,
+          2
+        ],
+        [
+          0,
+          6,
+          3
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          4,
+          4,
+          1
+        ],
+        [
+          3,
+          5,
+          2
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          5,
+          1
+        ],
+        [
+          1,
+          6,
+          0
+        ],
+        [
+          2,
+          6,
+          3
+        ],
+        [
+          2,
+          4,
+          2
+        ],
+        [
+          4,
+          4,
+          3
+        ],
+        [
+          1,
+          6,
+          3
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          0,
+          6,
+          0
+        ],
+        [
+          4,
+          3,
+          1
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          4,
+          4,
+          3
+        ],
+        [
+          1,
+          7,
+          3
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          4,
+          3,
+          0
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          1,
+          5,
+          0
+        ],
+        [
+          3,
+          7,
+          1
+        ],
+        [
+          4,
+          6,
+          2
+        ],
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          2,
+          5,
+          0
+        ]
+      ],
+      "evolucion": null,
+      "error": null,
+      "evaluaciones_inicializacion": 0,
+      "evaluaciones_evolucion": 0,
+      "evaluaciones_busqueda_local": 0,
+      "tiempo_inicializacion": 0.0,
+      "tiempo_evolucion": 0.0,
+      "tiempo_busqueda_local": 0.0
+    },
+    {
+      "id": "a3121468-78fc-46ea-9b2e-749bf75b6fe2",
+      "fecha": "2026-11-16T17:42:44-06:00",
+      "metodo": "constructivo",
+      "etiqueta_metodo": "Heurística constructiva",
+      "escenario": "pequeno",
+      "repeticion": 1,
+      "semilla": 42,
+      "configuracion": {
+        "presupuesto_evaluaciones": 1640
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 1640,
+      "duracion": 0.2180561000132002,
+      "motivo_parada": "presupuesto_agotado",
+      "factible": false,
+      "duras": 6,
+      "penalizacion_blanda": 194,
+      "fitness": 206,
+      "evaluaciones_hasta_factible": null,
+      "generacion_primera_factible": null,
+      "generaciones_ejecutadas": null,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 1,
+        "Indisponibilidad docente": 3,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 2,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 5,
+        "Extensión de jornada": 1,
+        "Sesiones aisladas al final": 0,
+        "Desequilibrio semanal": 8,
+        "Cambios innecesarios de salón": 3,
+        "Fuera de preferencia docente": 2
+      },
+      "historial": [],
+      "cromosoma": [
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          3,
+          4,
+          3
+        ],
+        [
+          4,
+          3,
+          2
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          3,
+          6,
+          3
+        ],
+        [
+          4,
+          2,
+          3
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          4,
+          5,
+          3
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          3
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          1,
+          5,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          4,
+          3,
+          3
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          1,
+          6,
+          0
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          0
+        ],
+        [
+          2,
+          5,
+          1
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          5,
+          3
+        ],
+        [
+          2,
+          5,
+          3
+        ],
+        [
+          0,
+          6,
+          1
+        ],
+        [
+          0,
+          5,
+          1
+        ]
+      ],
+      "evolucion": null,
+      "error": null,
+      "evaluaciones_inicializacion": 0,
+      "evaluaciones_evolucion": 0,
+      "evaluaciones_busqueda_local": 0,
+      "tiempo_inicializacion": 0.0,
+      "tiempo_evolucion": 0.0,
+      "tiempo_busqueda_local": 0.0
+    },
+    {
+      "id": "12d85869-f905-4b7c-8e98-ab96bb49731b",
+      "fecha": "2026-11-16T17:42:44-06:00",
+      "metodo": "genetico",
+      "etiqueta_metodo": "Algoritmo genético",
+      "escenario": "pequeno",
+      "repeticion": 2,
+      "semilla": 43,
+      "configuracion": {
+        "poblacion": 40,
+        "generaciones": 40,
+        "prob_cruza": 0.85,
+        "prob_mutacion": 0.08,
+        "elitismo": 4,
+        "torneo": 4,
+        "semilla": 43,
+        "mutacion_dirigida": 0.35,
+        "prob_reparacion": 0.25,
+        "inmigrantes": 0.03,
+        "parada_sin_mejora": 0,
+        "objetivo_penalizacion_blanda": 0,
+        "variante": "clasico",
+        "inicializacion_heuristica": false,
+        "porcentaje_inicializacion_heuristica": 0.3,
+        "busqueda_local": false,
+        "estrategia_busqueda_local": "mejores",
+        "vecindario_busqueda_local": "mixta",
+        "criterio_busqueda_local": "primera",
+        "frecuencia_busqueda_local": 5,
+        "porcentaje_busqueda_local": 0.2,
+        "evaluaciones_busqueda_local": 12,
+        "mejoras_busqueda_local": 2,
+        "mutacion_adaptativa": false,
+        "mutacion_min": 0.02,
+        "mutacion_max": 0.25,
+        "estancamiento_mutacion": 10,
+        "umbral_diversidad": 0.25,
+        "factor_incremento_mutacion": 1.5,
+        "factor_recuperacion_mutacion": 0.85,
+        "presupuesto_evaluaciones": 1640
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 1640,
+      "duracion": 0.2833614000119269,
+      "motivo_parada": "presupuesto_evaluaciones",
+      "factible": true,
+      "duras": 0,
+      "penalizacion_blanda": 384,
+      "fitness": 616,
+      "evaluaciones_hasta_factible": 557,
+      "generacion_primera_factible": 6,
+      "generaciones_ejecutadas": 17,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 0,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 11,
+        "Extensión de jornada": 1,
+        "Sesiones aisladas al final": 0,
+        "Desequilibrio semanal": 11,
+        "Cambios innecesarios de salón": 7,
+        "Fuera de preferencia docente": 5
+      },
+      "historial": [
+        {
+          "generacion": 0,
+          "mejor_fitness": -316,
+          "media_fitness": -1460.1,
+          "conflictos_duros": 7,
+          "huecos": 19,
+          "factible": false,
+          "penalizacion_blanda": 616,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 40,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 1,
+          "mejor_fitness": -182,
+          "media_fitness": -1038.1,
+          "conflictos_duros": 5,
+          "huecos": 23,
+          "factible": false,
+          "penalizacion_blanda": 682,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 128,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 2,
+          "mejor_fitness": -80,
+          "media_fitness": -836.85,
+          "conflictos_duros": 4,
+          "huecos": 23,
+          "factible": false,
+          "penalizacion_blanda": 680,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 229,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 3,
+          "mejor_fitness": 8,
+          "media_fitness": -682.45,
+          "conflictos_duros": 4,
+          "huecos": 17,
+          "factible": false,
+          "penalizacion_blanda": 592,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 295,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 4,
+          "mejor_fitness": 190,
+          "media_fitness": -479.4,
+          "conflictos_duros": 1,
+          "huecos": 25,
+          "factible": false,
+          "penalizacion_blanda": 710,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 446,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 5,
+          "mejor_fitness": 190,
+          "media_fitness": -490.9,
+          "conflictos_duros": 1,
+          "huecos": 25,
+          "factible": false,
+          "penalizacion_blanda": 710,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 545,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 6,
+          "mejor_fitness": 530,
+          "media_fitness": -461.6,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 470,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 640,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 7,
+          "mejor_fitness": 530,
+          "media_fitness": -242.35,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 470,
+          "diversidad": 0.95,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 732,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 8,
+          "mejor_fitness": 530,
+          "media_fitness": -152.85,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 470,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 825,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 9,
+          "mejor_fitness": 576,
+          "media_fitness": -19.65,
+          "conflictos_duros": 0,
+          "huecos": 14,
+          "factible": true,
+          "penalizacion_blanda": 424,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 910,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 10,
+          "mejor_fitness": 576,
+          "media_fitness": -94.4,
+          "conflictos_duros": 0,
+          "huecos": 14,
+          "factible": true,
+          "penalizacion_blanda": 424,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1022,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 11,
+          "mejor_fitness": 580,
+          "media_fitness": -80.3,
+          "conflictos_duros": 0,
+          "huecos": 13,
+          "factible": true,
+          "penalizacion_blanda": 420,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1119,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 12,
+          "mejor_fitness": 596,
+          "media_fitness": -87.4,
+          "conflictos_duros": 0,
+          "huecos": 13,
+          "factible": true,
+          "penalizacion_blanda": 404,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1208,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 13,
+          "mejor_fitness": 616,
+          "media_fitness": -50.7,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 384,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1280,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 14,
+          "mejor_fitness": 616,
+          "media_fitness": 191.5,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 384,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1356,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 15,
+          "mejor_fitness": 616,
+          "media_fitness": 317.15,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 384,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1420,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 16,
+          "mejor_fitness": 616,
+          "media_fitness": 299.15,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 384,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1490,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 17,
+          "mejor_fitness": 616,
+          "media_fitness": 241.15,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 384,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1588,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        }
+      ],
+      "cromosoma": [
+        [
+          3,
+          6,
+          2
+        ],
+        [
+          2,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          3,
+          4,
+          2
+        ],
+        [
+          4,
+          7,
+          0
+        ],
+        [
+          1,
+          6,
+          0
+        ],
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          2,
+          7,
+          2
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          2,
+          6,
+          1
+        ],
+        [
+          4,
+          6,
+          1
+        ],
+        [
+          2,
+          6,
+          3
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          5,
+          3
+        ],
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          4,
+          5,
+          2
+        ],
+        [
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          4,
+          6,
+          3
+        ],
+        [
+          4,
+          3,
+          3
+        ],
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          0,
+          6,
+          2
+        ],
+        [
+          1,
+          5,
+          0
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          7,
+          0
+        ],
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          3,
+          4,
+          0
+        ]
+      ],
+      "evolucion": null,
+      "error": null,
+      "evaluaciones_inicializacion": 40,
+      "evaluaciones_evolucion": 1600,
+      "evaluaciones_busqueda_local": 0,
+      "tiempo_inicializacion": 0.017231500009074807,
+      "tiempo_evolucion": 0.26583789999131113,
+      "tiempo_busqueda_local": 0.0
+    },
+    {
+      "id": "1988dcd1-2533-4838-93e5-b25511bbb6e9",
+      "fecha": "2026-11-16T17:42:44-06:00",
+      "metodo": "hibrido",
+      "etiqueta_metodo": "Algoritmo genético híbrido",
+      "escenario": "pequeno",
+      "repeticion": 2,
+      "semilla": 43,
+      "configuracion": {
+        "poblacion": 40,
+        "generaciones": 40,
+        "prob_cruza": 0.85,
+        "prob_mutacion": 0.08,
+        "elitismo": 4,
+        "torneo": 4,
+        "semilla": 43,
+        "mutacion_dirigida": 0.35,
+        "prob_reparacion": 0.25,
+        "inmigrantes": 0.03,
+        "parada_sin_mejora": 0,
+        "objetivo_penalizacion_blanda": 0,
+        "variante": "hibrido",
+        "inicializacion_heuristica": true,
+        "porcentaje_inicializacion_heuristica": 0.3,
+        "busqueda_local": true,
+        "estrategia_busqueda_local": "mejores",
+        "vecindario_busqueda_local": "mixta",
+        "criterio_busqueda_local": "primera",
+        "frecuencia_busqueda_local": 5,
+        "porcentaje_busqueda_local": 0.2,
+        "evaluaciones_busqueda_local": 12,
+        "mejoras_busqueda_local": 2,
+        "mutacion_adaptativa": true,
+        "mutacion_min": 0.02,
+        "mutacion_max": 0.25,
+        "estancamiento_mutacion": 10,
+        "umbral_diversidad": 0.25,
+        "factor_incremento_mutacion": 1.5,
+        "factor_recuperacion_mutacion": 0.85,
+        "presupuesto_evaluaciones": 1640
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 1640,
+      "duracion": 0.4357517999596894,
+      "motivo_parada": "presupuesto_evaluaciones",
+      "factible": true,
+      "duras": 0,
+      "penalizacion_blanda": 364,
+      "fitness": 636,
+      "evaluaciones_hasta_factible": 3,
+      "generacion_primera_factible": 0,
+      "generaciones_ejecutadas": 15,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 0,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 8,
+        "Extensión de jornada": 2,
+        "Sesiones aisladas al final": 3,
+        "Desequilibrio semanal": 11,
+        "Cambios innecesarios de salón": 7,
+        "Fuera de preferencia docente": 4
+      },
+      "historial": [
+        {
+          "generacion": 0,
+          "mejor_fitness": 498,
+          "media_fitness": -974.2,
+          "conflictos_duros": 0,
+          "huecos": 15,
+          "factible": true,
+          "penalizacion_blanda": 502,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 40,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 1,
+          "mejor_fitness": 498,
+          "media_fitness": -595.5,
+          "conflictos_duros": 0,
+          "huecos": 15,
+          "factible": true,
+          "penalizacion_blanda": 502,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 126,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 2,
+          "mejor_fitness": 498,
+          "media_fitness": -497.45,
+          "conflictos_duros": 0,
+          "huecos": 15,
+          "factible": true,
+          "penalizacion_blanda": 502,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 210,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 3,
+          "mejor_fitness": 498,
+          "media_fitness": -377.85,
+          "conflictos_duros": 0,
+          "huecos": 15,
+          "factible": true,
+          "penalizacion_blanda": 502,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 297,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 4,
+          "mejor_fitness": 498,
+          "media_fitness": -238.1,
+          "conflictos_duros": 0,
+          "huecos": 15,
+          "factible": true,
+          "penalizacion_blanda": 502,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 390,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 5,
+          "mejor_fitness": 528,
+          "media_fitness": -202.05,
+          "conflictos_duros": 0,
+          "huecos": 14,
+          "factible": true,
+          "penalizacion_blanda": 472,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 549,
+          "aplicaciones_busqueda_local": 8,
+          "mejoras_busqueda_local": 9,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 6,
+          "mejor_fitness": 528,
+          "media_fitness": -232.85,
+          "conflictos_duros": 0,
+          "huecos": 14,
+          "factible": true,
+          "penalizacion_blanda": 472,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 633,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 7,
+          "mejor_fitness": 528,
+          "media_fitness": -168.4,
+          "conflictos_duros": 0,
+          "huecos": 14,
+          "factible": true,
+          "penalizacion_blanda": 472,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 727,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 8,
+          "mejor_fitness": 528,
+          "media_fitness": -200.9,
+          "conflictos_duros": 0,
+          "huecos": 14,
+          "factible": true,
+          "penalizacion_blanda": 472,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 814,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 9,
+          "mejor_fitness": 528,
+          "media_fitness": 64.5,
+          "conflictos_duros": 0,
+          "huecos": 14,
+          "factible": true,
+          "penalizacion_blanda": 472,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 922,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 10,
+          "mejor_fitness": 590,
+          "media_fitness": 60.4,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 410,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1125,
+          "aplicaciones_busqueda_local": 8,
+          "mejoras_busqueda_local": 5,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 11,
+          "mejor_fitness": 590,
+          "media_fitness": 130.4,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 410,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1204,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 12,
+          "mejor_fitness": 600,
+          "media_fitness": 173.3,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 400,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1296,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 13,
+          "mejor_fitness": 600,
+          "media_fitness": 180.1,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 400,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1381,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 14,
+          "mejor_fitness": 600,
+          "media_fitness": 222.1,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 400,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1474,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 15,
+          "mejor_fitness": 636,
+          "media_fitness": 229.2,
+          "conflictos_duros": 0,
+          "huecos": 8,
+          "factible": true,
+          "penalizacion_blanda": 364,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1637,
+          "aplicaciones_busqueda_local": 8,
+          "mejoras_busqueda_local": 6,
+          "mejoro_global": true,
+          "estancada": false
+        }
+      ],
+      "cromosoma": [
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          4,
+          3,
+          2
+        ],
+        [
+          3,
+          6,
+          3
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          3,
+          4,
+          2
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          4,
+          3,
+          0
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          3,
+          3,
+          0
+        ],
+        [
+          1,
+          4,
+          3
+        ],
+        [
+          4,
+          4,
+          3
+        ],
+        [
+          2,
+          4,
+          3
+        ],
+        [
+          0,
+          7,
+          2
+        ],
+        [
+          1,
+          6,
+          1
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          7,
+          3
+        ],
+        [
+          4,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          0
+        ],
+        [
+          3,
+          7,
+          1
+        ]
+      ],
+      "evolucion": null,
+      "error": null,
+      "evaluaciones_inicializacion": 40,
+      "evaluaciones_evolucion": 1344,
+      "evaluaciones_busqueda_local": 256,
+      "tiempo_inicializacion": 0.17039520002435893,
+      "tiempo_evolucion": 0.22352800000226125,
+      "tiempo_busqueda_local": 0.041584799997508526
+    },
+    {
+      "id": "fecef9c2-ab6f-482e-b078-e544c00ef9dc",
+      "fecha": "2026-11-16T17:42:45-06:00",
+      "metodo": "aleatorio",
+      "etiqueta_metodo": "Búsqueda aleatoria",
+      "escenario": "pequeno",
+      "repeticion": 2,
+      "semilla": 43,
+      "configuracion": {
+        "presupuesto_evaluaciones": 1640
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 1640,
+      "duracion": 0.2608303000451997,
+      "motivo_parada": "presupuesto_agotado",
+      "factible": false,
+      "duras": 9,
+      "penalizacion_blanda": 552,
+      "fitness": -452,
+      "evaluaciones_hasta_factible": null,
+      "generacion_primera_factible": null,
+      "generaciones_ejecutadas": null,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 4,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 2,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 2,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 1,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 16,
+        "Extensión de jornada": 3,
+        "Sesiones aisladas al final": 0,
+        "Desequilibrio semanal": 12,
+        "Cambios innecesarios de salón": 12,
+        "Fuera de preferencia docente": 4
+      },
+      "historial": [],
+      "cromosoma": [
+        [
+          0,
+          4,
+          3
+        ],
+        [
+          2,
+          6,
+          3
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          4,
+          4,
+          3
+        ],
+        [
+          1,
+          6,
+          1
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          3,
+          5,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          3,
+          6,
+          0
+        ],
+        [
+          3,
+          3,
+          0
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          2,
+          5,
+          3
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          3,
+          3,
+          0
+        ],
+        [
+          0,
+          5,
+          2
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          0,
+          6,
+          1
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          4,
+          4,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          1,
+          5,
+          2
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          2,
+          5,
+          0
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          4,
+          3,
+          1
+        ],
+        [
+          3,
+          6,
+          2
+        ],
+        [
+          3,
+          5,
+          2
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ],
+      "evolucion": null,
+      "error": null,
+      "evaluaciones_inicializacion": 0,
+      "evaluaciones_evolucion": 0,
+      "evaluaciones_busqueda_local": 0,
+      "tiempo_inicializacion": 0.0,
+      "tiempo_evolucion": 0.0,
+      "tiempo_busqueda_local": 0.0
+    },
+    {
+      "id": "6aba5033-774d-4f89-bb6d-38638b3f589e",
+      "fecha": "2026-11-16T17:42:45-06:00",
+      "metodo": "constructivo",
+      "etiqueta_metodo": "Heurística constructiva",
+      "escenario": "pequeno",
+      "repeticion": 2,
+      "semilla": 43,
+      "configuracion": {
+        "presupuesto_evaluaciones": 1640
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 1640,
+      "duracion": 0.21861670003272593,
+      "motivo_parada": "presupuesto_agotado",
+      "factible": false,
+      "duras": 4,
+      "penalizacion_blanda": 318,
+      "fitness": 282,
+      "evaluaciones_hasta_factible": null,
+      "generacion_primera_factible": null,
+      "generaciones_ejecutadas": null,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 1,
+        "Colisiones de grupo": 2,
+        "Indisponibilidad docente": 1,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 9,
+        "Extensión de jornada": 3,
+        "Sesiones aisladas al final": 0,
+        "Desequilibrio semanal": 8,
+        "Cambios innecesarios de salón": 5,
+        "Fuera de preferencia docente": 4
+      },
+      "historial": [],
+      "cromosoma": [
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          1,
+          4,
+          3
+        ],
+        [
+          1,
+          6,
+          3
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          3,
+          6,
+          0
+        ],
+        [
+          4,
+          4,
+          0
+        ],
+        [
+          2,
+          6,
+          2
+        ],
+        [
+          2,
+          7,
+          2
+        ],
+        [
+          4,
+          5,
+          3
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          3,
+          5,
+          1
+        ],
+        [
+          4,
+          4,
+          2
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          4,
+          6,
+          3
+        ],
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          0,
+          6,
+          1
+        ],
+        [
+          0,
+          7,
+          1
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          3,
+          5,
+          3
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          3,
+          7,
+          3
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          4,
+          6,
+          0
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          4,
+          4,
+          3
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          3,
+          0,
+          0
+        ]
+      ],
+      "evolucion": null,
+      "error": null,
+      "evaluaciones_inicializacion": 0,
+      "evaluaciones_evolucion": 0,
+      "evaluaciones_busqueda_local": 0,
+      "tiempo_inicializacion": 0.0,
+      "tiempo_evolucion": 0.0,
+      "tiempo_busqueda_local": 0.0
+    },
+    {
+      "id": "adc49675-a3fa-47be-96b9-a3e582df6627",
+      "fecha": "2026-11-16T17:42:45-06:00",
+      "metodo": "genetico",
+      "etiqueta_metodo": "Algoritmo genético",
+      "escenario": "pequeno",
+      "repeticion": 3,
+      "semilla": 44,
+      "configuracion": {
+        "poblacion": 40,
+        "generaciones": 40,
+        "prob_cruza": 0.85,
+        "prob_mutacion": 0.08,
+        "elitismo": 4,
+        "torneo": 4,
+        "semilla": 44,
+        "mutacion_dirigida": 0.35,
+        "prob_reparacion": 0.25,
+        "inmigrantes": 0.03,
+        "parada_sin_mejora": 0,
+        "objetivo_penalizacion_blanda": 0,
+        "variante": "clasico",
+        "inicializacion_heuristica": false,
+        "porcentaje_inicializacion_heuristica": 0.3,
+        "busqueda_local": false,
+        "estrategia_busqueda_local": "mejores",
+        "vecindario_busqueda_local": "mixta",
+        "criterio_busqueda_local": "primera",
+        "frecuencia_busqueda_local": 5,
+        "porcentaje_busqueda_local": 0.2,
+        "evaluaciones_busqueda_local": 12,
+        "mejoras_busqueda_local": 2,
+        "mutacion_adaptativa": false,
+        "mutacion_min": 0.02,
+        "mutacion_max": 0.25,
+        "estancamiento_mutacion": 10,
+        "umbral_diversidad": 0.25,
+        "factor_incremento_mutacion": 1.5,
+        "factor_recuperacion_mutacion": 0.85,
+        "presupuesto_evaluaciones": 1640
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 1640,
+      "duracion": 0.2813520999625325,
+      "motivo_parada": "presupuesto_evaluaciones",
+      "factible": true,
+      "duras": 0,
+      "penalizacion_blanda": 500,
+      "fitness": 500,
+      "evaluaciones_hasta_factible": 575,
+      "generacion_primera_factible": 7,
+      "generaciones_ejecutadas": 16,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 0,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 13,
+        "Extensión de jornada": 3,
+        "Sesiones aisladas al final": 3,
+        "Desequilibrio semanal": 12,
+        "Cambios innecesarios de salón": 8,
+        "Fuera de preferencia docente": 7
+      },
+      "historial": [
+        {
+          "generacion": 0,
+          "mejor_fitness": -378,
+          "media_fitness": -1408.35,
+          "conflictos_duros": 8,
+          "huecos": 19,
+          "factible": false,
+          "penalizacion_blanda": 578,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 40,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 1,
+          "mejor_fitness": -434,
+          "media_fitness": -1001.25,
+          "conflictos_duros": 6,
+          "huecos": 29,
+          "factible": false,
+          "penalizacion_blanda": 834,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 112,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 2,
+          "mejor_fitness": -126,
+          "media_fitness": -797.05,
+          "conflictos_duros": 3,
+          "huecos": 29,
+          "factible": false,
+          "penalizacion_blanda": 826,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 214,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 3,
+          "mejor_fitness": -48,
+          "media_fitness": -754.95,
+          "conflictos_duros": 3,
+          "huecos": 23,
+          "factible": false,
+          "penalizacion_blanda": 748,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 301,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 4,
+          "mejor_fitness": 174,
+          "media_fitness": -549.2,
+          "conflictos_duros": 1,
+          "huecos": 23,
+          "factible": false,
+          "penalizacion_blanda": 726,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 381,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 5,
+          "mejor_fitness": 174,
+          "media_fitness": -445.45,
+          "conflictos_duros": 1,
+          "huecos": 23,
+          "factible": false,
+          "penalizacion_blanda": 726,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 482,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 6,
+          "mejor_fitness": 174,
+          "media_fitness": -396,
+          "conflictos_duros": 1,
+          "huecos": 23,
+          "factible": false,
+          "penalizacion_blanda": 726,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 572,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 7,
+          "mejor_fitness": 268,
+          "media_fitness": -358.85,
+          "conflictos_duros": 0,
+          "huecos": 21,
+          "factible": true,
+          "penalizacion_blanda": 732,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 681,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 8,
+          "mejor_fitness": 268,
+          "media_fitness": -224.3,
+          "conflictos_duros": 0,
+          "huecos": 21,
+          "factible": true,
+          "penalizacion_blanda": 732,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 798,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 9,
+          "mejor_fitness": 268,
+          "media_fitness": -153.35,
+          "conflictos_duros": 0,
+          "huecos": 21,
+          "factible": true,
+          "penalizacion_blanda": 732,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 892,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 10,
+          "mejor_fitness": 366,
+          "media_fitness": -140.15,
+          "conflictos_duros": 0,
+          "huecos": 20,
+          "factible": true,
+          "penalizacion_blanda": 634,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 980,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 11,
+          "mejor_fitness": 366,
+          "media_fitness": -77.95,
+          "conflictos_duros": 0,
+          "huecos": 20,
+          "factible": true,
+          "penalizacion_blanda": 634,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1072,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 12,
+          "mejor_fitness": 366,
+          "media_fitness": -92.3,
+          "conflictos_duros": 0,
+          "huecos": 20,
+          "factible": true,
+          "penalizacion_blanda": 634,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1164,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 13,
+          "mejor_fitness": 438,
+          "media_fitness": -86.7,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 562,
+          "diversidad": 0.95,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1273,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 14,
+          "mejor_fitness": 438,
+          "media_fitness": -66.95,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 562,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1378,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 15,
+          "mejor_fitness": 438,
+          "media_fitness": 35.8,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 562,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1474,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 16,
+          "mejor_fitness": 500,
+          "media_fitness": -18.85,
+          "conflictos_duros": 0,
+          "huecos": 13,
+          "factible": true,
+          "penalizacion_blanda": 500,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1575,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        }
+      ],
+      "cromosoma": [
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          0,
+          6,
+          3
+        ],
+        [
+          4,
+          3,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          7,
+          3
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          3,
+          7,
+          3
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          2,
+          6,
+          2
+        ],
+        [
+          1,
+          6,
+          2
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          4,
+          5,
+          3
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          4,
+          7,
+          1
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          4,
+          2,
+          3
+        ],
+        [
+          3,
+          5,
+          1
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          1,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          5,
+          3
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          3,
+          7,
+          0
+        ],
+        [
+          1,
+          6,
+          3
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "evolucion": null,
+      "error": null,
+      "evaluaciones_inicializacion": 40,
+      "evaluaciones_evolucion": 1600,
+      "evaluaciones_busqueda_local": 0,
+      "tiempo_inicializacion": 0.017008499999064952,
+      "tiempo_evolucion": 0.2641018000431359,
+      "tiempo_busqueda_local": 0.0
+    },
+    {
+      "id": "81760f06-4248-4df4-a4f3-da06d803aeba",
+      "fecha": "2026-11-16T17:42:46-06:00",
+      "metodo": "hibrido",
+      "etiqueta_metodo": "Algoritmo genético híbrido",
+      "escenario": "pequeno",
+      "repeticion": 3,
+      "semilla": 44,
+      "configuracion": {
+        "poblacion": 40,
+        "generaciones": 40,
+        "prob_cruza": 0.85,
+        "prob_mutacion": 0.08,
+        "elitismo": 4,
+        "torneo": 4,
+        "semilla": 44,
+        "mutacion_dirigida": 0.35,
+        "prob_reparacion": 0.25,
+        "inmigrantes": 0.03,
+        "parada_sin_mejora": 0,
+        "objetivo_penalizacion_blanda": 0,
+        "variante": "hibrido",
+        "inicializacion_heuristica": true,
+        "porcentaje_inicializacion_heuristica": 0.3,
+        "busqueda_local": true,
+        "estrategia_busqueda_local": "mejores",
+        "vecindario_busqueda_local": "mixta",
+        "criterio_busqueda_local": "primera",
+        "frecuencia_busqueda_local": 5,
+        "porcentaje_busqueda_local": 0.2,
+        "evaluaciones_busqueda_local": 12,
+        "mejoras_busqueda_local": 2,
+        "mutacion_adaptativa": true,
+        "mutacion_min": 0.02,
+        "mutacion_max": 0.25,
+        "estancamiento_mutacion": 10,
+        "umbral_diversidad": 0.25,
+        "factor_incremento_mutacion": 1.5,
+        "factor_recuperacion_mutacion": 0.85,
+        "presupuesto_evaluaciones": 1640
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 1640,
+      "duracion": 0.43618309998419136,
+      "motivo_parada": "presupuesto_evaluaciones",
+      "factible": true,
+      "duras": 0,
+      "penalizacion_blanda": 426,
+      "fitness": 574,
+      "evaluaciones_hasta_factible": 9,
+      "generacion_primera_factible": 0,
+      "generaciones_ejecutadas": 14,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 0,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 10,
+        "Extensión de jornada": 4,
+        "Sesiones aisladas al final": 0,
+        "Desequilibrio semanal": 13,
+        "Cambios innecesarios de salón": 10,
+        "Fuera de preferencia docente": 4
+      },
+      "historial": [
+        {
+          "generacion": 0,
+          "mejor_fitness": 424,
+          "media_fitness": -914.3,
+          "conflictos_duros": 0,
+          "huecos": 21,
+          "factible": true,
+          "penalizacion_blanda": 576,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 40,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 1,
+          "mejor_fitness": 424,
+          "media_fitness": -510.5,
+          "conflictos_duros": 0,
+          "huecos": 21,
+          "factible": true,
+          "penalizacion_blanda": 576,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 128,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 2,
+          "mejor_fitness": 424,
+          "media_fitness": -632.8,
+          "conflictos_duros": 0,
+          "huecos": 21,
+          "factible": true,
+          "penalizacion_blanda": 576,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 211,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 3,
+          "mejor_fitness": 464,
+          "media_fitness": -369.1,
+          "conflictos_duros": 0,
+          "huecos": 20,
+          "factible": true,
+          "penalizacion_blanda": 536,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 307,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 4,
+          "mejor_fitness": 464,
+          "media_fitness": -114.3,
+          "conflictos_duros": 0,
+          "huecos": 20,
+          "factible": true,
+          "penalizacion_blanda": 536,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 417,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 5,
+          "mejor_fitness": 478,
+          "media_fitness": -96.75,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 522,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 620,
+          "aplicaciones_busqueda_local": 8,
+          "mejoras_busqueda_local": 10,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 6,
+          "mejor_fitness": 478,
+          "media_fitness": -187.45,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 522,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 714,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 7,
+          "mejor_fitness": 478,
+          "media_fitness": -222.45,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 522,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 788,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 8,
+          "mejor_fitness": 478,
+          "media_fitness": -116.75,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 522,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 881,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 9,
+          "mejor_fitness": 478,
+          "media_fitness": -62.9,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 522,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 964,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 10,
+          "mejor_fitness": 564,
+          "media_fitness": -156.35,
+          "conflictos_duros": 0,
+          "huecos": 12,
+          "factible": true,
+          "penalizacion_blanda": 436,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1132,
+          "aplicaciones_busqueda_local": 8,
+          "mejoras_busqueda_local": 11,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 11,
+          "mejor_fitness": 564,
+          "media_fitness": -160.55,
+          "conflictos_duros": 0,
+          "huecos": 12,
+          "factible": true,
+          "penalizacion_blanda": 436,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1186,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 12,
+          "mejor_fitness": 564,
+          "media_fitness": -35.75,
+          "conflictos_duros": 0,
+          "huecos": 12,
+          "factible": true,
+          "penalizacion_blanda": 436,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1278,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 13,
+          "mejor_fitness": 574,
+          "media_fitness": -77.35,
+          "conflictos_duros": 0,
+          "huecos": 10,
+          "factible": true,
+          "penalizacion_blanda": 426,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1379,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 14,
+          "mejor_fitness": 574,
+          "media_fitness": -16.35,
+          "conflictos_duros": 0,
+          "huecos": 10,
+          "factible": true,
+          "penalizacion_blanda": 426,
+          "diversidad": 0.95,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1458,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        }
+      ],
+      "cromosoma": [
+        [
+          3,
+          4,
+          3
+        ],
+        [
+          0,
+          5,
+          2
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          4,
+          5,
+          0
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          4,
+          4,
+          3
+        ],
+        [
+          3,
+          6,
+          2
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          4,
+          7,
+          2
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          4,
+          6,
+          1
+        ],
+        [
+          2,
+          6,
+          2
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          6,
+          3
+        ],
+        [
+          4,
+          6,
+          2
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          7,
+          0
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          5,
+          1
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          6,
+          3
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          2,
+          6,
+          0
+        ],
+        [
+          4,
+          1,
+          0
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          3,
+          1,
+          1
+        ]
+      ],
+      "evolucion": null,
+      "error": null,
+      "evaluaciones_inicializacion": 40,
+      "evaluaciones_evolucion": 1365,
+      "evaluaciones_busqueda_local": 235,
+      "tiempo_inicializacion": 0.17127639998216182,
+      "tiempo_evolucion": 0.2357398999738507,
+      "tiempo_busqueda_local": 0.02891970000928268
+    },
+    {
+      "id": "9cc4315c-83b6-4fc4-b056-9715832aa457",
+      "fecha": "2026-11-16T17:42:46-06:00",
+      "metodo": "aleatorio",
+      "etiqueta_metodo": "Búsqueda aleatoria",
+      "escenario": "pequeno",
+      "repeticion": 3,
+      "semilla": 44,
+      "configuracion": {
+        "presupuesto_evaluaciones": 1640
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 1640,
+      "duracion": 0.26287660002708435,
+      "motivo_parada": "presupuesto_agotado",
+      "factible": false,
+      "duras": 9,
+      "penalizacion_blanda": 484,
+      "fitness": -384,
+      "evaluaciones_hasta_factible": null,
+      "generacion_primera_factible": null,
+      "generaciones_ejecutadas": null,
+      "desglose_duro": {
+        "Colisiones de docente": 2,
+        "Colisiones de salón": 3,
+        "Colisiones de grupo": 1,
+        "Indisponibilidad docente": 0,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 1,
+        "Fuera de periodo permitido": 2,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 13,
+        "Extensión de jornada": 2,
+        "Sesiones aisladas al final": 4,
+        "Desequilibrio semanal": 15,
+        "Cambios innecesarios de salón": 5,
+        "Fuera de preferencia docente": 5
+      },
+      "historial": [],
+      "cromosoma": [
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          4,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          0,
+          6,
+          1
+        ],
+        [
+          4,
+          5,
+          2
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          4,
+          4,
+          2
+        ],
+        [
+          1,
+          4,
+          3
+        ],
+        [
+          4,
+          7,
+          3
+        ],
+        [
+          0,
+          4,
+          3
+        ],
+        [
+          0,
+          7,
+          0
+        ],
+        [
+          3,
+          5,
+          0
+        ],
+        [
+          1,
+          7,
+          3
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          3,
+          6,
+          1
+        ],
+        [
+          3,
+          7,
+          1
+        ],
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          6,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          0,
+          3,
+          3
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          1,
+          7,
+          1
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          2,
+          5,
+          2
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          2,
+          0,
+          1
+        ]
+      ],
+      "evolucion": null,
+      "error": null,
+      "evaluaciones_inicializacion": 0,
+      "evaluaciones_evolucion": 0,
+      "evaluaciones_busqueda_local": 0,
+      "tiempo_inicializacion": 0.0,
+      "tiempo_evolucion": 0.0,
+      "tiempo_busqueda_local": 0.0
+    },
+    {
+      "id": "b03812d3-34d6-45cb-869c-249e667a290d",
+      "fecha": "2026-11-16T17:42:46-06:00",
+      "metodo": "constructivo",
+      "etiqueta_metodo": "Heurística constructiva",
+      "escenario": "pequeno",
+      "repeticion": 3,
+      "semilla": 44,
+      "configuracion": {
+        "presupuesto_evaluaciones": 1640
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 1640,
+      "duracion": 0.2203680999809876,
+      "motivo_parada": "presupuesto_agotado",
+      "factible": false,
+      "duras": 3,
+      "penalizacion_blanda": 228,
+      "fitness": 472,
+      "evaluaciones_hasta_factible": null,
+      "generacion_primera_factible": null,
+      "generaciones_ejecutadas": null,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 1,
+        "Indisponibilidad docente": 1,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 1,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 6,
+        "Extensión de jornada": 0,
+        "Sesiones aisladas al final": 0,
+        "Desequilibrio semanal": 7,
+        "Cambios innecesarios de salón": 5,
+        "Fuera de preferencia docente": 4
+      },
+      "historial": [],
+      "cromosoma": [
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          1,
+          4,
+          3
+        ],
+        [
+          4,
+          2,
+          2
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          4,
+          5,
+          0
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          0,
+          6,
+          2
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          3,
+          4,
+          0
+        ],
+        [
+          4,
+          4,
+          0
+        ],
+        [
+          4,
+          3,
+          3
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          4,
+          5,
+          3
+        ],
+        [
+          3,
+          1,
+          3
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          2,
+          6,
+          1
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          2,
+          5,
+          1
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          3,
+          5,
+          3
+        ],
+        [
+          0,
+          7,
+          2
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          4,
+          5,
+          1
+        ],
+        [
+          0,
+          6,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          4,
+          2
+        ],
+        [
+          0,
+          6,
+          3
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "evolucion": null,
+      "error": null,
+      "evaluaciones_inicializacion": 0,
+      "evaluaciones_evolucion": 0,
+      "evaluaciones_busqueda_local": 0,
+      "tiempo_inicializacion": 0.0,
+      "tiempo_evolucion": 0.0,
+      "tiempo_busqueda_local": 0.0
+    },
+    {
+      "id": "8c80699a-da93-452e-8e75-e5f243dc9901",
+      "fecha": "2026-11-16T17:42:46-06:00",
+      "metodo": "genetico",
+      "etiqueta_metodo": "Algoritmo genético",
+      "escenario": "pequeno",
+      "repeticion": 4,
+      "semilla": 45,
+      "configuracion": {
+        "poblacion": 40,
+        "generaciones": 40,
+        "prob_cruza": 0.85,
+        "prob_mutacion": 0.08,
+        "elitismo": 4,
+        "torneo": 4,
+        "semilla": 45,
+        "mutacion_dirigida": 0.35,
+        "prob_reparacion": 0.25,
+        "inmigrantes": 0.03,
+        "parada_sin_mejora": 0,
+        "objetivo_penalizacion_blanda": 0,
+        "variante": "clasico",
+        "inicializacion_heuristica": false,
+        "porcentaje_inicializacion_heuristica": 0.3,
+        "busqueda_local": false,
+        "estrategia_busqueda_local": "mejores",
+        "vecindario_busqueda_local": "mixta",
+        "criterio_busqueda_local": "primera",
+        "frecuencia_busqueda_local": 5,
+        "porcentaje_busqueda_local": 0.2,
+        "evaluaciones_busqueda_local": 12,
+        "mejoras_busqueda_local": 2,
+        "mutacion_adaptativa": false,
+        "mutacion_min": 0.02,
+        "mutacion_max": 0.25,
+        "estancamiento_mutacion": 10,
+        "umbral_diversidad": 0.25,
+        "factor_incremento_mutacion": 1.5,
+        "factor_recuperacion_mutacion": 0.85,
+        "presupuesto_evaluaciones": 1640
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 1640,
+      "duracion": 0.2820112999761477,
+      "motivo_parada": "presupuesto_evaluaciones",
+      "factible": true,
+      "duras": 0,
+      "penalizacion_blanda": 490,
+      "fitness": 510,
+      "evaluaciones_hasta_factible": 663,
+      "generacion_primera_factible": 8,
+      "generaciones_ejecutadas": 18,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 0,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 12,
+        "Extensión de jornada": 5,
+        "Sesiones aisladas al final": 4,
+        "Desequilibrio semanal": 12,
+        "Cambios innecesarios de salón": 7,
+        "Fuera de preferencia docente": 5
+      },
+      "historial": [
+        {
+          "generacion": 0,
+          "mejor_fitness": -528,
+          "media_fitness": -1545.3,
+          "conflictos_duros": 9,
+          "huecos": 20,
+          "factible": false,
+          "penalizacion_blanda": 628,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 40,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 1,
+          "mejor_fitness": -528,
+          "media_fitness": -1161.35,
+          "conflictos_duros": 9,
+          "huecos": 20,
+          "factible": false,
+          "penalizacion_blanda": 628,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 113,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 2,
+          "mejor_fitness": -518,
+          "media_fitness": -971.1,
+          "conflictos_duros": 8,
+          "huecos": 27,
+          "factible": false,
+          "penalizacion_blanda": 718,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 206,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 3,
+          "mejor_fitness": -100,
+          "media_fitness": -734.95,
+          "conflictos_duros": 5,
+          "huecos": 18,
+          "factible": false,
+          "penalizacion_blanda": 600,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 302,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 4,
+          "mejor_fitness": -220,
+          "media_fitness": -608.25,
+          "conflictos_duros": 4,
+          "huecos": 29,
+          "factible": false,
+          "penalizacion_blanda": 820,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 392,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 5,
+          "mejor_fitness": 50,
+          "media_fitness": -485.15,
+          "conflictos_duros": 2,
+          "huecos": 25,
+          "factible": false,
+          "penalizacion_blanda": 750,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 476,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 6,
+          "mejor_fitness": 88,
+          "media_fitness": -491.9,
+          "conflictos_duros": 1,
+          "huecos": 27,
+          "factible": false,
+          "penalizacion_blanda": 812,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 541,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 7,
+          "mejor_fitness": 88,
+          "media_fitness": -476.05,
+          "conflictos_duros": 1,
+          "huecos": 27,
+          "factible": false,
+          "penalizacion_blanda": 812,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 624,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 8,
+          "mejor_fitness": 350,
+          "media_fitness": -445.7,
+          "conflictos_duros": 0,
+          "huecos": 19,
+          "factible": true,
+          "penalizacion_blanda": 650,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 720,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 9,
+          "mejor_fitness": 388,
+          "media_fitness": -216.5,
+          "conflictos_duros": 0,
+          "huecos": 18,
+          "factible": true,
+          "penalizacion_blanda": 612,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 804,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 10,
+          "mejor_fitness": 388,
+          "media_fitness": -173.1,
+          "conflictos_duros": 0,
+          "huecos": 18,
+          "factible": true,
+          "penalizacion_blanda": 612,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 897,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 11,
+          "mejor_fitness": 388,
+          "media_fitness": -18.3,
+          "conflictos_duros": 0,
+          "huecos": 18,
+          "factible": true,
+          "penalizacion_blanda": 612,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 992,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 12,
+          "mejor_fitness": 388,
+          "media_fitness": -87,
+          "conflictos_duros": 0,
+          "huecos": 18,
+          "factible": true,
+          "penalizacion_blanda": 612,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1090,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 13,
+          "mejor_fitness": 408,
+          "media_fitness": 64.2,
+          "conflictos_duros": 0,
+          "huecos": 17,
+          "factible": true,
+          "penalizacion_blanda": 592,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1179,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 14,
+          "mejor_fitness": 408,
+          "media_fitness": 64.1,
+          "conflictos_duros": 0,
+          "huecos": 17,
+          "factible": true,
+          "penalizacion_blanda": 592,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1271,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 15,
+          "mejor_fitness": 408,
+          "media_fitness": 47.1,
+          "conflictos_duros": 0,
+          "huecos": 17,
+          "factible": true,
+          "penalizacion_blanda": 592,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1347,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 16,
+          "mejor_fitness": 408,
+          "media_fitness": 69.35,
+          "conflictos_duros": 0,
+          "huecos": 17,
+          "factible": true,
+          "penalizacion_blanda": 592,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1433,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 17,
+          "mejor_fitness": 408,
+          "media_fitness": 118.35,
+          "conflictos_duros": 0,
+          "huecos": 17,
+          "factible": true,
+          "penalizacion_blanda": 592,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1533,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 18,
+          "mejor_fitness": 510,
+          "media_fitness": 124.8,
+          "conflictos_duros": 0,
+          "huecos": 12,
+          "factible": true,
+          "penalizacion_blanda": 490,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1627,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        }
+      ],
+      "cromosoma": [
+        [
+          3,
+          4,
+          3
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          4,
+          5,
+          2
+        ],
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          2,
+          7,
+          1
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          4,
+          7,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          6,
+          2
+        ],
+        [
+          4,
+          3,
+          3
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          4,
+          6,
+          1
+        ],
+        [
+          4,
+          5,
+          3
+        ],
+        [
+          3,
+          7,
+          3
+        ],
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          2,
+          4,
+          3
+        ],
+        [
+          0,
+          7,
+          2
+        ],
+        [
+          4,
+          4,
+          0
+        ],
+        [
+          3,
+          7,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          3,
+          3
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          1,
+          7,
+          0
+        ],
+        [
+          1,
+          5,
+          1
+        ]
+      ],
+      "evolucion": null,
+      "error": null,
+      "evaluaciones_inicializacion": 40,
+      "evaluaciones_evolucion": 1600,
+      "evaluaciones_busqueda_local": 0,
+      "tiempo_inicializacion": 0.017625700042117387,
+      "tiempo_evolucion": 0.2641273000044748,
+      "tiempo_busqueda_local": 0.0
+    },
+    {
+      "id": "f2fcc690-1f4b-4103-8b7b-cf736240a961",
+      "fecha": "2026-11-16T17:42:47-06:00",
+      "metodo": "hibrido",
+      "etiqueta_metodo": "Algoritmo genético híbrido",
+      "escenario": "pequeno",
+      "repeticion": 4,
+      "semilla": 45,
+      "configuracion": {
+        "poblacion": 40,
+        "generaciones": 40,
+        "prob_cruza": 0.85,
+        "prob_mutacion": 0.08,
+        "elitismo": 4,
+        "torneo": 4,
+        "semilla": 45,
+        "mutacion_dirigida": 0.35,
+        "prob_reparacion": 0.25,
+        "inmigrantes": 0.03,
+        "parada_sin_mejora": 0,
+        "objetivo_penalizacion_blanda": 0,
+        "variante": "hibrido",
+        "inicializacion_heuristica": true,
+        "porcentaje_inicializacion_heuristica": 0.3,
+        "busqueda_local": true,
+        "estrategia_busqueda_local": "mejores",
+        "vecindario_busqueda_local": "mixta",
+        "criterio_busqueda_local": "primera",
+        "frecuencia_busqueda_local": 5,
+        "porcentaje_busqueda_local": 0.2,
+        "evaluaciones_busqueda_local": 12,
+        "mejoras_busqueda_local": 2,
+        "mutacion_adaptativa": true,
+        "mutacion_min": 0.02,
+        "mutacion_max": 0.25,
+        "estancamiento_mutacion": 10,
+        "umbral_diversidad": 0.25,
+        "factor_incremento_mutacion": 1.5,
+        "factor_recuperacion_mutacion": 0.85,
+        "presupuesto_evaluaciones": 1640
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 1640,
+      "duracion": 0.43462020001607016,
+      "motivo_parada": "presupuesto_evaluaciones",
+      "factible": true,
+      "duras": 0,
+      "penalizacion_blanda": 250,
+      "fitness": 750,
+      "evaluaciones_hasta_factible": 11,
+      "generacion_primera_factible": 0,
+      "generaciones_ejecutadas": 15,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 0,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 6,
+        "Extensión de jornada": 1,
+        "Sesiones aisladas al final": 0,
+        "Desequilibrio semanal": 8,
+        "Cambios innecesarios de salón": 7,
+        "Fuera de preferencia docente": 1
+      },
+      "historial": [
+        {
+          "generacion": 0,
+          "mejor_fitness": 374,
+          "media_fitness": -1037.85,
+          "conflictos_duros": 0,
+          "huecos": 21,
+          "factible": true,
+          "penalizacion_blanda": 626,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 40,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 1,
+          "mejor_fitness": 374,
+          "media_fitness": -422.25,
+          "conflictos_duros": 0,
+          "huecos": 21,
+          "factible": true,
+          "penalizacion_blanda": 626,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 144,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 2,
+          "mejor_fitness": 486,
+          "media_fitness": -367.4,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 514,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 236,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 3,
+          "mejor_fitness": 486,
+          "media_fitness": -304.6,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 514,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 324,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 4,
+          "mejor_fitness": 520,
+          "media_fitness": -229.25,
+          "conflictos_duros": 0,
+          "huecos": 14,
+          "factible": true,
+          "penalizacion_blanda": 480,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 401,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 5,
+          "mejor_fitness": 568,
+          "media_fitness": -248.65,
+          "conflictos_duros": 0,
+          "huecos": 13,
+          "factible": true,
+          "penalizacion_blanda": 432,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 558,
+          "aplicaciones_busqueda_local": 8,
+          "mejoras_busqueda_local": 11,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 6,
+          "mejor_fitness": 644,
+          "media_fitness": -60,
+          "conflictos_duros": 0,
+          "huecos": 9,
+          "factible": true,
+          "penalizacion_blanda": 356,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 647,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 7,
+          "mejor_fitness": 644,
+          "media_fitness": 302.3,
+          "conflictos_duros": 0,
+          "huecos": 9,
+          "factible": true,
+          "penalizacion_blanda": 356,
+          "diversidad": 0.95,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 716,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 8,
+          "mejor_fitness": 644,
+          "media_fitness": 284.75,
+          "conflictos_duros": 0,
+          "huecos": 9,
+          "factible": true,
+          "penalizacion_blanda": 356,
+          "diversidad": 0.95,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 808,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 9,
+          "mejor_fitness": 644,
+          "media_fitness": 279.1,
+          "conflictos_duros": 0,
+          "huecos": 9,
+          "factible": true,
+          "penalizacion_blanda": 356,
+          "diversidad": 0.925,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 894,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 10,
+          "mejor_fitness": 708,
+          "media_fitness": 365.95,
+          "conflictos_duros": 0,
+          "huecos": 7,
+          "factible": true,
+          "penalizacion_blanda": 292,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1063,
+          "aplicaciones_busqueda_local": 8,
+          "mejoras_busqueda_local": 8,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 11,
+          "mejor_fitness": 708,
+          "media_fitness": 331.85,
+          "conflictos_duros": 0,
+          "huecos": 7,
+          "factible": true,
+          "penalizacion_blanda": 292,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1146,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 12,
+          "mejor_fitness": 714,
+          "media_fitness": 403.4,
+          "conflictos_duros": 0,
+          "huecos": 6,
+          "factible": true,
+          "penalizacion_blanda": 286,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1242,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 13,
+          "mejor_fitness": 720,
+          "media_fitness": 388.4,
+          "conflictos_duros": 0,
+          "huecos": 7,
+          "factible": true,
+          "penalizacion_blanda": 280,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1327,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 14,
+          "mejor_fitness": 728,
+          "media_fitness": 426.15,
+          "conflictos_duros": 0,
+          "huecos": 6,
+          "factible": true,
+          "penalizacion_blanda": 272,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1442,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 15,
+          "mejor_fitness": 750,
+          "media_fitness": 366.55,
+          "conflictos_duros": 0,
+          "huecos": 6,
+          "factible": true,
+          "penalizacion_blanda": 250,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1605,
+          "aplicaciones_busqueda_local": 8,
+          "mejoras_busqueda_local": 4,
+          "mejoro_global": true,
+          "estancada": false
+        }
+      ],
+      "cromosoma": [
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          3,
+          4,
+          3
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          4,
+          2,
+          2
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          1,
+          5,
+          3
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          4,
+          5,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          0,
+          6,
+          3
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          3,
+          4,
+          2
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          1,
+          3,
+          0
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          4,
+          4,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          4,
+          6,
+          1
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          4,
+          7,
+          3
+        ],
+        [
+          2,
+          2,
+          3
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "evolucion": null,
+      "error": null,
+      "evaluaciones_inicializacion": 40,
+      "evaluaciones_evolucion": 1341,
+      "evaluaciones_busqueda_local": 259,
+      "tiempo_inicializacion": 0.17268429999239743,
+      "tiempo_evolucion": 0.22008190001361072,
+      "tiempo_busqueda_local": 0.04162149998592213
+    },
+    {
+      "id": "9cfa4f73-e8b8-432c-a457-2880cd98d31d",
+      "fecha": "2026-11-16T17:42:47-06:00",
+      "metodo": "aleatorio",
+      "etiqueta_metodo": "Búsqueda aleatoria",
+      "escenario": "pequeno",
+      "repeticion": 4,
+      "semilla": 45,
+      "configuracion": {
+        "presupuesto_evaluaciones": 1640
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 1640,
+      "duracion": 0.26893620000919327,
+      "motivo_parada": "presupuesto_agotado",
+      "factible": false,
+      "duras": 9,
+      "penalizacion_blanda": 570,
+      "fitness": -470,
+      "evaluaciones_hasta_factible": null,
+      "generacion_primera_factible": null,
+      "generaciones_ejecutadas": null,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 4,
+        "Colisiones de grupo": 4,
+        "Indisponibilidad docente": 1,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 18,
+        "Extensión de jornada": 5,
+        "Sesiones aisladas al final": 3,
+        "Desequilibrio semanal": 11,
+        "Cambios innecesarios de salón": 6,
+        "Fuera de preferencia docente": 2
+      },
+      "historial": [],
+      "cromosoma": [
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          1,
+          5,
+          3
+        ],
+        [
+          0,
+          5,
+          1
+        ],
+        [
+          2,
+          7,
+          1
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          3,
+          4,
+          2
+        ],
+        [
+          4,
+          7,
+          2
+        ],
+        [
+          1,
+          7,
+          3
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          1,
+          4,
+          3
+        ],
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          2,
+          6,
+          3
+        ],
+        [
+          2,
+          7,
+          3
+        ],
+        [
+          0,
+          6,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          4,
+          5,
+          3
+        ],
+        [
+          4,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          2,
+          6,
+          0
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          0,
+          7,
+          2
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          1,
+          5,
+          1
+        ]
+      ],
+      "evolucion": null,
+      "error": null,
+      "evaluaciones_inicializacion": 0,
+      "evaluaciones_evolucion": 0,
+      "evaluaciones_busqueda_local": 0,
+      "tiempo_inicializacion": 0.0,
+      "tiempo_evolucion": 0.0,
+      "tiempo_busqueda_local": 0.0
+    },
+    {
+      "id": "52027440-70c2-4197-b147-35e661502f9e",
+      "fecha": "2026-11-16T17:42:47-06:00",
+      "metodo": "constructivo",
+      "etiqueta_metodo": "Heurística constructiva",
+      "escenario": "pequeno",
+      "repeticion": 4,
+      "semilla": 45,
+      "configuracion": {
+        "presupuesto_evaluaciones": 1640
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 1640,
+      "duracion": 0.2181332999607548,
+      "motivo_parada": "presupuesto_agotado",
+      "factible": false,
+      "duras": 2,
+      "penalizacion_blanda": 220,
+      "fitness": 580,
+      "evaluaciones_hasta_factible": null,
+      "generacion_primera_factible": null,
+      "generaciones_ejecutadas": null,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 1,
+        "Indisponibilidad docente": 1,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 5,
+        "Extensión de jornada": 1,
+        "Sesiones aisladas al final": 0,
+        "Desequilibrio semanal": 9,
+        "Cambios innecesarios de salón": 5,
+        "Fuera de preferencia docente": 2
+      },
+      "historial": [],
+      "cromosoma": [
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          3,
+          4,
+          3
+        ],
+        [
+          4,
+          3,
+          2
+        ],
+        [
+          2,
+          6,
+          2
+        ],
+        [
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          4,
+          3
+        ],
+        [
+          3,
+          6,
+          3
+        ],
+        [
+          4,
+          5,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          3,
+          1,
+          3
+        ],
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          4,
+          6,
+          0
+        ],
+        [
+          4,
+          7,
+          0
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          5,
+          1
+        ],
+        [
+          3,
+          3,
+          0
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          4,
+          6,
+          2
+        ],
+        [
+          0,
+          3,
+          3
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          1,
+          3,
+          0
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          6,
+          1
+        ],
+        [
+          2,
+          4,
+          2
+        ],
+        [
+          0,
+          6,
+          2
+        ],
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          0,
+          5,
+          1
+        ]
+      ],
+      "evolucion": null,
+      "error": null,
+      "evaluaciones_inicializacion": 0,
+      "evaluaciones_evolucion": 0,
+      "evaluaciones_busqueda_local": 0,
+      "tiempo_inicializacion": 0.0,
+      "tiempo_evolucion": 0.0,
+      "tiempo_busqueda_local": 0.0
+    },
+    {
+      "id": "7c6124b5-1997-4058-9dbf-b9e62598cf3c",
+      "fecha": "2026-11-16T17:42:48-06:00",
+      "metodo": "genetico",
+      "etiqueta_metodo": "Algoritmo genético",
+      "escenario": "pequeno",
+      "repeticion": 5,
+      "semilla": 46,
+      "configuracion": {
+        "poblacion": 40,
+        "generaciones": 40,
+        "prob_cruza": 0.85,
+        "prob_mutacion": 0.08,
+        "elitismo": 4,
+        "torneo": 4,
+        "semilla": 46,
+        "mutacion_dirigida": 0.35,
+        "prob_reparacion": 0.25,
+        "inmigrantes": 0.03,
+        "parada_sin_mejora": 0,
+        "objetivo_penalizacion_blanda": 0,
+        "variante": "clasico",
+        "inicializacion_heuristica": false,
+        "porcentaje_inicializacion_heuristica": 0.3,
+        "busqueda_local": false,
+        "estrategia_busqueda_local": "mejores",
+        "vecindario_busqueda_local": "mixta",
+        "criterio_busqueda_local": "primera",
+        "frecuencia_busqueda_local": 5,
+        "porcentaje_busqueda_local": 0.2,
+        "evaluaciones_busqueda_local": 12,
+        "mejoras_busqueda_local": 2,
+        "mutacion_adaptativa": false,
+        "mutacion_min": 0.02,
+        "mutacion_max": 0.25,
+        "estancamiento_mutacion": 10,
+        "umbral_diversidad": 0.25,
+        "factor_incremento_mutacion": 1.5,
+        "factor_recuperacion_mutacion": 0.85,
+        "presupuesto_evaluaciones": 1640
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 1640,
+      "duracion": 0.2822026999783702,
+      "motivo_parada": "presupuesto_evaluaciones",
+      "factible": true,
+      "duras": 0,
+      "penalizacion_blanda": 502,
+      "fitness": 498,
+      "evaluaciones_hasta_factible": 598,
+      "generacion_primera_factible": 7,
+      "generaciones_ejecutadas": 18,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 0,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 16,
+        "Extensión de jornada": 1,
+        "Sesiones aisladas al final": 0,
+        "Desequilibrio semanal": 7,
+        "Cambios innecesarios de salón": 10,
+        "Fuera de preferencia docente": 8
+      },
+      "historial": [
+        {
+          "generacion": 0,
+          "mejor_fitness": -724,
+          "media_fitness": -1605.3,
+          "conflictos_duros": 12,
+          "huecos": 14,
+          "factible": false,
+          "penalizacion_blanda": 524,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 40,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 1,
+          "mejor_fitness": -380,
+          "media_fitness": -1126.85,
+          "conflictos_duros": 6,
+          "huecos": 28,
+          "factible": false,
+          "penalizacion_blanda": 780,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 117,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 2,
+          "mejor_fitness": -180,
+          "media_fitness": -787.9,
+          "conflictos_duros": 5,
+          "huecos": 22,
+          "factible": false,
+          "penalizacion_blanda": 680,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 203,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 3,
+          "mejor_fitness": -144,
+          "media_fitness": -667.2,
+          "conflictos_duros": 4,
+          "huecos": 25,
+          "factible": false,
+          "penalizacion_blanda": 744,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 285,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 4,
+          "mejor_fitness": -144,
+          "media_fitness": -605.4,
+          "conflictos_duros": 4,
+          "huecos": 25,
+          "factible": false,
+          "penalizacion_blanda": 744,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 367,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 5,
+          "mejor_fitness": 220,
+          "media_fitness": -502.7,
+          "conflictos_duros": 1,
+          "huecos": 22,
+          "factible": false,
+          "penalizacion_blanda": 680,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 453,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 6,
+          "mejor_fitness": 220,
+          "media_fitness": -360.35,
+          "conflictos_duros": 1,
+          "huecos": 22,
+          "factible": false,
+          "penalizacion_blanda": 680,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 546,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 7,
+          "mejor_fitness": 256,
+          "media_fitness": -239.15,
+          "conflictos_duros": 0,
+          "huecos": 26,
+          "factible": true,
+          "penalizacion_blanda": 744,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 642,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 8,
+          "mejor_fitness": 256,
+          "media_fitness": -178.5,
+          "conflictos_duros": 0,
+          "huecos": 26,
+          "factible": true,
+          "penalizacion_blanda": 744,
+          "diversidad": 0.9,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 738,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 9,
+          "mejor_fitness": 322,
+          "media_fitness": -101.45,
+          "conflictos_duros": 0,
+          "huecos": 23,
+          "factible": true,
+          "penalizacion_blanda": 678,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 830,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 10,
+          "mejor_fitness": 364,
+          "media_fitness": -1.75,
+          "conflictos_duros": 0,
+          "huecos": 19,
+          "factible": true,
+          "penalizacion_blanda": 636,
+          "diversidad": 0.95,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 906,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 11,
+          "mejor_fitness": 452,
+          "media_fitness": 84.25,
+          "conflictos_duros": 0,
+          "huecos": 14,
+          "factible": true,
+          "penalizacion_blanda": 548,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1000,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 12,
+          "mejor_fitness": 484,
+          "media_fitness": 99.25,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 516,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1078,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 13,
+          "mejor_fitness": 484,
+          "media_fitness": 105.65,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 516,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1167,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 14,
+          "mejor_fitness": 484,
+          "media_fitness": 152.9,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 516,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1259,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 15,
+          "mejor_fitness": 484,
+          "media_fitness": 139.2,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 516,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1348,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 16,
+          "mejor_fitness": 490,
+          "media_fitness": 140.8,
+          "conflictos_duros": 0,
+          "huecos": 15,
+          "factible": true,
+          "penalizacion_blanda": 510,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1437,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 17,
+          "mejor_fitness": 490,
+          "media_fitness": 171,
+          "conflictos_duros": 0,
+          "huecos": 15,
+          "factible": true,
+          "penalizacion_blanda": 510,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1510,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 18,
+          "mejor_fitness": 498,
+          "media_fitness": 152.3,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 502,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1585,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        }
+      ],
+      "cromosoma": [
+        [
+          0,
+          6,
+          2
+        ],
+        [
+          3,
+          6,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          4,
+          3,
+          2
+        ],
+        [
+          1,
+          6,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          4,
+          3
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          4,
+          4,
+          3
+        ],
+        [
+          1,
+          4,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          3,
+          5,
+          2
+        ],
+        [
+          4,
+          6,
+          0
+        ],
+        [
+          4,
+          1,
+          0
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          6,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          2,
+          7,
+          3
+        ],
+        [
+          4,
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          2,
+          6,
+          0
+        ],
+        [
+          1,
+          5,
+          0
+        ],
+        [
+          0,
+          6,
+          0
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          1,
+          6,
+          2
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          1,
+          7,
+          1
+        ]
+      ],
+      "evolucion": null,
+      "error": null,
+      "evaluaciones_inicializacion": 40,
+      "evaluaciones_evolucion": 1600,
+      "evaluaciones_busqueda_local": 0,
+      "tiempo_inicializacion": 0.017210900026839226,
+      "tiempo_evolucion": 0.2647111999685876,
+      "tiempo_busqueda_local": 0.0
+    },
+    {
+      "id": "cff081d7-442e-449f-8373-97d92fbff9fb",
+      "fecha": "2026-11-16T17:42:48-06:00",
+      "metodo": "hibrido",
+      "etiqueta_metodo": "Algoritmo genético híbrido",
+      "escenario": "pequeno",
+      "repeticion": 5,
+      "semilla": 46,
+      "configuracion": {
+        "poblacion": 40,
+        "generaciones": 40,
+        "prob_cruza": 0.85,
+        "prob_mutacion": 0.08,
+        "elitismo": 4,
+        "torneo": 4,
+        "semilla": 46,
+        "mutacion_dirigida": 0.35,
+        "prob_reparacion": 0.25,
+        "inmigrantes": 0.03,
+        "parada_sin_mejora": 0,
+        "objetivo_penalizacion_blanda": 0,
+        "variante": "hibrido",
+        "inicializacion_heuristica": true,
+        "porcentaje_inicializacion_heuristica": 0.3,
+        "busqueda_local": true,
+        "estrategia_busqueda_local": "mejores",
+        "vecindario_busqueda_local": "mixta",
+        "criterio_busqueda_local": "primera",
+        "frecuencia_busqueda_local": 5,
+        "porcentaje_busqueda_local": 0.2,
+        "evaluaciones_busqueda_local": 12,
+        "mejoras_busqueda_local": 2,
+        "mutacion_adaptativa": true,
+        "mutacion_min": 0.02,
+        "mutacion_max": 0.25,
+        "estancamiento_mutacion": 10,
+        "umbral_diversidad": 0.25,
+        "factor_incremento_mutacion": 1.5,
+        "factor_recuperacion_mutacion": 0.85,
+        "presupuesto_evaluaciones": 1640
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 1640,
+      "duracion": 0.43178899999475107,
+      "motivo_parada": "presupuesto_evaluaciones",
+      "factible": true,
+      "duras": 0,
+      "penalizacion_blanda": 284,
+      "fitness": 716,
+      "evaluaciones_hasta_factible": 3,
+      "generacion_primera_factible": 0,
+      "generaciones_ejecutadas": 14,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 0,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 6,
+        "Extensión de jornada": 0,
+        "Sesiones aisladas al final": 2,
+        "Desequilibrio semanal": 10,
+        "Cambios innecesarios de salón": 6,
+        "Fuera de preferencia docente": 5
+      },
+      "historial": [
+        {
+          "generacion": 0,
+          "mejor_fitness": 532,
+          "media_fitness": -1060.75,
+          "conflictos_duros": 0,
+          "huecos": 14,
+          "factible": true,
+          "penalizacion_blanda": 468,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 40,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 1,
+          "mejor_fitness": 532,
+          "media_fitness": -454.8,
+          "conflictos_duros": 0,
+          "huecos": 14,
+          "factible": true,
+          "penalizacion_blanda": 468,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 126,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 2,
+          "mejor_fitness": 532,
+          "media_fitness": -362,
+          "conflictos_duros": 0,
+          "huecos": 14,
+          "factible": true,
+          "penalizacion_blanda": 468,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 234,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 3,
+          "mejor_fitness": 532,
+          "media_fitness": -374.3,
+          "conflictos_duros": 0,
+          "huecos": 14,
+          "factible": true,
+          "penalizacion_blanda": 468,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 343,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 4,
+          "mejor_fitness": 532,
+          "media_fitness": -128.25,
+          "conflictos_duros": 0,
+          "huecos": 14,
+          "factible": true,
+          "penalizacion_blanda": 468,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 418,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 5,
+          "mejor_fitness": 584,
+          "media_fitness": 25.2,
+          "conflictos_duros": 0,
+          "huecos": 12,
+          "factible": true,
+          "penalizacion_blanda": 416,
+          "diversidad": 0.975,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 602,
+          "aplicaciones_busqueda_local": 8,
+          "mejoras_busqueda_local": 7,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 6,
+          "mejor_fitness": 584,
+          "media_fitness": 153.65,
+          "conflictos_duros": 0,
+          "huecos": 12,
+          "factible": true,
+          "penalizacion_blanda": 416,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 700,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 7,
+          "mejor_fitness": 586,
+          "media_fitness": 242.9,
+          "conflictos_duros": 0,
+          "huecos": 12,
+          "factible": true,
+          "penalizacion_blanda": 414,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 764,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 8,
+          "mejor_fitness": 662,
+          "media_fitness": 304.15,
+          "conflictos_duros": 0,
+          "huecos": 8,
+          "factible": true,
+          "penalizacion_blanda": 338,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 880,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 9,
+          "mejor_fitness": 678,
+          "media_fitness": 284.15,
+          "conflictos_duros": 0,
+          "huecos": 7,
+          "factible": true,
+          "penalizacion_blanda": 322,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 958,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 10,
+          "mejor_fitness": 698,
+          "media_fitness": 358.55,
+          "conflictos_duros": 0,
+          "huecos": 6,
+          "factible": true,
+          "penalizacion_blanda": 302,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1115,
+          "aplicaciones_busqueda_local": 8,
+          "mejoras_busqueda_local": 4,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 11,
+          "mejor_fitness": 706,
+          "media_fitness": 419.9,
+          "conflictos_duros": 0,
+          "huecos": 7,
+          "factible": true,
+          "penalizacion_blanda": 294,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1182,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 12,
+          "mejor_fitness": 706,
+          "media_fitness": 286.9,
+          "conflictos_duros": 0,
+          "huecos": 7,
+          "factible": true,
+          "penalizacion_blanda": 294,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1266,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        },
+        {
+          "generacion": 13,
+          "mejor_fitness": 716,
+          "media_fitness": 315.05,
+          "conflictos_duros": 0,
+          "huecos": 6,
+          "factible": true,
+          "penalizacion_blanda": 284,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1378,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": true,
+          "estancada": false
+        },
+        {
+          "generacion": 14,
+          "mejor_fitness": 716,
+          "media_fitness": 295.1,
+          "conflictos_duros": 0,
+          "huecos": 6,
+          "factible": true,
+          "penalizacion_blanda": 284,
+          "diversidad": 1.0,
+          "prob_mutacion_usada": 0.08,
+          "evaluaciones_acumuladas": 1479,
+          "aplicaciones_busqueda_local": 0,
+          "mejoras_busqueda_local": 0,
+          "mejoro_global": false,
+          "estancada": false
+        }
+      ],
+      "cromosoma": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          5,
+          2
+        ],
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          3,
+          6,
+          1
+        ],
+        [
+          0,
+          3,
+          3
+        ],
+        [
+          4,
+          4,
+          3
+        ],
+        [
+          2,
+          2,
+          3
+        ],
+        [
+          3,
+          5,
+          2
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          4,
+          3,
+          2
+        ],
+        [
+          3,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          1,
+          6,
+          1
+        ],
+        [
+          1,
+          7,
+          0
+        ],
+        [
+          1,
+          4,
+          3
+        ],
+        [
+          2,
+          7,
+          3
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          3,
+          6,
+          2
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          4,
+          6,
+          0
+        ],
+        [
+          3,
+          5,
+          1
+        ],
+        [
+          0,
+          7,
+          2
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          4,
+          5,
+          0
+        ],
+        [
+          1,
+          3,
+          1
+        ]
+      ],
+      "evolucion": null,
+      "error": null,
+      "evaluaciones_inicializacion": 40,
+      "evaluaciones_evolucion": 1362,
+      "evaluaciones_busqueda_local": 238,
+      "tiempo_inicializacion": 0.172420900024008,
+      "tiempo_evolucion": 0.23115690000122413,
+      "tiempo_busqueda_local": 0.027921399974729866
+    },
+    {
+      "id": "c2093bed-1929-4c4c-922e-c2c8b5af0de7",
+      "fecha": "2026-11-16T17:42:48-06:00",
+      "metodo": "aleatorio",
+      "etiqueta_metodo": "Búsqueda aleatoria",
+      "escenario": "pequeno",
+      "repeticion": 5,
+      "semilla": 46,
+      "configuracion": {
+        "presupuesto_evaluaciones": 1640
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 1640,
+      "duracion": 0.26843510003527626,
+      "motivo_parada": "presupuesto_agotado",
+      "factible": false,
+      "duras": 8,
+      "penalizacion_blanda": 498,
+      "fitness": -298,
+      "evaluaciones_hasta_factible": null,
+      "generacion_primera_factible": null,
+      "generaciones_ejecutadas": null,
+      "desglose_duro": {
+        "Colisiones de docente": 1,
+        "Colisiones de salón": 2,
+        "Colisiones de grupo": 3,
+        "Indisponibilidad docente": 1,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 1,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 13,
+        "Extensión de jornada": 3,
+        "Sesiones aisladas al final": 3,
+        "Desequilibrio semanal": 10,
+        "Cambios innecesarios de salón": 9,
+        "Fuera de preferencia docente": 7
+      },
+      "historial": [],
+      "cromosoma": [
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          1,
+          5,
+          2
+        ],
+        [
+          4,
+          4,
+          2
+        ],
+        [
+          4,
+          6,
+          3
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          3,
+          3,
+          0
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          3
+        ],
+        [
+          3,
+          4,
+          2
+        ],
+        [
+          1,
+          7,
+          3
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          2,
+          7,
+          0
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          4,
+          3,
+          2
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          4,
+          6,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          3,
+          5,
+          1
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          2,
+          6,
+          1
+        ],
+        [
+          4,
+          3,
+          3
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          4,
+          5,
+          2
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          2,
+          7,
+          2
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          3,
+          7,
+          1
+        ]
+      ],
+      "evolucion": null,
+      "error": null,
+      "evaluaciones_inicializacion": 0,
+      "evaluaciones_evolucion": 0,
+      "evaluaciones_busqueda_local": 0,
+      "tiempo_inicializacion": 0.0,
+      "tiempo_evolucion": 0.0,
+      "tiempo_busqueda_local": 0.0
+    },
+    {
+      "id": "9899ba5b-4c2e-43cb-9f9f-53fce7e9600e",
+      "fecha": "2026-11-16T17:42:49-06:00",
+      "metodo": "constructivo",
+      "etiqueta_metodo": "Heurística constructiva",
+      "escenario": "pequeno",
+      "repeticion": 5,
+      "semilla": 46,
+      "configuracion": {
+        "presupuesto_evaluaciones": 1640
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 1640,
+      "duracion": 0.21872189996065572,
+      "motivo_parada": "presupuesto_agotado",
+      "factible": false,
+      "duras": 3,
+      "penalizacion_blanda": 280,
+      "fitness": 420,
+      "evaluaciones_hasta_factible": null,
+      "generacion_primera_factible": null,
+      "generaciones_ejecutadas": null,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 2,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 1,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 7,
+        "Extensión de jornada": 2,
+        "Sesiones aisladas al final": 1,
+        "Desequilibrio semanal": 9,
+        "Cambios innecesarios de salón": 5,
+        "Fuera de preferencia docente": 2
+      },
+      "historial": [],
+      "cromosoma": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          3,
+          4,
+          3
+        ],
+        [
+          2,
+          2,
+          3
+        ],
+        [
+          4,
+          4,
+          1
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          4,
+          3,
+          3
+        ],
+        [
+          4,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          1,
+          4,
+          3
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          0,
+          6,
+          2
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          3,
+          5,
+          1
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          2,
+          6,
+          2
+        ],
+        [
+          0,
+          5,
+          2
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          3,
+          6,
+          1
+        ],
+        [
+          2,
+          7,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          5,
+          3
+        ],
+        [
+          2,
+          6,
+          3
+        ],
+        [
+          0,
+          4,
+          3
+        ],
+        [
+          3,
+          5,
+          2
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          4,
+          7,
+          1
+        ],
+        [
+          0,
+          7,
+          0
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          1,
+          6,
+          2
+        ],
+        [
+          2,
+          5,
+          3
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          3,
+          4,
+          0
+        ]
+      ],
+      "evolucion": null,
+      "error": null,
+      "evaluaciones_inicializacion": 0,
+      "evaluaciones_evolucion": 0,
+      "evaluaciones_busqueda_local": 0,
+      "tiempo_inicializacion": 0.0,
+      "tiempo_evolucion": 0.0,
+      "tiempo_busqueda_local": 0.0
+    }
+  ]
+}

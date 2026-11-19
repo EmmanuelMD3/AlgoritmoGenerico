@@ -1,0 +1,29 @@
+﻿metodo,metrica,n,media,mediana,desviacion,minimo,maximo,p25,p75
+Algoritmo genético,violaciones_duras,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Algoritmo genético,penalizacion_blanda_factible,5,476.4,500.0,51.98846025802265,384.0,506.0,490.0,502.0
+Algoritmo genético,fitness_factible,5,523.6,500.0,51.98846025802265,494.0,616.0,498.0,510.0
+Algoritmo genético,tiempo,5,0.2834331799764186,0.2822026999783702,0.002782175819961563,0.2813520999625325,0.28823839995311573,0.2820112999761477,0.2833614000119269
+Algoritmo genético,evaluaciones,5,1640.0,1640.0,0.0,1640.0,1640.0,1640.0,1640.0
+Algoritmo genético,evaluaciones_factibilidad,5,579.4,575.0,58.18333094624267,504.0,663.0,557.0,598.0
+Algoritmo genético,generaciones,5,17.2,17.0,0.8366600265340756,16.0,18.0,17.0,18.0
+Algoritmo genético híbrido,violaciones_duras,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Algoritmo genético híbrido,penalizacion_blanda_factible,5,338.4,364.0,70.6738990009749,250.0,426.0,284.0,368.0
+Algoritmo genético híbrido,fitness_factible,5,661.6,636.0,70.6738990009749,574.0,750.0,632.0,716.0
+Algoritmo genético híbrido,tiempo,5,0.43484729998745025,0.4357517999596894,0.0018096608158143011,0.43178899999475107,0.43618309998419136,0.43462020001607016,0.43589239998254925
+Algoritmo genético híbrido,evaluaciones,5,1640.0,1640.0,0.0,1640.0,1640.0,1640.0,1640.0
+Algoritmo genético híbrido,evaluaciones_factibilidad,5,6.0,4.0,3.7416573867739413,3.0,11.0,3.0,9.0
+Algoritmo genético híbrido,generaciones,5,14.4,14.0,0.5477225575051661,14.0,15.0,14.0,15.0
+Búsqueda aleatoria,violaciones_duras,5,8.6,9.0,0.5477225575051661,8.0,9.0,8.0,9.0
+Búsqueda aleatoria,penalizacion_blanda_factible,0,,,,,,,
+Búsqueda aleatoria,fitness_factible,0,,,,,,,
+Búsqueda aleatoria,tiempo,5,0.26453292001970113,0.26287660002708435,0.0038649273753645894,0.2608303000451997,0.26893620000919327,0.26158639998175204,0.26843510003527626
+Búsqueda aleatoria,evaluaciones,5,1640.0,1640.0,0.0,1640.0,1640.0,1640.0,1640.0
+Búsqueda aleatoria,evaluaciones_factibilidad,0,,,,,,,
+Búsqueda aleatoria,generaciones,0,,,,,,,
+Heurística constructiva,violaciones_duras,5,3.6,3.0,1.51657508881031,2.0,6.0,3.0,4.0
+Heurística constructiva,penalizacion_blanda_factible,0,,,,,,,
+Heurística constructiva,fitness_factible,0,,,,,,,
+Heurística constructiva,tiempo,5,0.21877921998966485,0.21861670003272593,0.0009346594477487823,0.2180561000132002,0.2203680999809876,0.2181332999607548,0.21872189996065572
+Heurística constructiva,evaluaciones,5,1640.0,1640.0,0.0,1640.0,1640.0,1640.0,1640.0
+Heurística constructiva,evaluaciones_factibilidad,0,,,,,,,
+Heurística constructiva,generaciones,0,,,,,,,

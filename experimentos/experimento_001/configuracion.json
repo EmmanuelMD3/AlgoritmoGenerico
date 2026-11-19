@@ -1,0 +1,31 @@
+{
+  "nombre": "Comparación científica",
+  "descripcion": "",
+  "escenario": "pequeno",
+  "repeticiones": 5,
+  "metodos": [
+    "genetico",
+    "aleatorio",
+    "constructivo"
+  ],
+  "genetico": {
+    "poblacion": 40,
+    "generaciones": 40,
+    "prob_cruza": 0.85,
+    "prob_mutacion": 0.08,
+    "elitismo": 4,
+    "torneo": 4,
+    "semilla": 42,
+    "mutacion_dirigida": 0.35,
+    "prob_reparacion": 0.25,
+    "inmigrantes": 0.03,
+    "parada_sin_mejora": 0,
+    "objetivo_penalizacion_blanda": 0
+  },
+  "semilla_inicial": 42,
+  "modo": "comparacion",
+  "variantes": [],
+  "id_experimento": "exp-7ceb98d209d4",
+  "estado": "completado",
+  "huella_escenario_sha256": "a301536c83fdc524d6380f52ce857d3310d7063487dfba2d0090363e9c347f2b"
+}

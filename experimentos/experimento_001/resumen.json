@@ -1,0 +1,5750 @@
+{
+  "id": "exp-7ceb98d209d4",
+  "inicio": "2026-11-16T14:59:29-06:00",
+  "fin": "2026-11-16T14:59:38-06:00",
+  "estado": "completado",
+  "duracion": 9.09571490000235,
+  "huella_escenario_sha256": "a301536c83fdc524d6380f52ce857d3310d7063487dfba2d0090363e9c347f2b",
+  "estadisticas": [
+    {
+      "metodo": "Algoritmo genético",
+      "ejecuciones": 5,
+      "muestras_validas": 5,
+      "errores": 0,
+      "factibles": 5,
+      "no_factibles": 0,
+      "tasa_factibilidad": 100.0,
+      "violaciones_duras": {
+        "n": 5,
+        "media": 0.0,
+        "mediana": 0.0,
+        "desviacion": 0.0,
+        "minimo": 0.0,
+        "maximo": 0.0,
+        "p25": 0.0,
+        "p75": 0.0
+      },
+      "penalizacion_blanda_factible": {
+        "n": 5,
+        "media": 260.4,
+        "mediana": 248.0,
+        "desviacion": 31.189741903388686,
+        "minimo": 224.0,
+        "maximo": 296.0,
+        "p25": 244.0,
+        "p75": 290.0
+      },
+      "fitness_factible": {
+        "n": 5,
+        "media": 739.6,
+        "mediana": 752.0,
+        "desviacion": 31.189741903388686,
+        "minimo": 704.0,
+        "maximo": 776.0,
+        "p25": 710.0,
+        "p75": 756.0
+      },
+      "tiempo": {
+        "n": 5,
+        "media": 0.6541031999746337,
+        "mediana": 0.6592398999491706,
+        "desviacion": 0.022446170367052907,
+        "minimo": 0.6199148999876343,
+        "maximo": 0.6735892999568023,
+        "p25": 0.6448389000142924,
+        "p75": 0.6729329999652691
+      },
+      "evaluaciones": {
+        "n": 5,
+        "media": 3918.4,
+        "mediana": 3961.0,
+        "desviacion": 123.60946565696334,
+        "minimo": 3718.0,
+        "maximo": 4042.0,
+        "p25": 3895.0,
+        "p75": 3976.0
+      },
+      "evaluaciones_factibilidad": {
+        "n": 5,
+        "media": 634.2,
+        "mediana": 634.0,
+        "desviacion": 64.19657311726226,
+        "minimo": 548.0,
+        "maximo": 726.0,
+        "p25": 614.0,
+        "p75": 649.0
+      },
+      "generaciones": {
+        "n": 5,
+        "media": 40.0,
+        "mediana": 40.0,
+        "desviacion": 0.0,
+        "minimo": 40.0,
+        "maximo": 40.0,
+        "p25": 40.0,
+        "p75": 40.0
+      }
+    },
+    {
+      "metodo": "Búsqueda aleatoria",
+      "ejecuciones": 5,
+      "muestras_validas": 5,
+      "errores": 0,
+      "factibles": 0,
+      "no_factibles": 5,
+      "tasa_factibilidad": 0.0,
+      "violaciones_duras": {
+        "n": 5,
+        "media": 7.4,
+        "mediana": 7.0,
+        "desviacion": 1.140175425099138,
+        "minimo": 6.0,
+        "maximo": 9.0,
+        "p25": 7.0,
+        "p75": 8.0
+      },
+      "penalizacion_blanda_factible": {
+        "media": null,
+        "mediana": null,
+        "desviacion": null,
+        "minimo": null,
+        "maximo": null,
+        "p25": null,
+        "p75": null,
+        "n": 0
+      },
+      "fitness_factible": {
+        "media": null,
+        "mediana": null,
+        "desviacion": null,
+        "minimo": null,
+        "maximo": null,
+        "p25": null,
+        "p75": null,
+        "n": 0
+      },
+      "tiempo": {
+        "n": 5,
+        "media": 0.6362079599988647,
+        "mediana": 0.6395901999785565,
+        "desviacion": 0.021535683902815416,
+        "minimo": 0.6020917000132613,
+        "maximo": 0.657141599978786,
+        "p25": 0.6312709000194445,
+        "p75": 0.6509454000042751
+      },
+      "evaluaciones": {
+        "n": 5,
+        "media": 3918.4,
+        "mediana": 3961.0,
+        "desviacion": 123.60946565696334,
+        "minimo": 3718.0,
+        "maximo": 4042.0,
+        "p25": 3895.0,
+        "p75": 3976.0
+      },
+      "evaluaciones_factibilidad": {
+        "media": null,
+        "mediana": null,
+        "desviacion": null,
+        "minimo": null,
+        "maximo": null,
+        "p25": null,
+        "p75": null,
+        "n": 0
+      },
+      "generaciones": {
+        "media": null,
+        "mediana": null,
+        "desviacion": null,
+        "minimo": null,
+        "maximo": null,
+        "p25": null,
+        "p75": null,
+        "n": 0
+      }
+    },
+    {
+      "metodo": "Heurística constructiva",
+      "ejecuciones": 5,
+      "muestras_validas": 5,
+      "errores": 0,
+      "factibles": 5,
+      "no_factibles": 0,
+      "tasa_factibilidad": 100.0,
+      "violaciones_duras": {
+        "n": 5,
+        "media": 0.0,
+        "mediana": 0.0,
+        "desviacion": 0.0,
+        "minimo": 0.0,
+        "maximo": 0.0,
+        "p25": 0.0,
+        "p75": 0.0
+      },
+      "penalizacion_blanda_factible": {
+        "n": 5,
+        "media": 53.2,
+        "mediana": 58.0,
+        "desviacion": 15.13935269422045,
+        "minimo": 34.0,
+        "maximo": 72.0,
+        "p25": 42.0,
+        "p75": 60.0
+      },
+      "fitness_factible": {
+        "n": 5,
+        "media": 946.8,
+        "mediana": 942.0,
+        "desviacion": 15.13935269422045,
+        "minimo": 928.0,
+        "maximo": 966.0,
+        "p25": 940.0,
+        "p75": 958.0
+      },
+      "tiempo": {
+        "n": 5,
+        "media": 0.5284419000032358,
+        "mediana": 0.5339320999919437,
+        "desviacion": 0.017843889800227983,
+        "minimo": 0.5004984000115655,
+        "maximo": 0.545941699994728,
+        "p25": 0.5224297000095248,
+        "p75": 0.5394076000084169
+      },
+      "evaluaciones": {
+        "n": 5,
+        "media": 3918.4,
+        "mediana": 3961.0,
+        "desviacion": 123.60946565696334,
+        "minimo": 3718.0,
+        "maximo": 4042.0,
+        "p25": 3895.0,
+        "p75": 3976.0
+      },
+      "evaluaciones_factibilidad": {
+        "n": 5,
+        "media": 2451.8,
+        "mediana": 2404.0,
+        "desviacion": 184.34939652735508,
+        "minimo": 2244.0,
+        "maximo": 2645.0,
+        "p25": 2323.0,
+        "p75": 2643.0
+      },
+      "generaciones": {
+        "media": null,
+        "mediana": null,
+        "desviacion": null,
+        "minimo": null,
+        "maximo": null,
+        "p25": null,
+        "p75": null,
+        "n": 0
+      }
+    }
+  ],
+  "conclusiones": "Interpretación descriptiva; no constituye una prueba de superioridad estadística.\nMayor tasa de factibilidad observada: 100.0% (Algoritmo genético, Heurística constructiva).\nMenor mediana de penalización entre soluciones factibles: 58.00 (Heurística constructiva).\nEl tiempo es secundario y puede variar según el equipo y la carga del sistema.",
+  "ejecuciones": [
+    {
+      "id": "1d4ca308-fcfd-4d66-8d9d-93779c31d7ec",
+      "fecha": "2026-11-16T14:59:30-06:00",
+      "metodo": "genetico",
+      "etiqueta_metodo": "Algoritmo genético",
+      "escenario": "pequeno",
+      "repeticion": 1,
+      "semilla": 42,
+      "configuracion": {
+        "poblacion": 40,
+        "generaciones": 40,
+        "prob_cruza": 0.85,
+        "prob_mutacion": 0.08,
+        "elitismo": 4,
+        "torneo": 4,
+        "semilla": 42,
+        "mutacion_dirigida": 0.35,
+        "prob_reparacion": 0.25,
+        "inmigrantes": 0.03,
+        "parada_sin_mejora": 0,
+        "objetivo_penalizacion_blanda": 0
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 4042,
+      "duracion": 0.6729329999652691,
+      "motivo_parada": "generaciones_completadas",
+      "factible": true,
+      "duras": 0,
+      "penalizacion_blanda": 290,
+      "fitness": 710,
+      "evaluaciones_hasta_factible": 548,
+      "generacion_primera_factible": 6,
+      "generaciones_ejecutadas": 40,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 0,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 8,
+        "Extensión de jornada": 1,
+        "Sesiones aisladas al final": 0,
+        "Desequilibrio semanal": 9,
+        "Cambios innecesarios de salón": 4,
+        "Fuera de preferencia docente": 7
+      },
+      "historial": [
+        {
+          "generacion": 0,
+          "mejor_fitness": -378,
+          "media_fitness": -1493.45,
+          "conflictos_duros": 8,
+          "huecos": 22,
+          "factible": false,
+          "penalizacion_blanda": 578,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 1,
+          "mejor_fitness": -380,
+          "media_fitness": -1137.85,
+          "conflictos_duros": 7,
+          "huecos": 21,
+          "factible": false,
+          "penalizacion_blanda": 680,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 2,
+          "mejor_fitness": -104,
+          "media_fitness": -973.65,
+          "conflictos_duros": 5,
+          "huecos": 20,
+          "factible": false,
+          "penalizacion_blanda": 604,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 3,
+          "mejor_fitness": -72,
+          "media_fitness": -808.2,
+          "conflictos_duros": 3,
+          "huecos": 26,
+          "factible": false,
+          "penalizacion_blanda": 772,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 4,
+          "mejor_fitness": 190,
+          "media_fitness": -560.15,
+          "conflictos_duros": 2,
+          "huecos": 20,
+          "factible": false,
+          "penalizacion_blanda": 610,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 5,
+          "mejor_fitness": 190,
+          "media_fitness": -501.95,
+          "conflictos_duros": 2,
+          "huecos": 20,
+          "factible": false,
+          "penalizacion_blanda": 610,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 6,
+          "mejor_fitness": 214,
+          "media_fitness": -136.2,
+          "conflictos_duros": 0,
+          "huecos": 26,
+          "factible": true,
+          "penalizacion_blanda": 786,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 7,
+          "mejor_fitness": 342,
+          "media_fitness": -124.1,
+          "conflictos_duros": 0,
+          "huecos": 19,
+          "factible": true,
+          "penalizacion_blanda": 658,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 8,
+          "mejor_fitness": 342,
+          "media_fitness": -83.2,
+          "conflictos_duros": 0,
+          "huecos": 19,
+          "factible": true,
+          "penalizacion_blanda": 658,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 9,
+          "mejor_fitness": 408,
+          "media_fitness": -15.95,
+          "conflictos_duros": 0,
+          "huecos": 18,
+          "factible": true,
+          "penalizacion_blanda": 592,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 10,
+          "mejor_fitness": 408,
+          "media_fitness": -84.65,
+          "conflictos_duros": 0,
+          "huecos": 18,
+          "factible": true,
+          "penalizacion_blanda": 592,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 11,
+          "mejor_fitness": 408,
+          "media_fitness": -86.5,
+          "conflictos_duros": 0,
+          "huecos": 18,
+          "factible": true,
+          "penalizacion_blanda": 592,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 12,
+          "mejor_fitness": 458,
+          "media_fitness": -10.9,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 542,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 13,
+          "mejor_fitness": 458,
+          "media_fitness": 3.5,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 542,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 14,
+          "mejor_fitness": 458,
+          "media_fitness": 93.6,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 542,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 15,
+          "mejor_fitness": 472,
+          "media_fitness": 37.25,
+          "conflictos_duros": 0,
+          "huecos": 15,
+          "factible": true,
+          "penalizacion_blanda": 528,
+          "diversidad": 0.95
+        },
+        {
+          "generacion": 16,
+          "mejor_fitness": 472,
+          "media_fitness": 49.95,
+          "conflictos_duros": 0,
+          "huecos": 15,
+          "factible": true,
+          "penalizacion_blanda": 528,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 17,
+          "mejor_fitness": 494,
+          "media_fitness": 54.55,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 506,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 18,
+          "mejor_fitness": 494,
+          "media_fitness": 74.55,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 506,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 19,
+          "mejor_fitness": 494,
+          "media_fitness": 28.75,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 506,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 20,
+          "mejor_fitness": 512,
+          "media_fitness": -13.9,
+          "conflictos_duros": 0,
+          "huecos": 15,
+          "factible": true,
+          "penalizacion_blanda": 488,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 21,
+          "mejor_fitness": 512,
+          "media_fitness": 79.3,
+          "conflictos_duros": 0,
+          "huecos": 15,
+          "factible": true,
+          "penalizacion_blanda": 488,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 22,
+          "mejor_fitness": 584,
+          "media_fitness": 138,
+          "conflictos_duros": 0,
+          "huecos": 12,
+          "factible": true,
+          "penalizacion_blanda": 416,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 23,
+          "mejor_fitness": 584,
+          "media_fitness": 124.15,
+          "conflictos_duros": 0,
+          "huecos": 12,
+          "factible": true,
+          "penalizacion_blanda": 416,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 24,
+          "mejor_fitness": 586,
+          "media_fitness": 0.05,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 414,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 25,
+          "mejor_fitness": 586,
+          "media_fitness": 115.8,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 414,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 26,
+          "mejor_fitness": 586,
+          "media_fitness": 166.45,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 414,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 27,
+          "mejor_fitness": 608,
+          "media_fitness": 260.55,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 392,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 28,
+          "mejor_fitness": 608,
+          "media_fitness": 307.25,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 392,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 29,
+          "mejor_fitness": 608,
+          "media_fitness": 247.75,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 392,
+          "diversidad": 0.95
+        },
+        {
+          "generacion": 30,
+          "mejor_fitness": 608,
+          "media_fitness": 298.6,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 392,
+          "diversidad": 0.925
+        },
+        {
+          "generacion": 31,
+          "mejor_fitness": 614,
+          "media_fitness": 358,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 386,
+          "diversidad": 0.95
+        },
+        {
+          "generacion": 32,
+          "mejor_fitness": 614,
+          "media_fitness": 329.7,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 386,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 33,
+          "mejor_fitness": 624,
+          "media_fitness": 341.05,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 376,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 34,
+          "mejor_fitness": 624,
+          "media_fitness": 307,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 376,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 35,
+          "mejor_fitness": 624,
+          "media_fitness": 320.65,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 376,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 36,
+          "mejor_fitness": 652,
+          "media_fitness": 362,
+          "conflictos_duros": 0,
+          "huecos": 9,
+          "factible": true,
+          "penalizacion_blanda": 348,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 37,
+          "mejor_fitness": 652,
+          "media_fitness": 266.35,
+          "conflictos_duros": 0,
+          "huecos": 9,
+          "factible": true,
+          "penalizacion_blanda": 348,
+          "diversidad": 0.95
+        },
+        {
+          "generacion": 38,
+          "mejor_fitness": 652,
+          "media_fitness": 376.95,
+          "conflictos_duros": 0,
+          "huecos": 9,
+          "factible": true,
+          "penalizacion_blanda": 348,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 39,
+          "mejor_fitness": 710,
+          "media_fitness": 345.85,
+          "conflictos_duros": 0,
+          "huecos": 8,
+          "factible": true,
+          "penalizacion_blanda": 290,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 40,
+          "mejor_fitness": 710,
+          "media_fitness": 357.95,
+          "conflictos_duros": 0,
+          "huecos": 8,
+          "factible": true,
+          "penalizacion_blanda": 290,
+          "diversidad": 1.0
+        }
+      ],
+      "cromosoma": [
+        [
+          3,
+          6,
+          3
+        ],
+        [
+          1,
+          6,
+          3
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          1,
+          5,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          5,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          4,
+          3,
+          2
+        ],
+        [
+          0,
+          6,
+          3
+        ],
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          3,
+          5,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          0,
+          7,
+          1
+        ],
+        [
+          2,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          3,
+          4,
+          2
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          3,
+          6,
+          1
+        ],
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          3,
+          5,
+          3
+        ],
+        [
+          2,
+          6,
+          3
+        ],
+        [
+          1,
+          6,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "error": null
+    },
+    {
+      "id": "19b8247c-d874-4894-8992-f178b795a85a",
+      "fecha": "2026-11-16T14:59:30-06:00",
+      "metodo": "aleatorio",
+      "etiqueta_metodo": "Búsqueda aleatoria",
+      "escenario": "pequeno",
+      "repeticion": 1,
+      "semilla": 42,
+      "configuracion": {
+        "presupuesto_evaluaciones": 4042
+      },
+      "presupuesto_objetivo": 4042,
+      "evaluaciones": 4042,
+      "duracion": 0.657141599978786,
+      "motivo_parada": "presupuesto_agotado",
+      "factible": false,
+      "duras": 7,
+      "penalizacion_blanda": 758,
+      "fitness": -458,
+      "evaluaciones_hasta_factible": null,
+      "generacion_primera_factible": null,
+      "generaciones_ejecutadas": null,
+      "desglose_duro": {
+        "Colisiones de docente": 1,
+        "Colisiones de salón": 1,
+        "Colisiones de grupo": 1,
+        "Indisponibilidad docente": 2,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 1,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 1,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 24,
+        "Extensión de jornada": 7,
+        "Sesiones aisladas al final": 4,
+        "Desequilibrio semanal": 13,
+        "Cambios innecesarios de salón": 8,
+        "Fuera de preferencia docente": 4
+      },
+      "historial": [],
+      "cromosoma": [
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          3,
+          6,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          7,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          4,
+          5,
+          2
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          3,
+          6,
+          2
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          4,
+          4,
+          3
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          3
+        ],
+        [
+          1,
+          7,
+          3
+        ],
+        [
+          4,
+          3,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          4,
+          6,
+          1
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          3
+        ],
+        [
+          0,
+          7,
+          2
+        ],
+        [
+          2,
+          5,
+          2
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          7,
+          2
+        ],
+        [
+          3,
+          3,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "error": null
+    },
+    {
+      "id": "61ebbde3-2991-426b-b9b3-3c64dd30bc0e",
+      "fecha": "2026-11-16T14:59:31-06:00",
+      "metodo": "constructivo",
+      "etiqueta_metodo": "Heurística constructiva",
+      "escenario": "pequeno",
+      "repeticion": 1,
+      "semilla": 42,
+      "configuracion": {
+        "presupuesto_evaluaciones": 4042
+      },
+      "presupuesto_objetivo": 4042,
+      "evaluaciones": 4042,
+      "duracion": 0.545941699994728,
+      "motivo_parada": "presupuesto_agotado",
+      "factible": true,
+      "duras": 0,
+      "penalizacion_blanda": 42,
+      "fitness": 958,
+      "evaluaciones_hasta_factible": 2643,
+      "generacion_primera_factible": null,
+      "generaciones_ejecutadas": null,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 0,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 0,
+        "Extensión de jornada": 0,
+        "Sesiones aisladas al final": 0,
+        "Desequilibrio semanal": 4,
+        "Cambios innecesarios de salón": 1,
+        "Fuera de preferencia docente": 2
+      },
+      "historial": [],
+      "cromosoma": [
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          3,
+          4,
+          3
+        ],
+        [
+          4,
+          3,
+          2
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          3,
+          6,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          4,
+          5,
+          3
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          3
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          1,
+          5,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          4,
+          3,
+          3
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          3,
+          4,
+          0
+        ],
+        [
+          1,
+          6,
+          0
+        ],
+        [
+          0,
+          6,
+          3
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          4,
+          5,
+          2
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          3,
+          6,
+          1
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          1,
+          5,
+          3
+        ],
+        [
+          4,
+          6,
+          3
+        ],
+        [
+          3,
+          7,
+          1
+        ],
+        [
+          0,
+          5,
+          1
+        ]
+      ],
+      "error": null
+    },
+    {
+      "id": "ef848a53-4058-4257-b335-982f73ab3f22",
+      "fecha": "2026-11-16T14:59:32-06:00",
+      "metodo": "genetico",
+      "etiqueta_metodo": "Algoritmo genético",
+      "escenario": "pequeno",
+      "repeticion": 2,
+      "semilla": 43,
+      "configuracion": {
+        "poblacion": 40,
+        "generaciones": 40,
+        "prob_cruza": 0.85,
+        "prob_mutacion": 0.08,
+        "elitismo": 4,
+        "torneo": 4,
+        "semilla": 43,
+        "mutacion_dirigida": 0.35,
+        "prob_reparacion": 0.25,
+        "inmigrantes": 0.03,
+        "parada_sin_mejora": 0,
+        "objetivo_penalizacion_blanda": 0
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 3976,
+      "duracion": 0.6735892999568023,
+      "motivo_parada": "generaciones_completadas",
+      "factible": true,
+      "duras": 0,
+      "penalizacion_blanda": 244,
+      "fitness": 756,
+      "evaluaciones_hasta_factible": 614,
+      "generacion_primera_factible": 6,
+      "generaciones_ejecutadas": 40,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 0,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 4,
+        "Extensión de jornada": 1,
+        "Sesiones aisladas al final": 0,
+        "Desequilibrio semanal": 11,
+        "Cambios innecesarios de salón": 7,
+        "Fuera de preferencia docente": 5
+      },
+      "historial": [
+        {
+          "generacion": 0,
+          "mejor_fitness": -316,
+          "media_fitness": -1460.1,
+          "conflictos_duros": 7,
+          "huecos": 19,
+          "factible": false,
+          "penalizacion_blanda": 616,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 1,
+          "mejor_fitness": -182,
+          "media_fitness": -1038.1,
+          "conflictos_duros": 5,
+          "huecos": 23,
+          "factible": false,
+          "penalizacion_blanda": 682,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 2,
+          "mejor_fitness": -80,
+          "media_fitness": -836.85,
+          "conflictos_duros": 4,
+          "huecos": 23,
+          "factible": false,
+          "penalizacion_blanda": 680,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 3,
+          "mejor_fitness": 8,
+          "media_fitness": -682.45,
+          "conflictos_duros": 4,
+          "huecos": 17,
+          "factible": false,
+          "penalizacion_blanda": 592,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 4,
+          "mejor_fitness": 190,
+          "media_fitness": -479.4,
+          "conflictos_duros": 1,
+          "huecos": 25,
+          "factible": false,
+          "penalizacion_blanda": 710,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 5,
+          "mejor_fitness": 190,
+          "media_fitness": -490.9,
+          "conflictos_duros": 1,
+          "huecos": 25,
+          "factible": false,
+          "penalizacion_blanda": 710,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 6,
+          "mejor_fitness": 530,
+          "media_fitness": -461.6,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 470,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 7,
+          "mejor_fitness": 530,
+          "media_fitness": -242.35,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 470,
+          "diversidad": 0.95
+        },
+        {
+          "generacion": 8,
+          "mejor_fitness": 530,
+          "media_fitness": -152.85,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 470,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 9,
+          "mejor_fitness": 576,
+          "media_fitness": -19.65,
+          "conflictos_duros": 0,
+          "huecos": 14,
+          "factible": true,
+          "penalizacion_blanda": 424,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 10,
+          "mejor_fitness": 576,
+          "media_fitness": -94.4,
+          "conflictos_duros": 0,
+          "huecos": 14,
+          "factible": true,
+          "penalizacion_blanda": 424,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 11,
+          "mejor_fitness": 580,
+          "media_fitness": -80.3,
+          "conflictos_duros": 0,
+          "huecos": 13,
+          "factible": true,
+          "penalizacion_blanda": 420,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 12,
+          "mejor_fitness": 596,
+          "media_fitness": -87.4,
+          "conflictos_duros": 0,
+          "huecos": 13,
+          "factible": true,
+          "penalizacion_blanda": 404,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 13,
+          "mejor_fitness": 616,
+          "media_fitness": -50.7,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 384,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 14,
+          "mejor_fitness": 616,
+          "media_fitness": 191.5,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 384,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 15,
+          "mejor_fitness": 616,
+          "media_fitness": 317.15,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 384,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 16,
+          "mejor_fitness": 616,
+          "media_fitness": 299.15,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 384,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 17,
+          "mejor_fitness": 616,
+          "media_fitness": 241.15,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 384,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 18,
+          "mejor_fitness": 652,
+          "media_fitness": 322.15,
+          "conflictos_duros": 0,
+          "huecos": 10,
+          "factible": true,
+          "penalizacion_blanda": 348,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 19,
+          "mejor_fitness": 676,
+          "media_fitness": 315.7,
+          "conflictos_duros": 0,
+          "huecos": 9,
+          "factible": true,
+          "penalizacion_blanda": 324,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 20,
+          "mejor_fitness": 686,
+          "media_fitness": 346.4,
+          "conflictos_duros": 0,
+          "huecos": 10,
+          "factible": true,
+          "penalizacion_blanda": 314,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 21,
+          "mejor_fitness": 686,
+          "media_fitness": 272.3,
+          "conflictos_duros": 0,
+          "huecos": 10,
+          "factible": true,
+          "penalizacion_blanda": 314,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 22,
+          "mejor_fitness": 686,
+          "media_fitness": 357.6,
+          "conflictos_duros": 0,
+          "huecos": 10,
+          "factible": true,
+          "penalizacion_blanda": 314,
+          "diversidad": 0.95
+        },
+        {
+          "generacion": 23,
+          "mejor_fitness": 686,
+          "media_fitness": 413.8,
+          "conflictos_duros": 0,
+          "huecos": 10,
+          "factible": true,
+          "penalizacion_blanda": 314,
+          "diversidad": 0.95
+        },
+        {
+          "generacion": 24,
+          "mejor_fitness": 686,
+          "media_fitness": 342.55,
+          "conflictos_duros": 0,
+          "huecos": 10,
+          "factible": true,
+          "penalizacion_blanda": 314,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 25,
+          "mejor_fitness": 686,
+          "media_fitness": 311.2,
+          "conflictos_duros": 0,
+          "huecos": 10,
+          "factible": true,
+          "penalizacion_blanda": 314,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 26,
+          "mejor_fitness": 686,
+          "media_fitness": 339,
+          "conflictos_duros": 0,
+          "huecos": 10,
+          "factible": true,
+          "penalizacion_blanda": 314,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 27,
+          "mejor_fitness": 686,
+          "media_fitness": 317.9,
+          "conflictos_duros": 0,
+          "huecos": 10,
+          "factible": true,
+          "penalizacion_blanda": 314,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 28,
+          "mejor_fitness": 686,
+          "media_fitness": 379.7,
+          "conflictos_duros": 0,
+          "huecos": 10,
+          "factible": true,
+          "penalizacion_blanda": 314,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 29,
+          "mejor_fitness": 686,
+          "media_fitness": 417.7,
+          "conflictos_duros": 0,
+          "huecos": 10,
+          "factible": true,
+          "penalizacion_blanda": 314,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 30,
+          "mejor_fitness": 686,
+          "media_fitness": 394.85,
+          "conflictos_duros": 0,
+          "huecos": 10,
+          "factible": true,
+          "penalizacion_blanda": 314,
+          "diversidad": 0.95
+        },
+        {
+          "generacion": 31,
+          "mejor_fitness": 686,
+          "media_fitness": 381.75,
+          "conflictos_duros": 0,
+          "huecos": 10,
+          "factible": true,
+          "penalizacion_blanda": 314,
+          "diversidad": 0.95
+        },
+        {
+          "generacion": 32,
+          "mejor_fitness": 686,
+          "media_fitness": 409.75,
+          "conflictos_duros": 0,
+          "huecos": 10,
+          "factible": true,
+          "penalizacion_blanda": 314,
+          "diversidad": 0.925
+        },
+        {
+          "generacion": 33,
+          "mejor_fitness": 720,
+          "media_fitness": 439.1,
+          "conflictos_duros": 0,
+          "huecos": 8,
+          "factible": true,
+          "penalizacion_blanda": 280,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 34,
+          "mejor_fitness": 756,
+          "media_fitness": 407.55,
+          "conflictos_duros": 0,
+          "huecos": 4,
+          "factible": true,
+          "penalizacion_blanda": 244,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 35,
+          "mejor_fitness": 756,
+          "media_fitness": 379.4,
+          "conflictos_duros": 0,
+          "huecos": 4,
+          "factible": true,
+          "penalizacion_blanda": 244,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 36,
+          "mejor_fitness": 756,
+          "media_fitness": 356.75,
+          "conflictos_duros": 0,
+          "huecos": 4,
+          "factible": true,
+          "penalizacion_blanda": 244,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 37,
+          "mejor_fitness": 756,
+          "media_fitness": 321.65,
+          "conflictos_duros": 0,
+          "huecos": 4,
+          "factible": true,
+          "penalizacion_blanda": 244,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 38,
+          "mejor_fitness": 756,
+          "media_fitness": 353.7,
+          "conflictos_duros": 0,
+          "huecos": 4,
+          "factible": true,
+          "penalizacion_blanda": 244,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 39,
+          "mejor_fitness": 756,
+          "media_fitness": 309.5,
+          "conflictos_duros": 0,
+          "huecos": 4,
+          "factible": true,
+          "penalizacion_blanda": 244,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 40,
+          "mejor_fitness": 756,
+          "media_fitness": 337.4,
+          "conflictos_duros": 0,
+          "huecos": 4,
+          "factible": true,
+          "penalizacion_blanda": 244,
+          "diversidad": 1.0
+        }
+      ],
+      "cromosoma": [
+        [
+          3,
+          6,
+          2
+        ],
+        [
+          2,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          3,
+          4,
+          3
+        ],
+        [
+          4,
+          7,
+          0
+        ],
+        [
+          4,
+          4,
+          1
+        ],
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          0
+        ],
+        [
+          4,
+          6,
+          1
+        ],
+        [
+          1,
+          6,
+          3
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          5,
+          3
+        ],
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          4,
+          5,
+          2
+        ],
+        [
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          4,
+          6,
+          3
+        ],
+        [
+          4,
+          3,
+          3
+        ],
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          0,
+          6,
+          2
+        ],
+        [
+          1,
+          5,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          7,
+          0
+        ],
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          3,
+          2,
+          0
+        ]
+      ],
+      "error": null
+    },
+    {
+      "id": "cc1e5596-e572-4d8b-a567-8b3adbf530c5",
+      "fecha": "2026-11-16T14:59:32-06:00",
+      "metodo": "aleatorio",
+      "etiqueta_metodo": "Búsqueda aleatoria",
+      "escenario": "pequeno",
+      "repeticion": 2,
+      "semilla": 43,
+      "configuracion": {
+        "presupuesto_evaluaciones": 3976
+      },
+      "presupuesto_objetivo": 3976,
+      "evaluaciones": 3976,
+      "duracion": 0.6509454000042751,
+      "motivo_parada": "presupuesto_agotado",
+      "factible": false,
+      "duras": 9,
+      "penalizacion_blanda": 552,
+      "fitness": -452,
+      "evaluaciones_hasta_factible": null,
+      "generacion_primera_factible": null,
+      "generaciones_ejecutadas": null,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 4,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 2,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 2,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 1,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 16,
+        "Extensión de jornada": 3,
+        "Sesiones aisladas al final": 0,
+        "Desequilibrio semanal": 12,
+        "Cambios innecesarios de salón": 12,
+        "Fuera de preferencia docente": 4
+      },
+      "historial": [],
+      "cromosoma": [
+        [
+          0,
+          4,
+          3
+        ],
+        [
+          2,
+          6,
+          3
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          4,
+          4,
+          3
+        ],
+        [
+          1,
+          6,
+          1
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          3,
+          5,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          3,
+          6,
+          0
+        ],
+        [
+          3,
+          3,
+          0
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          2,
+          5,
+          3
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          3,
+          3,
+          0
+        ],
+        [
+          0,
+          5,
+          2
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          0,
+          6,
+          1
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          4,
+          4,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          1,
+          5,
+          2
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          2,
+          5,
+          0
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          4,
+          3,
+          1
+        ],
+        [
+          3,
+          6,
+          2
+        ],
+        [
+          3,
+          5,
+          2
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ],
+      "error": null
+    },
+    {
+      "id": "40107415-c990-4dbd-850c-2a048eba36b0",
+      "fecha": "2026-11-16T14:59:33-06:00",
+      "metodo": "constructivo",
+      "etiqueta_metodo": "Heurística constructiva",
+      "escenario": "pequeno",
+      "repeticion": 2,
+      "semilla": 43,
+      "configuracion": {
+        "presupuesto_evaluaciones": 3976
+      },
+      "presupuesto_objetivo": 3976,
+      "evaluaciones": 3976,
+      "duracion": 0.5394076000084169,
+      "motivo_parada": "presupuesto_agotado",
+      "factible": true,
+      "duras": 0,
+      "penalizacion_blanda": 72,
+      "fitness": 928,
+      "evaluaciones_hasta_factible": 2244,
+      "generacion_primera_factible": null,
+      "generaciones_ejecutadas": null,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 0,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 1,
+        "Extensión de jornada": 0,
+        "Sesiones aisladas al final": 0,
+        "Desequilibrio semanal": 5,
+        "Cambios innecesarios de salón": 1,
+        "Fuera de preferencia docente": 3
+      },
+      "historial": [],
+      "cromosoma": [
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          1,
+          4,
+          3
+        ],
+        [
+          1,
+          6,
+          3
+        ],
+        [
+          4,
+          6,
+          2
+        ],
+        [
+          3,
+          6,
+          0
+        ],
+        [
+          4,
+          4,
+          0
+        ],
+        [
+          2,
+          6,
+          2
+        ],
+        [
+          2,
+          7,
+          2
+        ],
+        [
+          4,
+          5,
+          3
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          3,
+          5,
+          1
+        ],
+        [
+          4,
+          4,
+          2
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          4,
+          6,
+          3
+        ],
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          0,
+          6,
+          1
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          4,
+          3,
+          3
+        ],
+        [
+          3,
+          4,
+          3
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          3,
+          1,
+          3
+        ],
+        [
+          2,
+          4,
+          3
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          2,
+          3,
+          0
+        ]
+      ],
+      "error": null
+    },
+    {
+      "id": "b97e8efa-b9c9-4705-b42e-497d82cfed13",
+      "fecha": "2026-11-16T14:59:33-06:00",
+      "metodo": "genetico",
+      "etiqueta_metodo": "Algoritmo genético",
+      "escenario": "pequeno",
+      "repeticion": 3,
+      "semilla": 44,
+      "configuracion": {
+        "poblacion": 40,
+        "generaciones": 40,
+        "prob_cruza": 0.85,
+        "prob_mutacion": 0.08,
+        "elitismo": 4,
+        "torneo": 4,
+        "semilla": 44,
+        "mutacion_dirigida": 0.35,
+        "prob_reparacion": 0.25,
+        "inmigrantes": 0.03,
+        "parada_sin_mejora": 0,
+        "objetivo_penalizacion_blanda": 0
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 3961,
+      "duracion": 0.6592398999491706,
+      "motivo_parada": "generaciones_completadas",
+      "factible": true,
+      "duras": 0,
+      "penalizacion_blanda": 296,
+      "fitness": 704,
+      "evaluaciones_hasta_factible": 634,
+      "generacion_primera_factible": 7,
+      "generaciones_ejecutadas": 40,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 0,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 6,
+        "Extensión de jornada": 1,
+        "Sesiones aisladas al final": 2,
+        "Desequilibrio semanal": 11,
+        "Cambios innecesarios de salón": 5,
+        "Fuera de preferencia docente": 7
+      },
+      "historial": [
+        {
+          "generacion": 0,
+          "mejor_fitness": -378,
+          "media_fitness": -1408.35,
+          "conflictos_duros": 8,
+          "huecos": 19,
+          "factible": false,
+          "penalizacion_blanda": 578,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 1,
+          "mejor_fitness": -434,
+          "media_fitness": -1001.25,
+          "conflictos_duros": 6,
+          "huecos": 29,
+          "factible": false,
+          "penalizacion_blanda": 834,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 2,
+          "mejor_fitness": -126,
+          "media_fitness": -797.05,
+          "conflictos_duros": 3,
+          "huecos": 29,
+          "factible": false,
+          "penalizacion_blanda": 826,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 3,
+          "mejor_fitness": -48,
+          "media_fitness": -754.95,
+          "conflictos_duros": 3,
+          "huecos": 23,
+          "factible": false,
+          "penalizacion_blanda": 748,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 4,
+          "mejor_fitness": 174,
+          "media_fitness": -549.2,
+          "conflictos_duros": 1,
+          "huecos": 23,
+          "factible": false,
+          "penalizacion_blanda": 726,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 5,
+          "mejor_fitness": 174,
+          "media_fitness": -445.45,
+          "conflictos_duros": 1,
+          "huecos": 23,
+          "factible": false,
+          "penalizacion_blanda": 726,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 6,
+          "mejor_fitness": 174,
+          "media_fitness": -396,
+          "conflictos_duros": 1,
+          "huecos": 23,
+          "factible": false,
+          "penalizacion_blanda": 726,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 7,
+          "mejor_fitness": 268,
+          "media_fitness": -358.85,
+          "conflictos_duros": 0,
+          "huecos": 21,
+          "factible": true,
+          "penalizacion_blanda": 732,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 8,
+          "mejor_fitness": 268,
+          "media_fitness": -224.3,
+          "conflictos_duros": 0,
+          "huecos": 21,
+          "factible": true,
+          "penalizacion_blanda": 732,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 9,
+          "mejor_fitness": 268,
+          "media_fitness": -153.35,
+          "conflictos_duros": 0,
+          "huecos": 21,
+          "factible": true,
+          "penalizacion_blanda": 732,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 10,
+          "mejor_fitness": 366,
+          "media_fitness": -140.15,
+          "conflictos_duros": 0,
+          "huecos": 20,
+          "factible": true,
+          "penalizacion_blanda": 634,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 11,
+          "mejor_fitness": 366,
+          "media_fitness": -77.95,
+          "conflictos_duros": 0,
+          "huecos": 20,
+          "factible": true,
+          "penalizacion_blanda": 634,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 12,
+          "mejor_fitness": 366,
+          "media_fitness": -92.3,
+          "conflictos_duros": 0,
+          "huecos": 20,
+          "factible": true,
+          "penalizacion_blanda": 634,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 13,
+          "mejor_fitness": 438,
+          "media_fitness": -86.7,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 562,
+          "diversidad": 0.95
+        },
+        {
+          "generacion": 14,
+          "mejor_fitness": 438,
+          "media_fitness": -66.95,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 562,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 15,
+          "mejor_fitness": 438,
+          "media_fitness": 35.8,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 562,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 16,
+          "mejor_fitness": 500,
+          "media_fitness": -18.85,
+          "conflictos_duros": 0,
+          "huecos": 13,
+          "factible": true,
+          "penalizacion_blanda": 500,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 17,
+          "mejor_fitness": 530,
+          "media_fitness": -45.35,
+          "conflictos_duros": 0,
+          "huecos": 12,
+          "factible": true,
+          "penalizacion_blanda": 470,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 18,
+          "mejor_fitness": 550,
+          "media_fitness": 3.7,
+          "conflictos_duros": 0,
+          "huecos": 12,
+          "factible": true,
+          "penalizacion_blanda": 450,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 19,
+          "mejor_fitness": 550,
+          "media_fitness": -28.8,
+          "conflictos_duros": 0,
+          "huecos": 12,
+          "factible": true,
+          "penalizacion_blanda": 450,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 20,
+          "mejor_fitness": 560,
+          "media_fitness": 203.35,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 440,
+          "diversidad": 0.925
+        },
+        {
+          "generacion": 21,
+          "mejor_fitness": 560,
+          "media_fitness": 268.75,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 440,
+          "diversidad": 0.9
+        },
+        {
+          "generacion": 22,
+          "mejor_fitness": 604,
+          "media_fitness": 328.5,
+          "conflictos_duros": 0,
+          "huecos": 9,
+          "factible": true,
+          "penalizacion_blanda": 396,
+          "diversidad": 0.95
+        },
+        {
+          "generacion": 23,
+          "mejor_fitness": 604,
+          "media_fitness": 377.35,
+          "conflictos_duros": 0,
+          "huecos": 9,
+          "factible": true,
+          "penalizacion_blanda": 396,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 24,
+          "mejor_fitness": 616,
+          "media_fitness": 259.3,
+          "conflictos_duros": 0,
+          "huecos": 8,
+          "factible": true,
+          "penalizacion_blanda": 384,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 25,
+          "mejor_fitness": 616,
+          "media_fitness": 289.5,
+          "conflictos_duros": 0,
+          "huecos": 8,
+          "factible": true,
+          "penalizacion_blanda": 384,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 26,
+          "mejor_fitness": 646,
+          "media_fitness": 260.65,
+          "conflictos_duros": 0,
+          "huecos": 7,
+          "factible": true,
+          "penalizacion_blanda": 354,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 27,
+          "mejor_fitness": 646,
+          "media_fitness": 261.7,
+          "conflictos_duros": 0,
+          "huecos": 7,
+          "factible": true,
+          "penalizacion_blanda": 354,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 28,
+          "mejor_fitness": 646,
+          "media_fitness": 286.55,
+          "conflictos_duros": 0,
+          "huecos": 7,
+          "factible": true,
+          "penalizacion_blanda": 354,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 29,
+          "mejor_fitness": 646,
+          "media_fitness": 343.7,
+          "conflictos_duros": 0,
+          "huecos": 7,
+          "factible": true,
+          "penalizacion_blanda": 354,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 30,
+          "mejor_fitness": 694,
+          "media_fitness": 359.7,
+          "conflictos_duros": 0,
+          "huecos": 6,
+          "factible": true,
+          "penalizacion_blanda": 306,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 31,
+          "mejor_fitness": 694,
+          "media_fitness": 387.2,
+          "conflictos_duros": 0,
+          "huecos": 6,
+          "factible": true,
+          "penalizacion_blanda": 306,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 32,
+          "mejor_fitness": 694,
+          "media_fitness": 342.4,
+          "conflictos_duros": 0,
+          "huecos": 6,
+          "factible": true,
+          "penalizacion_blanda": 306,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 33,
+          "mejor_fitness": 694,
+          "media_fitness": 294.2,
+          "conflictos_duros": 0,
+          "huecos": 6,
+          "factible": true,
+          "penalizacion_blanda": 306,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 34,
+          "mejor_fitness": 694,
+          "media_fitness": 287,
+          "conflictos_duros": 0,
+          "huecos": 6,
+          "factible": true,
+          "penalizacion_blanda": 306,
+          "diversidad": 0.95
+        },
+        {
+          "generacion": 35,
+          "mejor_fitness": 694,
+          "media_fitness": 283.95,
+          "conflictos_duros": 0,
+          "huecos": 6,
+          "factible": true,
+          "penalizacion_blanda": 306,
+          "diversidad": 0.95
+        },
+        {
+          "generacion": 36,
+          "mejor_fitness": 694,
+          "media_fitness": 304.75,
+          "conflictos_duros": 0,
+          "huecos": 6,
+          "factible": true,
+          "penalizacion_blanda": 306,
+          "diversidad": 0.95
+        },
+        {
+          "generacion": 37,
+          "mejor_fitness": 694,
+          "media_fitness": 425.55,
+          "conflictos_duros": 0,
+          "huecos": 6,
+          "factible": true,
+          "penalizacion_blanda": 306,
+          "diversidad": 0.9
+        },
+        {
+          "generacion": 38,
+          "mejor_fitness": 704,
+          "media_fitness": 436.15,
+          "conflictos_duros": 0,
+          "huecos": 6,
+          "factible": true,
+          "penalizacion_blanda": 296,
+          "diversidad": 0.95
+        },
+        {
+          "generacion": 39,
+          "mejor_fitness": 704,
+          "media_fitness": 389.8,
+          "conflictos_duros": 0,
+          "huecos": 6,
+          "factible": true,
+          "penalizacion_blanda": 296,
+          "diversidad": 0.95
+        },
+        {
+          "generacion": 40,
+          "mejor_fitness": 704,
+          "media_fitness": 402.65,
+          "conflictos_duros": 0,
+          "huecos": 6,
+          "factible": true,
+          "penalizacion_blanda": 296,
+          "diversidad": 0.95
+        }
+      ],
+      "cromosoma": [
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          0,
+          6,
+          3
+        ],
+        [
+          4,
+          3,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          7,
+          3
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          3,
+          7,
+          3
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          2,
+          6,
+          2
+        ],
+        [
+          1,
+          6,
+          2
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          4,
+          5,
+          2
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          4,
+          2,
+          3
+        ],
+        [
+          3,
+          5,
+          1
+        ],
+        [
+          3,
+          6,
+          1
+        ],
+        [
+          1,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          5,
+          3
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          3,
+          7,
+          1
+        ],
+        [
+          1,
+          4,
+          3
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "error": null
+    },
+    {
+      "id": "1c96cfb3-abfe-4e55-9312-133f53bfb92e",
+      "fecha": "2026-11-16T14:59:34-06:00",
+      "metodo": "aleatorio",
+      "etiqueta_metodo": "Búsqueda aleatoria",
+      "escenario": "pequeno",
+      "repeticion": 3,
+      "semilla": 44,
+      "configuracion": {
+        "presupuesto_evaluaciones": 3961
+      },
+      "presupuesto_objetivo": 3961,
+      "evaluaciones": 3961,
+      "duracion": 0.6395901999785565,
+      "motivo_parada": "presupuesto_agotado",
+      "factible": false,
+      "duras": 7,
+      "penalizacion_blanda": 612,
+      "fitness": -312,
+      "evaluaciones_hasta_factible": null,
+      "generacion_primera_factible": null,
+      "generaciones_ejecutadas": null,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 3,
+        "Colisiones de grupo": 2,
+        "Indisponibilidad docente": 1,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 1,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 20,
+        "Extensión de jornada": 5,
+        "Sesiones aisladas al final": 1,
+        "Desequilibrio semanal": 11,
+        "Cambios innecesarios de salón": 7,
+        "Fuera de preferencia docente": 6
+      },
+      "historial": [],
+      "cromosoma": [
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          0,
+          6,
+          3
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          1,
+          7,
+          1
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          3
+        ],
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          7,
+          2
+        ],
+        [
+          1,
+          6,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          6,
+          3
+        ],
+        [
+          4,
+          4,
+          3
+        ],
+        [
+          3,
+          5,
+          3
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          2,
+          6,
+          0
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          2,
+          3,
+          0
+        ],
+        [
+          2,
+          5,
+          2
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          2,
+          7,
+          2
+        ],
+        [
+          4,
+          3,
+          3
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          4,
+          4,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          4,
+          2,
+          1
+        ]
+      ],
+      "error": null
+    },
+    {
+      "id": "f33607ee-a34a-43ba-a69c-e7c4c245278c",
+      "fecha": "2026-11-16T14:59:35-06:00",
+      "metodo": "constructivo",
+      "etiqueta_metodo": "Heurística constructiva",
+      "escenario": "pequeno",
+      "repeticion": 3,
+      "semilla": 44,
+      "configuracion": {
+        "presupuesto_evaluaciones": 3961
+      },
+      "presupuesto_objetivo": 3961,
+      "evaluaciones": 3961,
+      "duracion": 0.5339320999919437,
+      "motivo_parada": "presupuesto_agotado",
+      "factible": true,
+      "duras": 0,
+      "penalizacion_blanda": 60,
+      "fitness": 940,
+      "evaluaciones_hasta_factible": 2404,
+      "generacion_primera_factible": null,
+      "generaciones_ejecutadas": null,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 0,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 1,
+        "Extensión de jornada": 0,
+        "Sesiones aisladas al final": 0,
+        "Desequilibrio semanal": 4,
+        "Cambios innecesarios de salón": 0,
+        "Fuera de preferencia docente": 4
+      },
+      "historial": [],
+      "cromosoma": [
+        [
+          1,
+          6,
+          3
+        ],
+        [
+          1,
+          4,
+          3
+        ],
+        [
+          4,
+          2,
+          2
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          4,
+          5,
+          0
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          0,
+          6,
+          2
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          3,
+          4,
+          0
+        ],
+        [
+          4,
+          4,
+          0
+        ],
+        [
+          4,
+          3,
+          3
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          4,
+          5,
+          3
+        ],
+        [
+          3,
+          1,
+          3
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          2,
+          6,
+          1
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          3,
+          5,
+          3
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          4,
+          3,
+          1
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          1,
+          3,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          3,
+          4,
+          3
+        ],
+        [
+          0,
+          4,
+          3
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "error": null
+    },
+    {
+      "id": "cf82a00c-b216-4519-bc2c-1b9cf1fc9eba",
+      "fecha": "2026-11-16T14:59:35-06:00",
+      "metodo": "genetico",
+      "etiqueta_metodo": "Algoritmo genético",
+      "escenario": "pequeno",
+      "repeticion": 4,
+      "semilla": 45,
+      "configuracion": {
+        "poblacion": 40,
+        "generaciones": 40,
+        "prob_cruza": 0.85,
+        "prob_mutacion": 0.08,
+        "elitismo": 4,
+        "torneo": 4,
+        "semilla": 45,
+        "mutacion_dirigida": 0.35,
+        "prob_reparacion": 0.25,
+        "inmigrantes": 0.03,
+        "parada_sin_mejora": 0,
+        "objetivo_penalizacion_blanda": 0
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 3895,
+      "duracion": 0.6448389000142924,
+      "motivo_parada": "generaciones_completadas",
+      "factible": true,
+      "duras": 0,
+      "penalizacion_blanda": 224,
+      "fitness": 776,
+      "evaluaciones_hasta_factible": 726,
+      "generacion_primera_factible": 8,
+      "generaciones_ejecutadas": 40,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 0,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 4,
+        "Extensión de jornada": 1,
+        "Sesiones aisladas al final": 0,
+        "Desequilibrio semanal": 10,
+        "Cambios innecesarios de salón": 6,
+        "Fuera de preferencia docente": 4
+      },
+      "historial": [
+        {
+          "generacion": 0,
+          "mejor_fitness": -528,
+          "media_fitness": -1545.3,
+          "conflictos_duros": 9,
+          "huecos": 20,
+          "factible": false,
+          "penalizacion_blanda": 628,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 1,
+          "mejor_fitness": -528,
+          "media_fitness": -1161.35,
+          "conflictos_duros": 9,
+          "huecos": 20,
+          "factible": false,
+          "penalizacion_blanda": 628,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 2,
+          "mejor_fitness": -518,
+          "media_fitness": -971.1,
+          "conflictos_duros": 8,
+          "huecos": 27,
+          "factible": false,
+          "penalizacion_blanda": 718,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 3,
+          "mejor_fitness": -100,
+          "media_fitness": -734.95,
+          "conflictos_duros": 5,
+          "huecos": 18,
+          "factible": false,
+          "penalizacion_blanda": 600,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 4,
+          "mejor_fitness": -220,
+          "media_fitness": -608.25,
+          "conflictos_duros": 4,
+          "huecos": 29,
+          "factible": false,
+          "penalizacion_blanda": 820,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 5,
+          "mejor_fitness": 50,
+          "media_fitness": -485.15,
+          "conflictos_duros": 2,
+          "huecos": 25,
+          "factible": false,
+          "penalizacion_blanda": 750,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 6,
+          "mejor_fitness": 88,
+          "media_fitness": -491.9,
+          "conflictos_duros": 1,
+          "huecos": 27,
+          "factible": false,
+          "penalizacion_blanda": 812,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 7,
+          "mejor_fitness": 88,
+          "media_fitness": -476.05,
+          "conflictos_duros": 1,
+          "huecos": 27,
+          "factible": false,
+          "penalizacion_blanda": 812,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 8,
+          "mejor_fitness": 350,
+          "media_fitness": -445.7,
+          "conflictos_duros": 0,
+          "huecos": 19,
+          "factible": true,
+          "penalizacion_blanda": 650,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 9,
+          "mejor_fitness": 388,
+          "media_fitness": -216.5,
+          "conflictos_duros": 0,
+          "huecos": 18,
+          "factible": true,
+          "penalizacion_blanda": 612,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 10,
+          "mejor_fitness": 388,
+          "media_fitness": -173.1,
+          "conflictos_duros": 0,
+          "huecos": 18,
+          "factible": true,
+          "penalizacion_blanda": 612,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 11,
+          "mejor_fitness": 388,
+          "media_fitness": -18.3,
+          "conflictos_duros": 0,
+          "huecos": 18,
+          "factible": true,
+          "penalizacion_blanda": 612,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 12,
+          "mejor_fitness": 388,
+          "media_fitness": -87,
+          "conflictos_duros": 0,
+          "huecos": 18,
+          "factible": true,
+          "penalizacion_blanda": 612,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 13,
+          "mejor_fitness": 408,
+          "media_fitness": 64.2,
+          "conflictos_duros": 0,
+          "huecos": 17,
+          "factible": true,
+          "penalizacion_blanda": 592,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 14,
+          "mejor_fitness": 408,
+          "media_fitness": 64.1,
+          "conflictos_duros": 0,
+          "huecos": 17,
+          "factible": true,
+          "penalizacion_blanda": 592,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 15,
+          "mejor_fitness": 408,
+          "media_fitness": 47.1,
+          "conflictos_duros": 0,
+          "huecos": 17,
+          "factible": true,
+          "penalizacion_blanda": 592,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 16,
+          "mejor_fitness": 408,
+          "media_fitness": 69.35,
+          "conflictos_duros": 0,
+          "huecos": 17,
+          "factible": true,
+          "penalizacion_blanda": 592,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 17,
+          "mejor_fitness": 408,
+          "media_fitness": 118.35,
+          "conflictos_duros": 0,
+          "huecos": 17,
+          "factible": true,
+          "penalizacion_blanda": 592,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 18,
+          "mejor_fitness": 510,
+          "media_fitness": 124.8,
+          "conflictos_duros": 0,
+          "huecos": 12,
+          "factible": true,
+          "penalizacion_blanda": 490,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 19,
+          "mejor_fitness": 510,
+          "media_fitness": 173.8,
+          "conflictos_duros": 0,
+          "huecos": 12,
+          "factible": true,
+          "penalizacion_blanda": 490,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 20,
+          "mejor_fitness": 526,
+          "media_fitness": 173.5,
+          "conflictos_duros": 0,
+          "huecos": 12,
+          "factible": true,
+          "penalizacion_blanda": 474,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 21,
+          "mejor_fitness": 526,
+          "media_fitness": 220.15,
+          "conflictos_duros": 0,
+          "huecos": 12,
+          "factible": true,
+          "penalizacion_blanda": 474,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 22,
+          "mejor_fitness": 550,
+          "media_fitness": 203.3,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 450,
+          "diversidad": 0.95
+        },
+        {
+          "generacion": 23,
+          "mejor_fitness": 550,
+          "media_fitness": 205.25,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 450,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 24,
+          "mejor_fitness": 578,
+          "media_fitness": 237.55,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 422,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 25,
+          "mejor_fitness": 578,
+          "media_fitness": 236.75,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 422,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 26,
+          "mejor_fitness": 578,
+          "media_fitness": 306.95,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 422,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 27,
+          "mejor_fitness": 658,
+          "media_fitness": 239.35,
+          "conflictos_duros": 0,
+          "huecos": 8,
+          "factible": true,
+          "penalizacion_blanda": 342,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 28,
+          "mejor_fitness": 666,
+          "media_fitness": 307.25,
+          "conflictos_duros": 0,
+          "huecos": 8,
+          "factible": true,
+          "penalizacion_blanda": 334,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 29,
+          "mejor_fitness": 666,
+          "media_fitness": 352.95,
+          "conflictos_duros": 0,
+          "huecos": 8,
+          "factible": true,
+          "penalizacion_blanda": 334,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 30,
+          "mejor_fitness": 724,
+          "media_fitness": 350.2,
+          "conflictos_duros": 0,
+          "huecos": 6,
+          "factible": true,
+          "penalizacion_blanda": 276,
+          "diversidad": 0.95
+        },
+        {
+          "generacion": 31,
+          "mejor_fitness": 756,
+          "media_fitness": 391.7,
+          "conflictos_duros": 0,
+          "huecos": 5,
+          "factible": true,
+          "penalizacion_blanda": 244,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 32,
+          "mejor_fitness": 756,
+          "media_fitness": 376.8,
+          "conflictos_duros": 0,
+          "huecos": 5,
+          "factible": true,
+          "penalizacion_blanda": 244,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 33,
+          "mejor_fitness": 756,
+          "media_fitness": 416.85,
+          "conflictos_duros": 0,
+          "huecos": 5,
+          "factible": true,
+          "penalizacion_blanda": 244,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 34,
+          "mejor_fitness": 766,
+          "media_fitness": 383.9,
+          "conflictos_duros": 0,
+          "huecos": 5,
+          "factible": true,
+          "penalizacion_blanda": 234,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 35,
+          "mejor_fitness": 766,
+          "media_fitness": 410.5,
+          "conflictos_duros": 0,
+          "huecos": 5,
+          "factible": true,
+          "penalizacion_blanda": 234,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 36,
+          "mejor_fitness": 766,
+          "media_fitness": 478.85,
+          "conflictos_duros": 0,
+          "huecos": 5,
+          "factible": true,
+          "penalizacion_blanda": 234,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 37,
+          "mejor_fitness": 766,
+          "media_fitness": 472.45,
+          "conflictos_duros": 0,
+          "huecos": 5,
+          "factible": true,
+          "penalizacion_blanda": 234,
+          "diversidad": 0.95
+        },
+        {
+          "generacion": 38,
+          "mejor_fitness": 766,
+          "media_fitness": 472.8,
+          "conflictos_duros": 0,
+          "huecos": 5,
+          "factible": true,
+          "penalizacion_blanda": 234,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 39,
+          "mejor_fitness": 766,
+          "media_fitness": 450.15,
+          "conflictos_duros": 0,
+          "huecos": 5,
+          "factible": true,
+          "penalizacion_blanda": 234,
+          "diversidad": 0.925
+        },
+        {
+          "generacion": 40,
+          "mejor_fitness": 776,
+          "media_fitness": 440.75,
+          "conflictos_duros": 0,
+          "huecos": 4,
+          "factible": true,
+          "penalizacion_blanda": 224,
+          "diversidad": 0.975
+        }
+      ],
+      "cromosoma": [
+        [
+          3,
+          4,
+          2
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          4,
+          5,
+          2
+        ],
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          7,
+          1
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          4,
+          7,
+          2
+        ],
+        [
+          3,
+          6,
+          2
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          4,
+          3,
+          3
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          4,
+          6,
+          1
+        ],
+        [
+          4,
+          5,
+          3
+        ],
+        [
+          3,
+          1,
+          3
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          1,
+          6,
+          3
+        ],
+        [
+          0,
+          7,
+          2
+        ],
+        [
+          4,
+          4,
+          0
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          3,
+          3
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          1,
+          7,
+          0
+        ],
+        [
+          4,
+          3,
+          1
+        ]
+      ],
+      "error": null
+    },
+    {
+      "id": "82452234-7050-4467-a10d-5b084be9f5f5",
+      "fecha": "2026-11-16T14:59:36-06:00",
+      "metodo": "aleatorio",
+      "etiqueta_metodo": "Búsqueda aleatoria",
+      "escenario": "pequeno",
+      "repeticion": 4,
+      "semilla": 45,
+      "configuracion": {
+        "presupuesto_evaluaciones": 3895
+      },
+      "presupuesto_objetivo": 3895,
+      "evaluaciones": 3895,
+      "duracion": 0.6312709000194445,
+      "motivo_parada": "presupuesto_agotado",
+      "factible": false,
+      "duras": 6,
+      "penalizacion_blanda": 710,
+      "fitness": -310,
+      "evaluaciones_hasta_factible": null,
+      "generacion_primera_factible": null,
+      "generaciones_ejecutadas": null,
+      "desglose_duro": {
+        "Colisiones de docente": 1,
+        "Colisiones de salón": 1,
+        "Colisiones de grupo": 3,
+        "Indisponibilidad docente": 1,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 23,
+        "Extensión de jornada": 5,
+        "Sesiones aisladas al final": 1,
+        "Desequilibrio semanal": 9,
+        "Cambios innecesarios de salón": 12,
+        "Fuera de preferencia docente": 6
+      },
+      "historial": [],
+      "cromosoma": [
+        [
+          1,
+          6,
+          2
+        ],
+        [
+          3,
+          6,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          1,
+          6,
+          1
+        ],
+        [
+          4,
+          6,
+          0
+        ],
+        [
+          4,
+          4,
+          2
+        ],
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          2,
+          6,
+          3
+        ],
+        [
+          4,
+          3,
+          3
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          4,
+          5,
+          2
+        ],
+        [
+          2,
+          6,
+          2
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          3,
+          5,
+          2
+        ],
+        [
+          4,
+          6,
+          3
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          4,
+          7,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          4,
+          6,
+          2
+        ],
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          1,
+          5,
+          3
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          3,
+          5,
+          1
+        ],
+        [
+          3,
+          6,
+          0
+        ],
+        [
+          1,
+          5,
+          2
+        ],
+        [
+          2,
+          7,
+          3
+        ],
+        [
+          4,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "error": null
+    },
+    {
+      "id": "47acef2d-1c22-4cc4-8657-820d567e0d20",
+      "fecha": "2026-11-16T14:59:36-06:00",
+      "metodo": "constructivo",
+      "etiqueta_metodo": "Heurística constructiva",
+      "escenario": "pequeno",
+      "repeticion": 4,
+      "semilla": 45,
+      "configuracion": {
+        "presupuesto_evaluaciones": 3895
+      },
+      "presupuesto_objetivo": 3895,
+      "evaluaciones": 3895,
+      "duracion": 0.5224297000095248,
+      "motivo_parada": "presupuesto_agotado",
+      "factible": true,
+      "duras": 0,
+      "penalizacion_blanda": 34,
+      "fitness": 966,
+      "evaluaciones_hasta_factible": 2323,
+      "generacion_primera_factible": null,
+      "generaciones_ejecutadas": null,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 0,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 0,
+        "Extensión de jornada": 0,
+        "Sesiones aisladas al final": 0,
+        "Desequilibrio semanal": 5,
+        "Cambios innecesarios de salón": 0,
+        "Fuera de preferencia docente": 1
+      },
+      "historial": [],
+      "cromosoma": [
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          3,
+          4,
+          3
+        ],
+        [
+          4,
+          3,
+          2
+        ],
+        [
+          2,
+          6,
+          2
+        ],
+        [
+          3,
+          7,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          4,
+          3
+        ],
+        [
+          3,
+          6,
+          3
+        ],
+        [
+          4,
+          5,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          4,
+          6,
+          0
+        ],
+        [
+          4,
+          7,
+          0
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          1,
+          5,
+          1
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          4,
+          6,
+          2
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          2,
+          4,
+          2
+        ],
+        [
+          4,
+          5,
+          2
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          0,
+          5,
+          1
+        ]
+      ],
+      "error": null
+    },
+    {
+      "id": "891bf472-bfce-4e76-92fe-6d3f2c72795f",
+      "fecha": "2026-11-16T14:59:37-06:00",
+      "metodo": "genetico",
+      "etiqueta_metodo": "Algoritmo genético",
+      "escenario": "pequeno",
+      "repeticion": 5,
+      "semilla": 46,
+      "configuracion": {
+        "poblacion": 40,
+        "generaciones": 40,
+        "prob_cruza": 0.85,
+        "prob_mutacion": 0.08,
+        "elitismo": 4,
+        "torneo": 4,
+        "semilla": 46,
+        "mutacion_dirigida": 0.35,
+        "prob_reparacion": 0.25,
+        "inmigrantes": 0.03,
+        "parada_sin_mejora": 0,
+        "objetivo_penalizacion_blanda": 0
+      },
+      "presupuesto_objetivo": 1640,
+      "evaluaciones": 3718,
+      "duracion": 0.6199148999876343,
+      "motivo_parada": "generaciones_completadas",
+      "factible": true,
+      "duras": 0,
+      "penalizacion_blanda": 248,
+      "fitness": 752,
+      "evaluaciones_hasta_factible": 649,
+      "generacion_primera_factible": 7,
+      "generaciones_ejecutadas": 40,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 0,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 5,
+        "Extensión de jornada": 0,
+        "Sesiones aisladas al final": 0,
+        "Desequilibrio semanal": 11,
+        "Cambios innecesarios de salón": 5,
+        "Fuera de preferencia docente": 8
+      },
+      "historial": [
+        {
+          "generacion": 0,
+          "mejor_fitness": -724,
+          "media_fitness": -1605.3,
+          "conflictos_duros": 12,
+          "huecos": 14,
+          "factible": false,
+          "penalizacion_blanda": 524,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 1,
+          "mejor_fitness": -380,
+          "media_fitness": -1126.85,
+          "conflictos_duros": 6,
+          "huecos": 28,
+          "factible": false,
+          "penalizacion_blanda": 780,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 2,
+          "mejor_fitness": -180,
+          "media_fitness": -787.9,
+          "conflictos_duros": 5,
+          "huecos": 22,
+          "factible": false,
+          "penalizacion_blanda": 680,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 3,
+          "mejor_fitness": -144,
+          "media_fitness": -667.2,
+          "conflictos_duros": 4,
+          "huecos": 25,
+          "factible": false,
+          "penalizacion_blanda": 744,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 4,
+          "mejor_fitness": -144,
+          "media_fitness": -605.4,
+          "conflictos_duros": 4,
+          "huecos": 25,
+          "factible": false,
+          "penalizacion_blanda": 744,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 5,
+          "mejor_fitness": 220,
+          "media_fitness": -502.7,
+          "conflictos_duros": 1,
+          "huecos": 22,
+          "factible": false,
+          "penalizacion_blanda": 680,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 6,
+          "mejor_fitness": 220,
+          "media_fitness": -360.35,
+          "conflictos_duros": 1,
+          "huecos": 22,
+          "factible": false,
+          "penalizacion_blanda": 680,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 7,
+          "mejor_fitness": 256,
+          "media_fitness": -239.15,
+          "conflictos_duros": 0,
+          "huecos": 26,
+          "factible": true,
+          "penalizacion_blanda": 744,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 8,
+          "mejor_fitness": 256,
+          "media_fitness": -178.5,
+          "conflictos_duros": 0,
+          "huecos": 26,
+          "factible": true,
+          "penalizacion_blanda": 744,
+          "diversidad": 0.9
+        },
+        {
+          "generacion": 9,
+          "mejor_fitness": 322,
+          "media_fitness": -101.45,
+          "conflictos_duros": 0,
+          "huecos": 23,
+          "factible": true,
+          "penalizacion_blanda": 678,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 10,
+          "mejor_fitness": 364,
+          "media_fitness": -1.75,
+          "conflictos_duros": 0,
+          "huecos": 19,
+          "factible": true,
+          "penalizacion_blanda": 636,
+          "diversidad": 0.95
+        },
+        {
+          "generacion": 11,
+          "mejor_fitness": 452,
+          "media_fitness": 84.25,
+          "conflictos_duros": 0,
+          "huecos": 14,
+          "factible": true,
+          "penalizacion_blanda": 548,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 12,
+          "mejor_fitness": 484,
+          "media_fitness": 99.25,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 516,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 13,
+          "mejor_fitness": 484,
+          "media_fitness": 105.65,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 516,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 14,
+          "mejor_fitness": 484,
+          "media_fitness": 152.9,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 516,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 15,
+          "mejor_fitness": 484,
+          "media_fitness": 139.2,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 516,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 16,
+          "mejor_fitness": 490,
+          "media_fitness": 140.8,
+          "conflictos_duros": 0,
+          "huecos": 15,
+          "factible": true,
+          "penalizacion_blanda": 510,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 17,
+          "mejor_fitness": 490,
+          "media_fitness": 171,
+          "conflictos_duros": 0,
+          "huecos": 15,
+          "factible": true,
+          "penalizacion_blanda": 510,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 18,
+          "mejor_fitness": 498,
+          "media_fitness": 152.3,
+          "conflictos_duros": 0,
+          "huecos": 16,
+          "factible": true,
+          "penalizacion_blanda": 502,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 19,
+          "mejor_fitness": 502,
+          "media_fitness": 176.15,
+          "conflictos_duros": 0,
+          "huecos": 15,
+          "factible": true,
+          "penalizacion_blanda": 498,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 20,
+          "mejor_fitness": 624,
+          "media_fitness": 149.2,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 376,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 21,
+          "mejor_fitness": 624,
+          "media_fitness": 240.8,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 376,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 22,
+          "mejor_fitness": 624,
+          "media_fitness": 225.65,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 376,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 23,
+          "mejor_fitness": 624,
+          "media_fitness": 229.8,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 376,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 24,
+          "mejor_fitness": 624,
+          "media_fitness": 299.35,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 376,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 25,
+          "mejor_fitness": 624,
+          "media_fitness": 316.55,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 376,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 26,
+          "mejor_fitness": 624,
+          "media_fitness": 282.55,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 376,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 27,
+          "mejor_fitness": 634,
+          "media_fitness": 305.5,
+          "conflictos_duros": 0,
+          "huecos": 11,
+          "factible": true,
+          "penalizacion_blanda": 366,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 28,
+          "mejor_fitness": 650,
+          "media_fitness": 347.65,
+          "conflictos_duros": 0,
+          "huecos": 10,
+          "factible": true,
+          "penalizacion_blanda": 350,
+          "diversidad": 0.925
+        },
+        {
+          "generacion": 29,
+          "mejor_fitness": 650,
+          "media_fitness": 267,
+          "conflictos_duros": 0,
+          "huecos": 10,
+          "factible": true,
+          "penalizacion_blanda": 350,
+          "diversidad": 0.95
+        },
+        {
+          "generacion": 30,
+          "mejor_fitness": 650,
+          "media_fitness": 386.4,
+          "conflictos_duros": 0,
+          "huecos": 10,
+          "factible": true,
+          "penalizacion_blanda": 350,
+          "diversidad": 0.925
+        },
+        {
+          "generacion": 31,
+          "mejor_fitness": 682,
+          "media_fitness": 374.5,
+          "conflictos_duros": 0,
+          "huecos": 9,
+          "factible": true,
+          "penalizacion_blanda": 318,
+          "diversidad": 0.95
+        },
+        {
+          "generacion": 32,
+          "mejor_fitness": 686,
+          "media_fitness": 421.85,
+          "conflictos_duros": 0,
+          "huecos": 9,
+          "factible": true,
+          "penalizacion_blanda": 314,
+          "diversidad": 1.0
+        },
+        {
+          "generacion": 33,
+          "mejor_fitness": 686,
+          "media_fitness": 336.5,
+          "conflictos_duros": 0,
+          "huecos": 9,
+          "factible": true,
+          "penalizacion_blanda": 314,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 34,
+          "mejor_fitness": 686,
+          "media_fitness": 369.2,
+          "conflictos_duros": 0,
+          "huecos": 9,
+          "factible": true,
+          "penalizacion_blanda": 314,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 35,
+          "mejor_fitness": 686,
+          "media_fitness": 351.25,
+          "conflictos_duros": 0,
+          "huecos": 9,
+          "factible": true,
+          "penalizacion_blanda": 314,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 36,
+          "mejor_fitness": 716,
+          "media_fitness": 333.95,
+          "conflictos_duros": 0,
+          "huecos": 8,
+          "factible": true,
+          "penalizacion_blanda": 284,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 37,
+          "mejor_fitness": 716,
+          "media_fitness": 353.1,
+          "conflictos_duros": 0,
+          "huecos": 8,
+          "factible": true,
+          "penalizacion_blanda": 284,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 38,
+          "mejor_fitness": 744,
+          "media_fitness": 347.05,
+          "conflictos_duros": 0,
+          "huecos": 6,
+          "factible": true,
+          "penalizacion_blanda": 256,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 39,
+          "mejor_fitness": 752,
+          "media_fitness": 376.65,
+          "conflictos_duros": 0,
+          "huecos": 5,
+          "factible": true,
+          "penalizacion_blanda": 248,
+          "diversidad": 0.975
+        },
+        {
+          "generacion": 40,
+          "mejor_fitness": 752,
+          "media_fitness": 423.25,
+          "conflictos_duros": 0,
+          "huecos": 5,
+          "factible": true,
+          "penalizacion_blanda": 248,
+          "diversidad": 0.975
+        }
+      ],
+      "cromosoma": [
+        [
+          0,
+          6,
+          2
+        ],
+        [
+          3,
+          6,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          4,
+          4,
+          3
+        ],
+        [
+          1,
+          4,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          3,
+          4,
+          2
+        ],
+        [
+          4,
+          6,
+          0
+        ],
+        [
+          1,
+          6,
+          0
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          2,
+          6,
+          1
+        ],
+        [
+          4,
+          7,
+          0
+        ],
+        [
+          4,
+          2,
+          3
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          2,
+          7,
+          3
+        ],
+        [
+          1,
+          6,
+          3
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          7,
+          0
+        ],
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          4,
+          4,
+          2
+        ],
+        [
+          2,
+          6,
+          2
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          4,
+          5,
+          1
+        ]
+      ],
+      "error": null
+    },
+    {
+      "id": "b3272407-4c4c-4768-91f7-21815340c590",
+      "fecha": "2026-11-16T14:59:38-06:00",
+      "metodo": "aleatorio",
+      "etiqueta_metodo": "Búsqueda aleatoria",
+      "escenario": "pequeno",
+      "repeticion": 5,
+      "semilla": 46,
+      "configuracion": {
+        "presupuesto_evaluaciones": 3718
+      },
+      "presupuesto_objetivo": 3718,
+      "evaluaciones": 3718,
+      "duracion": 0.6020917000132613,
+      "motivo_parada": "presupuesto_agotado",
+      "factible": false,
+      "duras": 8,
+      "penalizacion_blanda": 498,
+      "fitness": -298,
+      "evaluaciones_hasta_factible": null,
+      "generacion_primera_factible": null,
+      "generaciones_ejecutadas": null,
+      "desglose_duro": {
+        "Colisiones de docente": 1,
+        "Colisiones de salón": 2,
+        "Colisiones de grupo": 3,
+        "Indisponibilidad docente": 1,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 1,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 13,
+        "Extensión de jornada": 3,
+        "Sesiones aisladas al final": 3,
+        "Desequilibrio semanal": 10,
+        "Cambios innecesarios de salón": 9,
+        "Fuera de preferencia docente": 7
+      },
+      "historial": [],
+      "cromosoma": [
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          1,
+          5,
+          2
+        ],
+        [
+          4,
+          4,
+          2
+        ],
+        [
+          4,
+          6,
+          3
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          3,
+          3,
+          0
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          3
+        ],
+        [
+          3,
+          4,
+          2
+        ],
+        [
+          1,
+          7,
+          3
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          2,
+          7,
+          0
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          4,
+          3,
+          2
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          4,
+          6,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          3,
+          5,
+          1
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          2,
+          6,
+          1
+        ],
+        [
+          4,
+          3,
+          3
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          4,
+          5,
+          2
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          2,
+          7,
+          2
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          3,
+          7,
+          1
+        ]
+      ],
+      "error": null
+    },
+    {
+      "id": "de73e68f-cf1d-49d1-b302-a35bb1a9f889",
+      "fecha": "2026-11-16T14:59:38-06:00",
+      "metodo": "constructivo",
+      "etiqueta_metodo": "Heurística constructiva",
+      "escenario": "pequeno",
+      "repeticion": 5,
+      "semilla": 46,
+      "configuracion": {
+        "presupuesto_evaluaciones": 3718
+      },
+      "presupuesto_objetivo": 3718,
+      "evaluaciones": 3718,
+      "duracion": 0.5004984000115655,
+      "motivo_parada": "presupuesto_agotado",
+      "factible": true,
+      "duras": 0,
+      "penalizacion_blanda": 58,
+      "fitness": 942,
+      "evaluaciones_hasta_factible": 2645,
+      "generacion_primera_factible": null,
+      "generaciones_ejecutadas": null,
+      "desglose_duro": {
+        "Colisiones de docente": 0,
+        "Colisiones de salón": 0,
+        "Colisiones de grupo": 0,
+        "Indisponibilidad docente": 0,
+        "Indisponibilidad de grupo": 0,
+        "Franjas no lectivas": 0,
+        "Fuera de periodo permitido": 0,
+        "Exceso consecutivo de grupo": 0,
+        "Exceso consecutivo de docente": 0
+      },
+      "desglose_blando": {
+        "Huecos entre clases": 1,
+        "Extensión de jornada": 0,
+        "Sesiones aisladas al final": 0,
+        "Desequilibrio semanal": 5,
+        "Cambios innecesarios de salón": 0,
+        "Fuera de preferencia docente": 2
+      },
+      "historial": [],
+      "cromosoma": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          3,
+          4,
+          3
+        ],
+        [
+          2,
+          2,
+          3
+        ],
+        [
+          4,
+          4,
+          1
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          4,
+          3,
+          3
+        ],
+        [
+          4,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          1,
+          4,
+          3
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          3,
+          5,
+          1
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          2,
+          6,
+          2
+        ],
+        [
+          0,
+          5,
+          2
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          3,
+          3
+        ],
+        [
+          2,
+          6,
+          3
+        ],
+        [
+          4,
+          1,
+          2
+        ],
+        [
+          4,
+          3,
+          2
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          0,
+          6,
+          1
+        ],
+        [
+          1,
+          5,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          1,
+          6,
+          3
+        ],
+        [
+          3,
+          5,
+          0
+        ],
+        [
+          3,
+          4,
+          0
+        ]
+      ],
+      "error": null
+    }
+  ]
+}
