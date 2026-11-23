@@ -62,6 +62,10 @@ class Problema:
     max_horas_consecutivas_docente: int | None = None
     umbral_jornada_larga: int = 6
     duracion_bloque_minutos: int = 60
+    # Los JSON anteriores no incluían este interruptor. En ese caso el lector
+    # conserva el comportamiento histórico; la interfaz 7.2 crea explícitamente
+    # una migración a ``False`` sin borrar los mapas ``preferidos`` originales.
+    preferencias_docentes_activas: bool = True
 
     def gen_valido(self, sesion_idx: int, gen: Gen) -> bool:
         d, h, a = gen

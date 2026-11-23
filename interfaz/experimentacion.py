@@ -12,16 +12,13 @@ from time import monotonic
 from tkinter import filedialog, messagebox, ttk
 from typing import Any, Mapping
 
-from horarios_ga.escenarios import cargar_escenario
-from horarios_ga.datos import cargar_datos
 from horarios_ga.estadisticas import (
     VISTAS_EXPERIMENTO, conclusiones_descriptivas, dibujar_resultados,
     resumir_ejecuciones,
 )
 from horarios_ga.experimentos import (
     ConfiguracionExperimento, ProgresoExperimento, ResultadoExperimento,
-    ProgresoLoteEscenarios, ResultadoLoteEscenarios,
-    estimar_experimento, ejecutar_experimento, ejecutar_lote_escenarios,
+    estimar_experimento, ejecutar_experimento,
     exportar_experimento,
     generar_ablaciones, generar_variantes_un_parametro,
 )
@@ -87,7 +84,7 @@ def configuracion_experimento_desde_valores(
     config = ConfiguracionExperimento(
         nombre=valores.get("nombre", "").strip(),
         descripcion=valores.get("descripcion", "").strip(),
-        escenario=valores.get("escenario", "pequeno"),
+        escenario=valores.get("escenario", "activo"),
         repeticiones=int(valores.get("repeticiones", "5")),
         metodos=metodos, genetico=base, hibrido=hibrido, semilla_inicial=base.semilla,
         modo=modo, variantes=variantes,
@@ -113,14 +110,10 @@ class VistaExperimentacion(ttk.Frame):
             "aleatorio": tk.BooleanVar(value=True),
             "constructivo": tk.BooleanVar(value=True),
         }
-        self.ruta_json: Path | None = None
-        self.rutas_escenarios: tuple[Path, ...] = ()
         self.escenario_activo_datos: dict[str, Any] | None = None
         self.escenario_activo_nombre = ""
         self.resultado: ResultadoExperimento | None = None
-        self.resultado_lote: ResultadoLoteEscenarios | None = None
         self.carpeta_exportada: Path | None = None
-        self.carpetas_lote: tuple[Path, ...] = ()
         self.cola: queue.Queue[tuple[str, object]] = queue.Queue()
         self.cancelacion = threading.Event()
         self.hilo: threading.Thread | None = None
@@ -164,18 +157,10 @@ class VistaExperimentacion(ttk.Frame):
         self._entrada(general.contenido, "nombre", "Nombre", "Comparación científica")
         self._entrada(general.contenido, "descripcion", "Descripción", "")
         self._combo(general.contenido, "modo", "Modo", ("comparacion", "parametros", "ablacion"), "comparacion")
-        self._combo(
-            general.contenido, "escenario", "Escenario",
-            ("activo", "pequeno", "mediano", "grande", "json", "lote_json"), "pequeno",
-        )
-        ttk.Button(general.contenido, text="Cargar escenario JSON…", command=self._seleccionar_json).pack(fill="x", pady=(0, 5))
-        self.etiqueta_lote = tk.StringVar(value="Sin lote de escenarios seleccionado")
-        ttk.Button(
-            general.contenido, text="Seleccionar varios JSON…",
-            command=self._seleccionar_varios_json,
-        ).pack(fill="x", pady=(0, 3))
+        self._variable("escenario", "activo")
+        self.etiqueta_escenario_activo = tk.StringVar(value="Configuración activa pendiente")
         ttk.Label(
-            general.contenido, textvariable=self.etiqueta_lote,
+            general.contenido, textvariable=self.etiqueta_escenario_activo,
             style="Ayuda.TLabel", wraplength=280,
         ).pack(fill="x", pady=(0, 5))
         self._combo(general.contenido, "repeticiones", "Repeticiones", ("5", "10", "20", "30"), "5", editable=True)
@@ -219,7 +204,7 @@ class VistaExperimentacion(ttk.Frame):
         acciones = ttk.Frame(padre, style="Panel.TFrame")
         acciones.pack(fill="x", pady=(8, 0))
         self.boton_ejecutar = ttk.Button(
-            acciones, text="Ejecutar experimento", style="Accent.TButton", command=self.ejecutar,
+            acciones, text="Ejecutar experimento", style="Primary.TButton", command=self.ejecutar,
         )
         self.boton_ejecutar.pack(fill="x", pady=(0, 5))
         fila = ttk.Frame(acciones, style="Panel.TFrame")
@@ -355,6 +340,7 @@ class VistaExperimentacion(ttk.Frame):
 
     def obtener_configuracion(self) -> ConfiguracionExperimento:
         valores = {clave: variable.get() for clave, variable in self.variables.items()}
+        valores["escenario"] = "activo"
         seleccionados = tuple(clave for clave, variable in self.metodos.items() if variable.get())
         return configuracion_experimento_desde_valores(valores, seleccionados)
 
@@ -363,55 +349,23 @@ class VistaExperimentacion(ttk.Frame):
             return
         try:
             estimacion = estimar_experimento(self.obtener_configuracion())
-            multiplicador = len(self.rutas_escenarios) if self.variables["escenario"].get() == "lote_json" else 1
             self.estimacion.set(
                 f"Estimación previa: {estimacion['configuraciones']} configuraciones · "
-                f"{estimacion['ejecuciones'] * multiplicador} ejecuciones en "
-                f"{multiplicador} escenario(s) · "
-                f"{estimacion['evaluaciones_nominales'] * multiplicador:,} evaluaciones nominales."
+                f"{estimacion['ejecuciones']} ejecuciones sobre la configuración activa · "
+                f"{estimacion['evaluaciones_nominales']:,} evaluaciones nominales."
             )
         except (ValueError, KeyError):
             self.estimacion.set("Completa valores válidos para calcular el costo estimado.")
-
-    def _seleccionar_json(self) -> None:
-        ruta = filedialog.askopenfilename(
-            parent=self, title="Seleccionar escenario académico", initialdir=self.base / "datos",
-            filetypes=[("Datos JSON", "*.json")],
-        )
-        if ruta:
-            self.ruta_json = Path(ruta)
-            self.variables["escenario"].set("json")
-
-    def _seleccionar_varios_json(self) -> None:
-        rutas = filedialog.askopenfilenames(
-            parent=self, title="Seleccionar escenarios académicos",
-            initialdir=self.base / "escenarios_usuario",
-            filetypes=[("Datos JSON", "*.json")],
-        )
-        if not rutas:
-            return
-        candidatas = tuple(Path(ruta) for ruta in rutas)
-        try:
-            for ruta in candidatas:
-                cargar_datos(ruta)
-        except (OSError, ValueError, KeyError, TypeError) as exc:
-            messagebox.showerror("Lote no válido", str(exc), parent=self)
-            return
-        self.rutas_escenarios = candidatas
-        self.etiqueta_lote.set(
-            f"{len(candidatas)} escenarios: " + ", ".join(ruta.stem for ruta in candidatas[:3])
-            + ("…" if len(candidatas) > 3 else "")
-        )
-        self.variables["escenario"].set("lote_json")
-        self._actualizar_estimacion()
 
     def establecer_escenario_activo(self, datos: dict[str, Any], nombre: str) -> None:
         """Recibe una copia del mismo escenario validado que usa Optimización."""
         self.escenario_activo_datos = deepcopy(datos)
         self.escenario_activo_nombre = nombre
+        if hasattr(self, "etiqueta_escenario_activo"):
+            self.etiqueta_escenario_activo.set(f"Configuración activa: {nombre}")
         if hasattr(self, "variables") and "escenario" in self.variables:
             self.variables["escenario"].set("activo")
-            self._actualizar_estimacion()
+        self._actualizar_estimacion()
 
     def ejecutar(self) -> None:
         if self.en_ejecucion:
@@ -419,26 +373,14 @@ class VistaExperimentacion(ttk.Frame):
         try:
             configuracion = self.obtener_configuracion()
             estimacion = estimar_experimento(configuracion)
-            escenarios_lote: tuple[tuple[str, dict[str, Any]], ...] = ()
-            if configuracion.escenario == "lote_json":
-                if not self.rutas_escenarios:
-                    raise ValueError("Selecciona al menos un JSON para el lote experimental")
-                escenarios_lote = tuple((ruta.stem, cargar_datos(ruta)) for ruta in self.rutas_escenarios)
-            elif configuracion.escenario == "activo":
-                if self.escenario_activo_datos is None:
-                    raise ValueError("No hay un escenario activo compartido")
-                datos = deepcopy(self.escenario_activo_datos)
-            else:
-                datos = cargar_escenario(
-                    configuracion.escenario, self.base, configuracion.semilla_inicial,
-                    ruta_json=self.ruta_json,
-                )
+            if self.escenario_activo_datos is None:
+                raise ValueError("No hay una configuración académica activa compartida")
+            datos = deepcopy(self.escenario_activo_datos)
         except (ValueError, OSError, KeyError) as exc:
             messagebox.showerror("Experimento no válido", str(exc), parent=self)
             return
-        multiplicador = len(escenarios_lote) if escenarios_lote else 1
-        total_ejecuciones = estimacion["ejecuciones"] * multiplicador
-        total_evaluaciones = estimacion["evaluaciones_nominales"] * multiplicador
+        total_ejecuciones = estimacion["ejecuciones"]
+        total_evaluaciones = estimacion["evaluaciones_nominales"]
         if (total_ejecuciones > 60 or total_evaluaciones > 5_000_000) and not messagebox.askyesno(
             "Experimento grande",
             f"Se ejecutarán {total_ejecuciones} corridas y aproximadamente "
@@ -448,9 +390,7 @@ class VistaExperimentacion(ttk.Frame):
             return
         self.cancelacion.clear()
         self.resultado = None
-        self.resultado_lote = None
         self.carpeta_exportada = None
-        self.carpetas_lote = ()
         self.inicio = monotonic()
         self._set_estado("EJECUTANDO", "warning")
         self.boton_ejecutar.configure(state="disabled")
@@ -461,30 +401,16 @@ class VistaExperimentacion(ttk.Frame):
 
         def trabajador() -> None:
             try:
-                if escenarios_lote:
-                    lote = ejecutar_lote_escenarios(
-                        configuracion, escenarios_lote,
-                        al_progresar=lambda progreso: self.cola.put(("progreso_lote", progreso)),
-                        debe_cancelar=self.cancelacion.is_set,
-                    )
-                    carpetas = tuple(
-                        exportar_experimento(resultado, self.raiz_experimentos)
-                        for resultado in lote.resultados
-                    )
-                else:
-                    resultado = ejecutar_experimento(
-                        configuracion, datos,
-                        al_progresar=lambda progreso: self.cola.put(("progreso", progreso)),
-                        debe_cancelar=self.cancelacion.is_set,
-                    )
-                    carpeta = exportar_experimento(resultado, self.raiz_experimentos)
+                resultado = ejecutar_experimento(
+                    configuracion, datos,
+                    al_progresar=lambda progreso: self.cola.put(("progreso", progreso)),
+                    debe_cancelar=self.cancelacion.is_set,
+                )
+                carpeta = exportar_experimento(resultado, self.raiz_experimentos)
             except Exception as exc:
                 self.cola.put(("error", exc))
             else:
-                if escenarios_lote:
-                    self.cola.put(("final_lote", (lote, carpetas)))
-                else:
-                    self.cola.put(("final", (resultado, carpeta)))
+                self.cola.put(("final", (resultado, carpeta)))
 
         self.hilo = threading.Thread(target=trabajador, name="laboratorio-experimental", daemon=True)
         self.hilo.start()
@@ -506,18 +432,10 @@ class VistaExperimentacion(ttk.Frame):
                 break
             if tipo == "progreso":
                 self._aplicar_progreso(contenido)
-            elif tipo == "progreso_lote":
-                self._aplicar_progreso_lote(contenido)
             elif tipo == "final":
                 termino = True
                 self.resultado, self.carpeta_exportada = contenido
                 self._mostrar_resultado()
-            elif tipo == "final_lote":
-                termino = True
-                self.resultado_lote, self.carpetas_lote = contenido
-                self.resultado = self.resultado_lote.resultados[-1] if self.resultado_lote.resultados else None
-                self.carpeta_exportada = self.carpetas_lote[-1] if self.carpetas_lote else None
-                self._mostrar_resultado_lote()
             elif tipo == "error":
                 termino = True
                 self._set_estado("ERROR", "danger")
@@ -544,19 +462,6 @@ class VistaExperimentacion(ttk.Frame):
         if progreso.ultimo_resultado:
             self.ultimo_resultado.set(f"Último resultado: {progreso.ultimo_resultado}")
 
-    def _aplicar_progreso_lote(self, avance: ProgresoLoteEscenarios) -> None:
-        por_escenario = estimar_experimento(self.obtener_configuracion())["ejecuciones"]
-        completadas = (avance.indice_escenario - 1) * por_escenario + avance.progreso.completadas
-        total = avance.total_escenarios * por_escenario
-        self.barra.configure(value=completadas / total * 100 if total else 0)
-        self.progreso_texto.set(f"{completadas} / {total} ejecuciones")
-        self.progreso_detalle.set(
-            f"Escenario {avance.indice_escenario}/{avance.total_escenarios}: {avance.escenario} · "
-            f"{avance.progreso.metodo} · repetición {avance.progreso.repeticion or '—'}"
-        )
-        if avance.progreso.ultimo_resultado:
-            self.ultimo_resultado.set(f"Último resultado: {avance.progreso.ultimo_resultado}")
-
     def _mostrar_resultado(self) -> None:
         assert self.resultado is not None
         estado = self.resultado.estado
@@ -573,30 +478,6 @@ class VistaExperimentacion(ttk.Frame):
         self._llenar_tablas()
         self._escribir_conclusiones(conclusiones_descriptivas(self.resultado.ejecuciones))
         self._redibujar()
-
-    def _mostrar_resultado_lote(self) -> None:
-        assert self.resultado_lote is not None
-        if self.resultado is None:
-            self._set_estado("CANCELADO", "warning")
-            self.progreso_detalle.set("El lote se canceló antes de completar un escenario.")
-            return
-        self._mostrar_resultado()
-        estado = "CANCELADO" if self.resultado_lote.cancelado else "COMPLETADO"
-        self._set_estado(estado, "warning" if self.resultado_lote.cancelado else "success")
-        total = len(self.resultado_lote.resultados)
-        self.progreso_detalle.set(
-            f"{total} escenarios procesados y exportados por separado · se muestra "
-            f"{self.resultado_lote.nombres[-1]} · sin agregar estadísticas entre escenarios"
-        )
-        conclusiones = [
-            "LOTE DE ESCENARIOS — RESULTADOS INDEPENDIENTES",
-            "No se mezclan muestras ni estadísticas de problemas académicos diferentes.",
-            "",
-        ]
-        for nombre, resultado in zip(self.resultado_lote.nombres, self.resultado_lote.resultados):
-            conclusiones.append(f"{nombre} · SHA-256 {resultado.huella_escenario[:12]}…")
-            conclusiones.append(conclusiones_descriptivas(resultado.ejecuciones).splitlines()[0])
-        self._escribir_conclusiones("\n".join(conclusiones))
 
     def _llenar_tablas(self) -> None:
         assert self.resultado is not None
@@ -661,22 +542,11 @@ class VistaExperimentacion(ttk.Frame):
         if not raiz:
             return
         try:
-            if self.resultado_lote is not None:
-                self.carpetas_lote = tuple(
-                    exportar_experimento(resultado, raiz)
-                    for resultado in self.resultado_lote.resultados
-                )
-                self.carpeta_exportada = self.carpetas_lote[-1] if self.carpetas_lote else None
-            else:
-                self.carpeta_exportada = exportar_experimento(self.resultado, raiz)
+            self.carpeta_exportada = exportar_experimento(self.resultado, raiz)
         except (OSError, ValueError, ImportError) as exc:
             messagebox.showerror("No se pudo exportar", str(exc), parent=self)
             return
-        if self.resultado_lote is not None:
-            detalle = f"{len(self.carpetas_lote)} carpetas independientes guardadas en:\n{raiz}"
-        else:
-            detalle = f"Archivos guardados en:\n{self.carpeta_exportada}"
-        messagebox.showinfo("Experimento exportado", detalle, parent=self)
+        messagebox.showinfo("Experimento exportado", f"Archivos guardados en:\n{self.carpeta_exportada}", parent=self)
 
     def abrir_carpeta(self) -> None:
         carpeta = self.carpeta_exportada or self.raiz_experimentos
@@ -691,8 +561,6 @@ class VistaExperimentacion(ttk.Frame):
             messagebox.showinfo("Experimento en curso", "Cancela el experimento antes de limpiar.", parent=self)
             return
         self.resultado = None
-        self.resultado_lote = None
-        self.carpetas_lote = ()
         self.tabla.delete(*self.tabla.get_children()) if hasattr(self, "tabla") else None
         self.resumen.delete(*self.resumen.get_children()) if hasattr(self, "resumen") else None
         if hasattr(self, "barra"):

@@ -232,7 +232,8 @@ def resumen_finalizacion(resultado: Resultado, cancelada: bool = False) -> str:
         f"\n\nModo: {estadisticas.variante}. Evaluaciones reales: {estadisticas.evaluaciones_totales}; "
         f"población inicial aleatoria/heurística: {estadisticas.individuos_aleatorios}/"
         f"{estadisticas.individuos_heuristicos}. Tiempos (s): inicialización "
-        f"{estadisticas.tiempo_inicializacion:.3f}, evolución {estadisticas.tiempo_evolucion:.3f}."
+        f"{estadisticas.tiempo_inicializacion:.3f}, evolución {estadisticas.tiempo_evolucion:.3f}, "
+        f"espera didáctica excluida {estadisticas.tiempo_espera_didactica:.3f}."
     )
     if resultado.configuracion.variante == "hibrido" and resultado.configuracion.busqueda_local:
         detalle_hibrido += (
@@ -364,6 +365,7 @@ class VistaOptimizacion(ttk.Frame):
         self._ultimo_redibujo = 0.0
         self.vista_grafica = tk.StringVar(value="factibilidad")
         self.escenario_actual = tk.StringVar(value="Escenario actual: datos de ejemplo")
+        self.origen_resultado = tk.StringVar(value="Resultado mostrado: —")
         self.kpis: dict[str, TarjetaKPI] = {}
 
         paneles = ttk.Panedwindow(self, orient="horizontal")
@@ -404,7 +406,7 @@ class VistaOptimizacion(ttk.Frame):
         acciones = ttk.Frame(padre, style="Panel.TFrame")
         acciones.pack(fill="x", pady=(8, 0))
         self.boton_ejecutar = ttk.Button(
-            acciones, text="Ejecutar algoritmo", style="Accent.TButton", command=self.al_ejecutar,
+            acciones, text="Ejecutar algoritmo", style="Primary.TButton", command=self.al_ejecutar,
         )
         self.boton_ejecutar.pack(fill="x", pady=(0, 5))
         fila = ttk.Frame(acciones, style="Panel.TFrame")
@@ -498,7 +500,11 @@ class VistaOptimizacion(ttk.Frame):
         tk.Label(
             marco, textvariable=self.cabecera_detalle, bg=PANEL, fg=SECUNDARIO,
             font=("Segoe UI", 8), anchor="w",
-        ).pack(fill="x", pady=(3, 5))
+        ).pack(fill="x", pady=(3, 1))
+        tk.Label(
+            marco, textvariable=self.origen_resultado, bg=PANEL, fg=AZUL,
+            font=("Segoe UI Semibold", 8), anchor="w",
+        ).pack(fill="x", pady=(0, 5))
         progreso_fila = tk.Frame(marco, bg=PANEL)
         progreso_fila.pack(fill="x")
         self.progreso = ttk.Progressbar(progreso_fila, mode="determinate", maximum=100)
@@ -617,6 +623,12 @@ class VistaOptimizacion(ttk.Frame):
     def establecer_escenario(self, texto: str) -> None:
         self.escenario_actual.set(f"Escenario actual: {texto}")
 
+    def establecer_origen_resultado(self, nombre: str, huella: str, *, historico: bool = False) -> None:
+        estado = "histórico · datos activos diferentes" if historico else "instantánea exacta activa"
+        self.origen_resultado.set(
+            f"Resultado mostrado: {nombre} · SHA-256 {huella[:12]}… · {estado}"
+        )
+
     def restablecer(self) -> None:
         defaults = Configuracion()
         for clave, variable in self.variables.items():
@@ -726,6 +738,7 @@ class VistaOptimizacion(ttk.Frame):
             tarjeta.limpiar()
         self._set_estado_chip("SIN EJECUTAR", "neutral")
         self.cabecera_detalle.set("Configura los parámetros y ejecuta el algoritmo.")
+        self.origen_resultado.set("Resultado mostrado: —")
         self.progreso.configure(value=0)
         self.progreso_texto.set("Generación — / —")
         if hasattr(self, "detalle"):

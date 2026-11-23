@@ -5,14 +5,15 @@ import tkinter as tk
 from tkinter import ttk
 
 
-AZUL = "#102a43"
-AZUL_MEDIO = "#1f5a94"
+AZUL = "#132238"
+AZUL_MEDIO = "#2563a6"
 AZUL_CLARO = "#dbeafe"
-FONDO = "#f3f6fa"
+FONDO = "#f5f7fa"
 PANEL = "#ffffff"
 TEXTO = "#17202a"
 SECUNDARIO = "#5d6d7e"
 EXITO = "#18794e"
+VERDE_PRINCIPAL = "#16845b"
 PELIGRO = "#b42318"
 ADVERTENCIA = "#9a6700"
 
@@ -33,6 +34,8 @@ def configurar_estilos(raiz: tk.Misc) -> ttk.Style:
 
     estilo.configure("TFrame", background=FONDO)
     estilo.configure("Panel.TFrame", background=PANEL, relief="flat")
+    estilo.configure("Card.TFrame", background=PANEL, relief="flat", borderwidth=1)
+    estilo.configure("Sidebar.TFrame", background=AZUL)
     estilo.configure("Header.TFrame", background=AZUL)
     estilo.configure("Header.TLabel", background=AZUL, foreground="white", font=("Segoe UI Semibold", 20))
     estilo.configure("Subheader.TLabel", background=AZUL, foreground="#c7d9ec", font=("Segoe UI", 10))
@@ -46,6 +49,10 @@ def configurar_estilos(raiz: tk.Misc) -> ttk.Style:
     estilo.configure("TNotebook", background=FONDO, borderwidth=0)
     estilo.configure("TNotebook.Tab", padding=(15, 8), font=("Segoe UI Semibold", 9))
     estilo.map("TNotebook.Tab", background=[("selected", PANEL)], foreground=[("selected", AZUL)])
+    # El notebook sigue coordinando las siete vistas, pero sus pestañas se
+    # ocultan cuando la navegación lateral profesional está activa.
+    estilo.configure("Sidebar.TNotebook", background=FONDO, borderwidth=0)
+    estilo.layout("Sidebar.TNotebook.Tab", [])
     # El tema nativo de Windows ignora el color de fondo de botones personalizados;
     # usar texto azul mantiene el contraste tanto en ``vista`` como en ``clam``.
     estilo.configure("Accent.TButton", background=AZUL_MEDIO, foreground=AZUL, padding=(12, 7), font=("Segoe UI Semibold", 9))
@@ -55,6 +62,15 @@ def configurar_estilos(raiz: tk.Misc) -> ttk.Style:
         foreground=[("disabled", "#829ab1")],
     )
     estilo.configure("Danger.TButton", foreground=PELIGRO, padding=(10, 7))
+    estilo.configure(
+        "Primary.TButton", background="#dcefe6", foreground=VERDE_PRINCIPAL,
+        padding=(14, 8), font=("Segoe UI Semibold", 9), borderwidth=0,
+    )
+    estilo.map(
+        "Primary.TButton",
+        background=[("active", "#c9e7d8"), ("disabled", "#e4e7eb")],
+        foreground=[("active", "#0f6f4b"), ("disabled", "#829ab1")],
+    )
     estilo.configure("Treeview", rowheight=27, fieldbackground=PANEL, background=PANEL)
     estilo.configure("Treeview.Heading", font=("Segoe UI Semibold", 9), foreground=AZUL)
     estilo.configure("Horizontal.TProgressbar", troughcolor="#dfe7ef", background=AZUL_MEDIO)

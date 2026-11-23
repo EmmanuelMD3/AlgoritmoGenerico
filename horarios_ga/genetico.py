@@ -125,6 +125,7 @@ class EstadisticasEjecucion:
     tiempo_inicializacion: float = 0.0
     tiempo_evolucion: float = 0.0
     tiempo_busqueda_local: float = 0.0
+    tiempo_espera_didactica: float = 0.0
 
 
 @dataclass(frozen=True)
@@ -383,6 +384,7 @@ def ejecutar(
             tiempo_inicializacion=tiempo_inicializacion,
             tiempo_evolucion=max(0.0, tiempo_total - tiempo_inicializacion - tiempo_local),
             tiempo_busqueda_local=tiempo_local,
+            tiempo_espera_didactica=tiempo_artificial,
         )
         return Resultado(cromosoma, evaluacion, inicial, tuple(historial), config, motivo, estadisticas)
 

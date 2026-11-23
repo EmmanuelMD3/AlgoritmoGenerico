@@ -195,7 +195,11 @@ def evaluar_detallado(
             if sesion.periodos_permitidos is not None and posicion not in sesion.periodos_permitidos:
                 fuera_periodo += 1
                 conflictivos.add(idx)
-            if docente.preferidos and posicion not in docente.preferidos:
+            if (
+                problema.preferencias_docentes_activas
+                and docente.preferidos
+                and posicion not in docente.preferidos
+            ):
                 fuera_preferencia_docente += 1
 
     pares = lambda n: n * (n - 1) // 2

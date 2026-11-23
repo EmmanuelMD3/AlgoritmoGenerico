@@ -11,9 +11,15 @@ from horarios_ga.reportes import exportar
 BASE = Path(__file__).resolve().parent
 
 
+def ruta_datos_predeterminada(base: Path = BASE) -> Path:
+    """Usa la configuración canónica si existe y el ejemplo sólo como respaldo."""
+    canonica = base / "datos" / "configuracion_academica.json"
+    return canonica if canonica.exists() else base / "datos" / "ejemplo.json"
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Optimizacion de horarios mediante algoritmos geneticos")
-    parser.add_argument("--datos", type=Path, default=BASE / "datos" / "ejemplo.json")
+    parser.add_argument("--datos", type=Path, default=ruta_datos_predeterminada())
     parser.add_argument("--salida", type=Path, default=BASE / "resultados")
     parser.add_argument("--poblacion", type=int, default=120)
     parser.add_argument("--generaciones", type=int, default=200)

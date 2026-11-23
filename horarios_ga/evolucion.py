@@ -207,14 +207,23 @@ def resultado_desde_instantanea(
 
 
 class ControlDidactico:
-    """Pausa cooperativa en puntos seguros; nunca bloquea el hilo de Tkinter."""
+    """Pausa cooperativa y sincronización opcional con la presentación visual.
 
-    def __init__(self, retardo: float = 0.0):
+    Todas las esperas ocurren en el trabajador. La interfaz sólo confirma qué
+    generación llegó a dibujarse y nunca espera a que termine el algoritmo.
+    """
+
+    def __init__(
+        self, retardo: float = 0.0, *, sincronizar_presentacion: bool = False,
+    ):
         self.retardo = max(0.0, float(retardo))
+        self.sincronizar_presentacion = sincronizar_presentacion
         self._condicion = threading.Condition()
         self._pausado = False
         self._pasos = 0
         self._cancelado = False
+        self._generacion_pendiente = -1
+        self._generacion_presentada = -1
 
     @property
     def pausado(self) -> bool:
@@ -247,12 +256,37 @@ class ControlDidactico:
             self._cancelado = True
             self._condicion.notify_all()
 
+    def notificar_captura(self, generacion: int) -> None:
+        """Registra una captura que el trabajador espera ver presentada."""
+        if not self.sincronizar_presentacion:
+            return
+        with self._condicion:
+            self._generacion_pendiente = max(self._generacion_pendiente, generacion)
+
+    def confirmar_presentacion(self, generacion: int) -> None:
+        """La llama Tk después de actualizar calendario, métricas y marcador."""
+        if not self.sincronizar_presentacion:
+            return
+        with self._condicion:
+            self._generacion_presentada = max(self._generacion_presentada, generacion)
+            self._condicion.notify_all()
+
     def esperar(self) -> float:
         """Devuelve tiempo artificial para excluirlo del tiempo algorítmico."""
         inicio = perf_counter()
         with self._condicion:
-            if self.retardo > 0 and not self._cancelado:
-                self._condicion.wait(timeout=self.retardo)
+            while (
+                self.sincronizar_presentacion
+                and self._generacion_presentada < self._generacion_pendiente
+                and not self._cancelado
+            ):
+                self._condicion.wait(timeout=.2)
+            fin_retardo = perf_counter() + self.retardo
+            while not self._cancelado:
+                restante = fin_retardo - perf_counter()
+                if restante <= 0:
+                    break
+                self._condicion.wait(timeout=restante)
             while self._pausado and self._pasos == 0 and not self._cancelado:
                 self._condicion.wait(timeout=.2)
             if self._pasos > 0:

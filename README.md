@@ -4,7 +4,7 @@
 **Materia:** Cómputo Evolutivo  
 **Autor:** Emmanuel Martínez Díaz
 
-Aplicación de escritorio para configurar, ejecutar y analizar algoritmos genéticos de horarios universitarios. La **Fase 2** separa factibilidad y calidad académica; la **Fase 3** incorpora el dashboard; la **Fase 4** añade experimentación reproducible; la **Fase 5** permite observar la evolución real; la **Fase 6** incorpora un algoritmo híbrido opcional; y la **Fase 7** añade un constructor visual, validación y generación reproducible de escenarios académicos. Se conservan la consola, la interfaz en español y todas las exportaciones anteriores.
+Aplicación de escritorio para configurar, ejecutar y analizar algoritmos genéticos de horarios universitarios. La **Fase 2** separa factibilidad y calidad académica; la **Fase 3** incorpora el dashboard; la **Fase 4** añade experimentación reproducible; la **Fase 5** permite observar la evolución real; la **Fase 6** incorpora un algoritmo híbrido opcional; la **Fase 7** añadió generación reproducible de escenarios; la **Fase 7.1** concentra toda la edición cotidiana en una única configuración académica canónica; la **Fase 7.2** incorpora navegación lateral y disponibilidad binaria; y la **Fase 7.3** permite importar de forma validada y transaccional escenarios JSON externos. Se conservan la consola, la interfaz en español, el generador sintético de soporte y todas las exportaciones anteriores.
 
 Los datos de `datos/ejemplo.json` son ficticios y sólo sirven para demostración; los resultados son cálculos reales del algoritmo sobre ese conjunto.
 
@@ -30,7 +30,9 @@ Iniciar con:
 python app.py
 ```
 
-La ventana es redimensionable y contiene ocho pestañas:
+`python main.py` usa también `datos/configuracion_academica.json` cuando existe; `--datos` permite indicar explícitamente otro JSON para ejecuciones de consola reproducibles. Si todavía no se ha creado el archivo canónico, la consola conserva el respaldo compatible `datos/ejemplo.json`.
+
+La ventana es redimensionable y contiene siete secciones en una barra lateral única:
 
 1. **Optimización:** configuración, métricas, progreso y gráficas de fitness/conflictos.
 2. **Datos académicos:** clases, docentes, grupos, salones, días y bloques.
@@ -39,7 +41,6 @@ La ventana es redimensionable y contiene ocho pestañas:
 5. **Información del algoritmo:** explicación educativa de la representación y operadores.
 6. **Experimentación:** comparaciones reproducibles, estadísticas, gráficas y reportes científicos.
 7. **Evolución en vivo:** calendario por generación, cambios, reproducción, comparación y animaciones.
-8. **Constructor de escenarios:** creación manual, semiautomática o automática, validación, vista previa, biblioteca JSON y generación por lotes.
 
 ### Configurar y ejecutar
 
@@ -74,63 +75,56 @@ La búsqueda local es memética: puede mejorar una solución, pero no demuestra 
 
 ### Cargar y editar datos académicos
 
-La pestaña **Datos académicos** permite:
+`datos/configuracion_academica.json` es la única configuración académica persistente y editable de la aplicación. Al iniciar, se carga automáticamente si existe. En una instalación nueva, `datos/ejemplo.json` se usa sólo como plantilla en memoria; el primer **Guardar todos los cambios** crea el archivo canónico. Una configuración personalizada existente nunca se sustituye silenciosamente por el ejemplo.
 
-- cargar y guardar JSON compatible con `horarios_ga/datos.py`;
-- restaurar `datos/ejemplo.json` con confirmación;
-- crear, editar y eliminar clases, docentes, grupos y salones;
-- editar días lectivos, duración de bloque y bloques horarios;
-- editar disponibilidad de docentes y grupos, preferencias docentes y franjas no lectivas mediante una cuadrícula semanal accesible, con texto además de color;
-- validar el conjunto antes de ejecutar.
+La sección **Datos académicos** se organiza mediante navegación secundaria compacta en General, Docentes, Grupos, Materias y sesiones, Salones, Disponibilidad, y Resumen y validación. Permite:
 
-Las referencias no se cambian automáticamente. No se permite eliminar o renombrar un docente/grupo referenciado por clases, ni dejar una clase sin salón de tipo y capacidad suficientes. La indisponibilidad docente se edita como, por ejemplo, `Lunes=07:00,08:00; Viernes=13:00`.
+- crear, editar, duplicar y eliminar clases, docentes, grupos y salones con formularios maestro–detalle;
+- elegir días lectivos y generar los bloques desde inicio, fin y duración mediante controles cerrados;
+- previsualizar cuántos bloques y referencias semanales se verán afectados antes de aplicar un cambio temporal;
+- editar la disponibilidad binaria de docentes y grupos con un clic por celda; la entidad se carga automáticamente y se muestra como `Nombre (ID)`;
+- alternar días completos y concentrar “todo disponible/no disponible” en un menú de acciones;
+- configurar las franjas institucionales no lectivas desde General y los periodos permitidos desde Materias y sesiones;
+- validar errores y advertencias, guardar, descartar o ejecutar desde una barra de acciones persistente.
+
+#### Importar un escenario JSON (Fase 7.3)
+
+El botón **Importar escenario JSON** está en la cabecera de Datos académicos. Abre el selector nativo de Windows y acepta un archivo `.json` desde cualquier carpeta accesible. La selección pasa por los mismos cargadores y validadores del motor; no ejecuta código, no deserializa objetos y rechaza archivos mayores de 5 MiB. Antes de escribir muestra una vista previa con archivo, nombre, docentes, grupos, materias, sesiones, salones, días, rango horario, duración de bloque, errores y advertencias. **Importar y utilizar** sólo se habilita para una estructura válida. Las advertencias describen riesgos aproximados y nunca se presentan como demostración de imposibilidad.
+
+Si hay cambios locales pendientes se puede **guardar y continuar**, **descartar al completar la importación** o **cancelar**. El descarte no se hace por adelantado: si falla la lectura, validación o escritura, la configuración en memoria y el archivo anterior permanecen intactos. Un cambio externo del archivo canónico también exige confirmación expresa antes de reintentar el reemplazo.
+
+La fuente seleccionada nunca se modifica. Tras confirmar, se valida de nuevo el contenido y se escribe mediante un temporal en el mismo directorio y reemplazo atómico exclusivamente sobre `datos/configuracion_academica.json`; no se crean copias activas, nombres numerados ni selectores alternos. Los JSON anteriores sin metadatos nuevos conservan los valores predeterminados documentados, incluida una duración de bloque de 60 minutos. No se inventan docentes, grupos, salones ni referencias faltantes.
+
+Al terminar, Datos académicos, Optimización, Experimentación y Evolución en vivo reciben inmediatamente la nueva instantánea central. Las corridas que empiecen después usan esos datos; un resultado ya calculado conserva su nombre, huella y escenario histórico, y no se recalcula ni se sobrescribe. Los estados visibles del flujo son Seleccionando, Validando, Listo para importar, Importando, Completado, Cancelado y Error.
+
+**Guardar disponibilidad** actualiza únicamente `no_disponible` del docente o grupo seleccionado. Parte de la última versión persistida y por ello no guarda accidentalmente borradores de otras entidades o secciones; esos borradores permanecen en memoria. **Guardar todos los cambios** persiste la instantánea académica completa. Ambos validan antes de escribir, crean un temporal en el mismo directorio y usan reemplazo atómico sobre el mismo JSON. Una huella SHA-256 detecta modificaciones externas. En el guardado individual se puede cancelar o reintentar sobre la versión externa más reciente: la reconciliación de tres vías preserva datos ajenos y borradores locales, y sólo sustituye la disponibilidad confirmada. No se crean versiones numeradas ni configuraciones activas paralelas.
+
+Al cambiar de docente o grupo con una edición pendiente se ofrecen tres decisiones explícitas: guardar esa disponibilidad, descartar sólo el borrador de esa entidad o cancelar el cambio. La cabecera muestra la entidad, las horas semanales reales —calculadas con la duración de bloque, incluidos bloques de 30 minutos— y el estado Guardado/Cambios pendientes/Guardando/Error.
+
+La disponibilidad dejó de tener el estado visual **Preferido**. Si un JSON anterior contiene `docentes[].preferidos`, la aplicación lo informa, conserva esos mapas sin borrarlos y prepara `restricciones.preferencias_docentes_activas: false` al siguiente guardado. Así el dato histórico sigue disponible, pero no produce una penalización invisible en Optimización ni Experimentación. Un JSON antiguo leído directamente por consola y sin el nuevo interruptor conserva por compatibilidad el comportamiento histórico hasta que se migre explícitamente; los resultados y archivos de experimentos ya existentes nunca se recalculan.
+
+Las referencias no se cambian automáticamente. No se permite eliminar o renombrar un docente/grupo referenciado por clases, ni dejar una clase sin salón de tipo y capacidad suficientes. Las listas separadas por comas ya no forman parte del flujo gráfico: la cuadrícula convierte cada selección al mapa JSON correspondiente.
 
 Estructura principal del JSON:
 
 - `dias`: nombres de días lectivos únicos.
 - `horas`: inicios `HH:MM` de bloques consecutivos; los JSON anteriores conservan 60 minutos.
-- `metadatos.duracion_bloque_minutos` opcional: 15–180 minutos; el constructor ofrece 15, 30, 45, 60, 90 y 120.
+- `metadatos.duracion_bloque_minutos` opcional: 15–180 minutos; el editor ofrece 15, 30, 45, 60, 90 y 120.
 - `salones`: `id`, `capacidad`, `tipo` y `nombre` opcional.
 - `grupos`: `id`, `alumnos` y, opcionalmente, `no_disponible` y `max_horas_consecutivas`.
 - `docentes`: `id`, `nombre`, `no_disponible` y, opcionalmente, `preferidos` y `max_horas_consecutivas`.
 - `clases`: `id`, `materia`, `grupo`, `docente`, `sesiones_semana`, `duracion_bloques`, `tipo_salon` y `periodos_permitidos` opcional.
-- `restricciones` opcional: `franjas_no_lectivas`, máximos consecutivos globales para grupos/docentes y `umbral_jornada_larga`.
+- `restricciones` opcional: `franjas_no_lectivas`, máximos consecutivos globales para grupos/docentes, `umbral_jornada_larga` y `preferencias_docentes_activas`. Este último es `false` en el flujo gráfico 7.2.
 
 Las disponibilidades y periodos usan el formato JSON `{"Lunes": ["07:00", "08:00"]}`. La ausencia de cualquiera de los campos nuevos conserva el comportamiento compatible de los datos anteriores. Un conjunto válido puede ser muy restrictivo; la carga no lo etiqueta como matemáticamente imposible.
 
-## Constructor de escenarios académicos (Fase 7)
+Optimización, Experimentación, Evolución en vivo y las demás vistas reciben copias validadas del mismo modelo central. Al comenzar una corrida se captura una instantánea exacta. Editar después la configuración activa no muta esa ejecución ni reinterpreta sus resultados: el nombre y la huella SHA-256 de origen permanecen asociados al historial mostrado.
 
-La octava pestaña comparte exactamente el mismo `ModeloDatosAcademicos` con el editor y la optimización. No mantiene una copia paralela: al crear, abrir o editar un escenario se actualizan la vista previa, su huella y el escenario activo. Si existen cambios sin guardar, la interfaz los marca explícitamente. **Utilizar en Optimización** valida y usa una instantánea de los datos actuales en memoria; no obliga a guardarlos primero.
+## Generación sintética de soporte
 
-### Modos y parámetros
+La Fase 7.1 retira de la aplicación cotidiana la pestaña Constructor, la biblioteca de múltiples JSON y sus selectores de escenarios. El módulo `horarios_ga/constructor_escenarios.py` se conserva como infraestructura interna para pruebas automatizadas, datos sintéticos reproducibles y estudios controlados; no compite con `datos/configuracion_academica.json` como configuración activa.
 
-- **Manual:** crea una base mínima válida y abre el flujo de edición detallada.
-- **Semiautomático:** genera entidades y restricciones desde cantidades, horarios y proporciones configurables, que después pueden editarse.
-- **Automático:** usa el mismo generador reproducible con un perfil de dificultad elegido.
-
-Se configuran nombre, descripción, docentes, grupos, materias distintas, salones, sesiones por asignación, duración multibloque, estudiantes por grupo, días, inicio/fin de jornada, minutos por bloque y semilla. La estimación separa **materias distintas**, **asignaciones materia–grupo** y **sesiones/genes** para evitar tratarlas como la misma cantidad.
-
-Los perfiles fácil, moderado y difícil ajustan disponibilidad, proporción de laboratorios, coincidencia de indisponibilidades y franjas institucionales. El perfil personalizado permite introducir proporciones propias. Son parámetros de generación, no una clasificación matemática de dificultad.
-
-### Factibilidad conocida, estrés y validación
-
-En el modo normal puede solicitarse una solución factible conocida. El generador construye y evalúa internamente una asignación testigo antes de devolver el escenario, pero no incluye su cromosoma en el JSON ni lo entrega al optimizador. Esto demuestra existencia de al menos una solución respecto al modelo generado, no optimalidad. En modo de estrés se retira esa garantía.
-
-La validación distingue:
-
-- **errores**, que impiden interpretar o ejecutar el escenario, como secciones/identificadores inválidos y referencias rotas;
-- **advertencias**, como entidades sin disponibilidad, sesiones sin ubicación estática evidente o demanda superior a una cota aproximada;
-- **estructura válida**, que significa compatibilidad con el modelo, no una prueba general de factibilidad.
-
-La vista previa informa entidades, asignaciones, sesiones, demanda de bloques, capacidad aproximada, carga por grupo, restricciones institucionales y SHA-256. Las cotas de capacidad son diagnósticos necesarios o aproximados y nunca se presentan como demostraciones generales de imposibilidad.
-
-### Biblioteca y lotes
-
-**Mis escenarios** administra exclusivamente JSON dentro de `escenarios_usuario/`: abrir, guardar, guardar como, duplicar, renombrar, eliminar con confirmación, importar, exportar y restaurar el ejemplo. Los nombres de archivo se normalizan y las operaciones destructivas quedan confinadas a esa carpeta.
-
-La generación por lotes crea hasta 200 escenarios con semilla inicial, incremento determinista y variación opcional de tamaño. Cada JSON conserva nombre, parámetros, semilla y huella. `manifiesto_lote.json` registra lo solicitado, lo generado y si hubo cancelación. La cancelación es cooperativa y conserva únicamente archivos ya terminados.
-
-En **Experimentación**, `lote_json` permite seleccionar varios escenarios. Se aplica a todos la misma configuración y secuencia de semillas, pero cada problema produce su propio resultado, resumen, huella y carpeta exportada. No se mezclan penalizaciones ni estadísticas de escenarios académicos diferentes.
+El generador mantiene perfiles, semillas, sesiones multibloque, estrés y la opción de construir internamente un testigo factible. Ese testigo nunca se incluye en el JSON ni se entrega al optimizador. Las validaciones distinguen errores estructurales de advertencias aproximadas; ninguna advertencia de demanda o falta de ubicación estática se presenta como prueba general de imposibilidad matemática.
 
 ### Consultar y exportar
 
@@ -156,6 +150,10 @@ La séptima pestaña permite inspeccionar directamente cómo cambia el mejor hor
 - tiempo de cálculo, excluyendo pausas y retardos didácticos.
 
 La frecuencia **Capturar cada** permite reducir memoria en escenarios grandes. Siempre se conservan G0 y la última generación realmente ejecutada. El calendario reutiliza la matriz de horarios existente, admite vistas por grupo, docente o salón, representa sesiones multibloque y dispone de desplazamiento horizontal/vertical.
+
+La comunicación en vivo usa una cola segura entre el trabajador y Tk. El consumidor procesa como máximo ocho eventos o 8 ms por ciclo y devuelve el control al bucle de ventanas; G0 se presenta en un primer lote independiente. En modo rápido se conservan todas las capturas configuradas, pero se agrupan únicamente redibujos intermedios cuando el motor supera la frecuencia de la pantalla. En modo didáctico, el trabajador espera cooperativamente la confirmación de que cada captura fue presentada y después aplica el retardo elegido. Esa espera se registra como `tiempo_espera_didactica` y queda excluida del tiempo algorítmico.
+
+Las celdas del calendario se crean una vez por estructura semanal y después sólo cambian texto y estilo. Las líneas de las gráficas también actualizan sus datos y límites sin reconstruir las cuatro figuras en cada generación; las anotaciones completas se regeneran al finalizar. Pausar cálculo, continuar y avanzar un paso son controles del trabajador, independientes de Pausar animación, que sólo afecta la reproducción visual.
 
 ### Reproducción y diferencias
 
@@ -186,18 +184,11 @@ Medición de referencia realizada durante la validación de Fase 5, con escenari
 
 ## Laboratorio de experimentación científica
 
-La pestaña **Experimentación** permite estudiar el comportamiento del algoritmo sobre el mismo modelo académico y la misma función de evaluación, sin depender de Tkinter para el cálculo. El laboratorio separa generación de escenarios, métodos, ejecución, estadística, exportación y presentación.
+La pestaña **Experimentación** permite estudiar el comportamiento del algoritmo sobre el mismo modelo académico y la misma función de evaluación, sin depender de Tkinter para el cálculo. El laboratorio separa métodos, ejecución, estadística, exportación y presentación.
 
-### Escenarios
+### Configuración académica del estudio
 
-- **Pequeño:** reutiliza `datos/ejemplo.json` —3 grupos, 7 docentes y 4 salones—.
-- **Mediano:** genera 10 grupos, 25 docentes y 12 salones.
-- **Grande:** genera 25 grupos, 60 docentes y 30 salones.
-- **JSON:** carga y valida un escenario externo compatible.
-- **Activo:** usa la misma instantánea validada que la pestaña Optimización.
-- **Lote JSON:** ejecuta varios archivos por separado, con configuración y semillas comunes pero sin agregar sus muestras.
-
-Los escenarios sintéticos usan un generador local con semilla. Incluyen tipos y capacidades de salón, sesiones multibloque, disponibilidades, preferencias, periodos académicos y una franja institucional. En el modo normal se crea y valida internamente una asignación factible conocida; esa asignación se descarta y nunca se entrega como respuesta al optimizador. Los escenarios de estrés pueden ser difíciles sin garantía de factibilidad.
+La interfaz ya no ofrece selectores Pequeño, Mediano, Grande, JSON ni Lote JSON. Cada estudio usa una copia exacta de la configuración académica activa, igual que Optimización. Los generadores sintéticos siguen disponibles en el backend para las pruebas y protocolos programáticos, pero no crean una segunda fuente de verdad en la interfaz.
 
 Cada exportación conserva el JSON exacto del escenario y su huella SHA-256. Mismos datos, configuración y semillas producen los mismos resultados algorítmicos; identificadores, fechas y tiempos de pared pueden variar.
 
@@ -345,7 +336,8 @@ Penalizaciones blandas y pesos predeterminados:
 | Sesión aislada en el último bloque | ocurrencia | 12 |
 | Diferencia entre el día más y menos cargado | bloque | 6 |
 | Salones adicionales usados por una misma clase | cambio | 10 |
-| Bloques fuera de preferencia docente | bloque | 4 |
+
+El peso histórico de **bloques fuera de preferencia docente** es 4 y sólo se aplica cuando un documento establece `preferencias_docentes_activas: true` o cuando un JSON anterior se usa directamente fuera del flujo de migración. La configuración activa de la interfaz 7.2 lo establece en `false`, por lo que su desglose es cero y no existe una penalización oculta.
 
 Cada tipo de violación dura usa peso visual 100 en el fitness, pero la factibilidad depende del conteo duro, no de ese peso. Un horario es **factible respecto al modelo actual** cuando `D(H) = 0`; puede seguir teniendo `B(H) > 0` y no ser óptimo.
 
@@ -377,7 +369,7 @@ Ejecutar:
 python -m unittest discover -s tests -v
 ```
 
-Las 94 pruebas cubren el motor original, compatibilidad JSON, reproducibilidad, operadores, exportaciones, parámetros de interfaz, callback, cancelación cooperativa, sesiones multibloque, disponibilidades limitadas, dashboard, experimentación, escenarios y estadísticas. La Fase 5 añade generación 0, copias inmutables, frecuencia de captura, diferencias y exportaciones PNG/GIF. La Fase 6 añade compatibilidad estricta del modo clásico, población mixta, vecindarios locales, cotas adaptativas, presupuesto global, métricas por fase, comparación clásico/híbrido y ablaciones A–E. La Fase 7 añade bloques variables, generación reproducible, perfiles, testigo oculto, validación con errores/advertencias, gestión segura, lotes cancelables, ejecución multi-escenario y compatibilidad con optimización/evolución.
+Las 150 pruebas cubren el motor original, compatibilidad JSON, reproducibilidad, operadores, exportaciones, parámetros de interfaz, callback, cancelación cooperativa, sesiones multibloque, disponibilidades limitadas, dashboard, experimentación, escenarios y estadísticas. La Fase 5 añade generación 0, copias inmutables, frecuencia de captura, diferencias y exportaciones PNG/GIF. La corrección de evolución en vivo añade callbacks desde el trabajador, orden G0→Gn en clásico e híbrido, consumo acotado de eventos, confirmación de presentación didáctica, paso exacto, separación de tiempos y reutilización de celdas. La Fase 6 añade compatibilidad estricta del modo clásico, población mixta, vecindarios locales, cotas adaptativas, presupuesto global, métricas por fase, comparación clásico/híbrido y ablaciones A–E. La Fase 7 añade bloques variables, generación reproducible, perfiles, testigo oculto, validación con errores/advertencias, gestión segura y lotes cancelables. La Fase 7.1 añade carga canónica, escritura atómica, recuperación ante fallos de reemplazo, detección de cambios externos, estado sucio y descarte, persistencia tras reinicio, conversión de cuadrícula, periodos permitidos, poda temporal, instantáneas históricas, selección canónica en consola y verificación de siete secciones. La Fase 7.2 agrega estado binario, cálculo de horas con bloques variables, carga automática, cambio de entidad con borradores, guardado aislado de docentes/grupos, fusión segura ante conflictos externos, migración de preferencias sin borrado, persistencia al reiniciar e integración del mismo contrato con optimización y experimentación. La Fase 7.3 añade selección y cancelación, vista previa, compatibilidad heredada, referencias inválidas, límites de tamaño, fallos de lectura/escritura, conflictos externos, atomicidad, persistencia al reinicio, propagación a las vistas y ejecución clásica/híbrida sobre el escenario importado.
 
 ## Organización
 
@@ -385,7 +377,9 @@ Las 94 pruebas cubren el motor original, compatibilidad JSON, reproducibilidad, 
 HorariosGeneticos/
 ├── app.py                         # entrada gráfica
 ├── main.py                        # entrada de consola
-├── datos/ejemplo.json
+├── datos/
+│   ├── ejemplo.json               # plantilla y compatibilidad
+│   └── configuracion_academica.json # configuración activa creada por la UI
 ├── horarios_ga/
 │   ├── modelo.py
 │   ├── datos.py
@@ -393,11 +387,11 @@ HorariosGeneticos/
 │   ├── genetico.py
 │   ├── escenarios.py
 │   ├── constructor_escenarios.py
+│   ├── importacion.py
 │   ├── baselines.py
 │   ├── experimentos.py
 │   ├── estadisticas.py
 │   ├── evolucion.py
-│   ├── constructor_escenarios.py
 │   ├── exportaciones_evolucion.py
 │   └── reportes.py
 ├── interfaz/
@@ -425,6 +419,6 @@ Los pesos son iniciales y experimentales. Una sola ejecución no constituye evid
 
 Los escenarios sintéticos son modelos académicos controlados, no réplicas certificadas de la carga real de la institución. El testigo demuestra que el escenario normal generado tiene al menos una solución válida, pero no prueba unicidad ni optimalidad. Los experimentos no aplican todavía pruebas inferenciales o correcciones por comparaciones múltiples; los resúmenes y conclusiones son descriptivos. Los métodos realizan operaciones internas diferentes aun cuando se iguala el número de evaluaciones completas, por lo que también se reporta tiempo y se documenta el trabajo adicional del AG.
 
-El constructor no importa planes de estudio institucionales, hojas de cálculo ni bases externas; genera y edita el esquema JSON local. La disponibilidad de salones no se modela como calendario individual en la versión actual: se modelan tipo, capacidad y colisiones de ocupación. Los perfiles de dificultad y las advertencias de demanda son heurísticos. Un escenario de estrés puede ser inviable, pero el generador no lo afirma sin una comprobación formal.
+El editor importa escenarios que ya cumplen el esquema JSON documentado; todavía no transforma planes de estudio institucionales, hojas de cálculo ni bases de datos externas. La disponibilidad de salones no se modela como calendario individual: se modelan tipo, capacidad y colisiones de ocupación. La cuadrícula permite clic individual, día completo y acciones globales, pero no selección rectangular por arrastre. Los perfiles del generador sintético y las advertencias de demanda son heurísticos. Un escenario de estrés puede ser inviable, pero el sistema no lo afirma sin una comprobación formal.
 
 La captura completa consume memoria proporcional a `sesiones × instantáneas`; para escenarios grandes debe aumentarse el intervalo. El visor conserva el mejor individuo por captura, no poblaciones completas. El GIF rasteriza cada calendario y puede ser costoso, por lo que se limita a 200 fotogramas. No se exporta MP4. Los colores de materias son ayudas visuales y no codifican calidad o causalidad; un cambio del mejor individuo no se atribuye automáticamente a mutación.

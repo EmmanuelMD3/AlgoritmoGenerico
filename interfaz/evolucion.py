@@ -60,6 +60,8 @@ class CalendarioEvolutivo(ttk.Frame):
         self.ventana = self.canvas.create_window((0, 0), window=self.tabla, anchor="nw")
         self.tabla.bind("<Configure>", lambda _e: self.canvas.configure(scrollregion=self.canvas.bbox("all")))
         self.canvas.bind("<Configure>", self._ancho)
+        self._estructura: tuple[tuple[str, ...], tuple[str, ...]] | None = None
+        self._celdas: dict[tuple[int, int], tk.Label] = {}
 
     def _ancho(self, evento) -> None:
         self.canvas.itemconfigure(self.ventana, width=max(evento.width, self.tabla.winfo_reqwidth()))
@@ -67,30 +69,53 @@ class CalendarioEvolutivo(ttk.Frame):
     def limpiar(self, texto: str = "Sin instantáneas evolutivas") -> None:
         for hijo in self.tabla.winfo_children():
             hijo.destroy()
+        self._estructura = None
+        self._celdas.clear()
         tk.Label(self.tabla, text=texto, bg=PANEL, fg=SECUNDARIO, padx=20, pady=30).pack()
+
+    def _asegurar_estructura(self, problema: Problema) -> None:
+        estructura = (problema.dias, problema.horas)
+        if self._estructura == estructura:
+            return
+        for hijo in self.tabla.winfo_children():
+            hijo.destroy()
+        self._estructura = estructura
+        self._celdas.clear()
+        encabezados = ("Hora",) + problema.dias
+        for columna, texto in enumerate(encabezados):
+            tk.Label(
+                self.tabla, text=texto, bg=AZUL, fg="white",
+                font=("Segoe UI Semibold", 8), padx=6, pady=5,
+                relief="solid", borderwidth=1,
+            ).grid(row=0, column=columna, sticky="nsew")
+            self.tabla.columnconfigure(columna, minsize=86 if columna else 72, weight=1)
+        for bloque, hora in enumerate(problema.horas):
+            tk.Label(
+                self.tabla, text=hora, bg=FONDO, fg=AZUL,
+                font=("Segoe UI Semibold", 8), padx=4, pady=5,
+                relief="solid", borderwidth=1,
+            ).grid(row=bloque + 1, column=0, sticky="nsew")
+            for dia in range(len(problema.dias)):
+                celda = tk.Label(
+                    self.tabla, text="", bg=PANEL, fg=TEXTO,
+                    justify="left", anchor="nw", padx=5, pady=4,
+                    wraplength=135, relief="solid", borderwidth=1,
+                    font=("Segoe UI", 7),
+                )
+                celda.grid(row=bloque + 1, column=dia + 1, sticky="nsew")
+                self._celdas[(bloque, dia)] = celda
+            self.tabla.rowconfigure(bloque + 1, minsize=52, weight=1)
 
     def mostrar(
         self, problema: Problema, instantanea: InstantaneaEvolutiva,
         modo: str, identificador: str, cambiados: set[int] | None = None,
     ) -> None:
-        for hijo in self.tabla.winfo_children():
-            hijo.destroy()
+        self._asegurar_estructura(problema)
         resultado = resultado_desde_instantanea(instantanea, Configuracion())
         matriz = construir_matriz(problema, resultado, modo, identificador)
         indice_por_id = {sesion.id: i for i, sesion in enumerate(problema.sesiones)}
         cambiados = cambiados or set()
-        encabezados = ("Hora",) + problema.dias
-        for columna, texto in enumerate(encabezados):
-            tk.Label(
-                self.tabla, text=texto, bg=AZUL, fg="white", font=("Segoe UI Semibold", 8),
-                padx=6, pady=5, relief="solid", borderwidth=1,
-            ).grid(row=0, column=columna, sticky="nsew")
-            self.tabla.columnconfigure(columna, minsize=86 if columna else 72, weight=1)
         for bloque, hora in enumerate(problema.horas):
-            tk.Label(
-                self.tabla, text=hora, bg=FONDO, fg=AZUL, font=("Segoe UI Semibold", 8),
-                padx=4, pady=5, relief="solid", borderwidth=1,
-            ).grid(row=bloque + 1, column=0, sticky="nsew")
             for dia in range(len(problema.dias)):
                 entradas = matriz.get((bloque, dia), ())
                 textos, indices = [], []
@@ -121,12 +146,9 @@ class CalendarioEvolutivo(ttk.Frame):
                     fondo, frente = PALETA_MATERIAS[color], TEXTO
                 else:
                     fondo, frente = PANEL, TEXTO
-                tk.Label(
-                    self.tabla, text="\n——\n".join(textos), bg=fondo, fg=frente,
-                    justify="left", anchor="nw", padx=5, pady=4, wraplength=135,
-                    relief="solid", borderwidth=1, font=("Segoe UI", 7),
-                ).grid(row=bloque + 1, column=dia + 1, sticky="nsew")
-            self.tabla.rowconfigure(bloque + 1, minsize=52, weight=1)
+                self._celdas[(bloque, dia)].configure(
+                    text="\n——\n".join(textos), bg=fondo, fg=frente,
+                )
 
 
 class VistaEvolucion(ttk.Frame):
@@ -152,6 +174,11 @@ class VistaEvolucion(ttk.Frame):
         self._ultima_vista = 0.0
         self._ajustando_escala = False
         self._marcadores = []
+        self._lineas_vivas = []
+        self._linea_mutacion = None
+        self.modo_didactico_activo = False
+        self.actualizaciones_visuales = 0
+        self.tiempo_renderizado = 0.0
         self.modo = tk.StringVar(value="grupo")
         self.identificador = tk.StringVar()
         self.generacion = tk.StringVar(value="0")
@@ -171,16 +198,26 @@ class VistaEvolucion(ttk.Frame):
         marco = tk.Frame(self, bg=PANEL, highlightbackground="#d9e2ec", highlightthickness=1, padx=9, pady=6)
         marco.pack(fill="x")
         tk.Label(marco, text="Evolución en vivo", bg=PANEL, fg=AZUL, font=("Segoe UI Semibold", 11)).pack(side="left")
-        ttk.Button(marco, text="Iniciar", style="Accent.TButton", command=self.al_iniciar).pack(side="left", padx=(14, 3))
+        ttk.Button(marco, text="Iniciar", style="Primary.TButton", command=self.al_iniciar).pack(side="left", padx=(14, 3))
         ttk.Button(marco, text="Pausar cálculo", command=self.al_pausar).pack(side="left", padx=3)
         ttk.Button(marco, text="Continuar", command=self.al_continuar).pack(side="left", padx=3)
         ttk.Button(marco, text="Paso", command=self.al_paso).pack(side="left", padx=3)
         ttk.Button(marco, text="Detener", style="Danger.TButton", command=self.al_detener).pack(side="left", padx=3)
-        ttk.Checkbutton(marco, text="Ejecución didáctica", variable=self.didactico).pack(side="left", padx=(12, 3))
+        self.control_didactico_ui = ttk.Checkbutton(
+            marco, text="Ejecución didáctica", variable=self.didactico,
+        )
+        self.control_didactico_ui.pack(side="left", padx=(12, 3))
         ttk.Label(marco, text="Retardo:", style="Campo.TLabel").pack(side="left")
-        ttk.Combobox(marco, textvariable=self.retardo, values=VELOCIDADES, state="readonly", width=5).pack(side="left", padx=3)
+        self.combo_retardo = ttk.Combobox(
+            marco, textvariable=self.retardo, values=VELOCIDADES,
+            state="readonly", width=5,
+        )
+        self.combo_retardo.pack(side="left", padx=3)
         ttk.Label(marco, text="Capturar cada:", style="Campo.TLabel").pack(side="left", padx=(8, 0))
-        ttk.Spinbox(marco, textvariable=self.frecuencia_captura, from_=1, to=100, width=4).pack(side="left", padx=3)
+        self.spin_captura = ttk.Spinbox(
+            marco, textvariable=self.frecuencia_captura, from_=1, to=100, width=4,
+        )
+        self.spin_captura.pack(side="left", padx=3)
         tk.Label(marco, textvariable=self.estado_calculo, bg=PANEL, fg=SECUNDARIO, font=("Segoe UI", 8)).pack(side="right")
 
     def _crear_metricas(self) -> None:
@@ -321,19 +358,37 @@ class VistaEvolucion(ttk.Frame):
             retardo = float(self.retardo.get()) if self.didactico.get() else 0.0
         except ValueError as exc:
             raise ValueError("El retardo didáctico no es válido") from exc
-        return ControlDidactico(retardo)
+        return ControlDidactico(
+            retardo, sincronizar_presentacion=self.didactico.get(),
+        )
 
     def preparar(self, problema: Problema, configuracion: Configuracion, escenario_datos: dict) -> None:
         self.limpiar()
         self.problema, self.configuracion = problema, configuracion
         self.escenario_datos = deepcopy(escenario_datos)
-        self.estado_calculo.set("Ejecutando · modo didáctico" if self.didactico.get() else "Ejecutando · modo rápido")
+        self.modo_didactico_activo = self.didactico.get()
+        self.actualizaciones_visuales = 0
+        self.tiempo_renderizado = 0.0
+        self._configuracion_bloqueada(True)
+        self.estado_calculo.set("Preparando ejecución · esperando G0")
         self._actualizar_opciones()
 
-    def agregar_instantanea(self, instantanea: InstantaneaEvolutiva) -> None:
+    def agregar_instantanea(
+        self, instantanea: InstantaneaEvolutiva, *, actualizar_visual: bool = True,
+    ) -> bool:
+        """Conserva siempre la captura; su presentación puede agruparse en modo rápido."""
         if self.instantaneas and instantanea.generacion <= self.instantaneas[-1].generacion:
-            return
+            return False
         self.instantaneas.append(instantanea)
+        if actualizar_visual:
+            self.presentar_pendientes(forzar=self.modo_didactico_activo)
+        return True
+
+    def presentar_pendientes(self, *, forzar: bool = False) -> None:
+        """Presenta la captura más reciente sin descartar el historial intermedio."""
+        if not self.instantaneas:
+            return
+        inicio = monotonic()
         generaciones = [str(i.generacion) for i in self.instantaneas]
         self.selector_generacion["values"] = generaciones
         self.combo_izquierda["values"] = generaciones
@@ -343,12 +398,19 @@ class VistaEvolucion(ttk.Frame):
         ahora = monotonic()
         if self.seguir_ultima:
             self.indice_actual = len(self.instantaneas) - 1
-            if ahora - self._ultima_vista >= .15 or len(self.instantaneas) == 1:
+            if forzar or ahora - self._ultima_vista >= .10 or len(self.instantaneas) == 1:
                 self._mostrar_indice(self.indice_actual, desde_escala=False)
                 self._ultima_vista = ahora
-        if ahora - self._ultima_grafica >= .30 or len(self.instantaneas) == 1:
-            self._reconstruir_grafica()
+        if forzar or ahora - self._ultima_grafica >= .20 or len(self.instantaneas) == 1:
+            self._actualizar_grafica_en_vivo()
             self._ultima_grafica = ahora
+        self.actualizaciones_visuales += 1
+        self.tiempo_renderizado += monotonic() - inicio
+        modo = "didáctico" if self.modo_didactico_activo else "rápido"
+        self.estado_calculo.set(
+            f"En vivo · G{self.instantaneas[self.indice_actual].generacion} · "
+            f"modo {modo} · {len(self.instantaneas)} capturas"
+        )
 
     def finalizar(self, resultado: Resultado, cancelada: bool = False) -> None:
         if not self.problema or not self.configuracion or self.escenario_datos is None:
@@ -358,10 +420,25 @@ class VistaEvolucion(ttk.Frame):
             tuple(s.id for s in self.problema.sesiones), tuple(self.instantaneas),
             resultado.motivo_parada, cancelada,
         )
-        self.estado_calculo.set("Cancelada · registro parcial" if cancelada else "Finalizada · reproducción disponible")
+        self._configuracion_bloqueada(False)
+        estado = "Cancelada · registro parcial" if cancelada else "Finalizada · reproducción disponible"
+        self.estado_calculo.set(
+            f"{estado} · {len(self.instantaneas)} capturas · "
+            f"{self.actualizaciones_visuales} refrescos · render {self.tiempo_renderizado:.3f} s"
+        )
         self._ir_ultima()
         self._reconstruir_grafica()
         self._comparar_extremos()
+
+    def error(self) -> None:
+        self._configuracion_bloqueada(False)
+        self.estado_calculo.set("Error durante la ejecución")
+
+    def _configuracion_bloqueada(self, bloqueada: bool) -> None:
+        estado = "disabled" if bloqueada else "normal"
+        self.control_didactico_ui.configure(state=estado)
+        self.spin_captura.configure(state=estado)
+        self.combo_retardo.configure(state="disabled" if bloqueada else "readonly")
 
     def mostrar_registro(self, registro: RegistroEvolucion) -> None:
         self.limpiar()
@@ -371,7 +448,8 @@ class VistaEvolucion(ttk.Frame):
         self.problema = problema_desde_datos(registro.escenario_datos)
         self.estado_calculo.set("Registro cargado · sin recalcular el algoritmo")
         for instantanea in registro.instantaneas:
-            self.agregar_instantanea(instantanea)
+            self.agregar_instantanea(instantanea, actualizar_visual=False)
+        self.presentar_pendientes(forzar=True)
         self._ir_ultima()
         self._comparar_extremos()
 
@@ -499,10 +577,16 @@ class VistaEvolucion(ttk.Frame):
         )
         xs = [s.generacion for s in self.instantaneas]
         self._marcadores = []
+        self._lineas_vivas = []
+        self._linea_mutacion = None
         for eje, (_, titulo, valor, color) in zip(self.ejes, datos):
             eje.clear()
+            linea, = eje.plot(
+                xs, [valor(s) for s in self.instantaneas],
+                color=color, linewidth=1.3,
+            )
+            self._lineas_vivas.append((linea, valor))
             if xs:
-                eje.plot(xs, [valor(s) for s in self.instantaneas], color=color, linewidth=1.3)
                 marcador = eje.axvline(self.instantaneas[self.indice_actual].generacion, color="#17202a", linestyle="--", linewidth=.8)
                 self._marcadores.append(marcador)
             eje.set_title(titulo, fontsize=8)
@@ -532,13 +616,33 @@ class VistaEvolucion(ttk.Frame):
             if locales or mejoras:
                 eje_fitness.legend(fontsize=6, loc="best")
             eje_diversidad = self.ejes[3]
-            eje_diversidad.plot(
+            self._linea_mutacion, = eje_diversidad.plot(
                 xs, [s.registro.prob_mutacion_usada * 100 for s in self.instantaneas],
                 color="#e67e22", linestyle="--", linewidth=1.0, label="Mutación (%)",
             )
             eje_diversidad.legend(fontsize=6, loc="best")
             eje_diversidad.set_title("Diversidad y mutación (%)", fontsize=8)
         self.canvas_grafica.draw_idle()
+
+    def _actualizar_grafica_en_vivo(self) -> None:
+        """Actualiza datos y límites sin reconstruir las cuatro figuras."""
+        if self.figura is None:
+            return
+        xs = [s.generacion for s in self.instantaneas]
+        if len(self._lineas_vivas) != 4 or (xs and not self._marcadores):
+            self._reconstruir_grafica()
+            return
+        for eje, (linea, valor) in zip(self.ejes, self._lineas_vivas):
+            linea.set_data(xs, [valor(s) for s in self.instantaneas])
+            eje.relim()
+            eje.autoscale_view()
+        if self._linea_mutacion is not None:
+            self._linea_mutacion.set_data(
+                xs, [s.registro.prob_mutacion_usada * 100 for s in self.instantaneas],
+            )
+            self.ejes[3].relim()
+            self.ejes[3].autoscale_view()
+        self._actualizar_marcador()
 
     def _actualizar_marcador(self) -> None:
         if not self._marcadores or not self.instantaneas:
@@ -682,6 +786,11 @@ class VistaEvolucion(ttk.Frame):
             self.selector_generacion["values"] = ()
         if hasattr(self, "estado_calculo"):
             self.estado_calculo.set("Sin ejecución")
+        if hasattr(self, "control_didactico_ui"):
+            self._configuracion_bloqueada(False)
+        self.modo_didactico_activo = False
+        self.actualizaciones_visuales = 0
+        self.tiempo_renderizado = 0.0
         if hasattr(self, "figura"):
             self._reconstruir_grafica()
 

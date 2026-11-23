@@ -2,12 +2,27 @@
 from __future__ import annotations
 
 import json
+import hashlib
+import os
+import tempfile
 from copy import deepcopy
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any
 
 from .modelo import Docente, Grupo, Problema, Salon, Sesion
+
+
+class ConflictoArchivoExterno(RuntimeError):
+    """El JSON activo cambió en disco después de que la aplicación lo leyó."""
+
+
+def huella_archivo(ruta: str | Path) -> str | None:
+    """Devuelve la huella del contenido o ``None`` si el archivo no existe."""
+    destino = Path(ruta)
+    if not destino.exists():
+        return None
+    return hashlib.sha256(destino.read_bytes()).hexdigest()
 
 
 def _bloques_desde_mapa(
@@ -68,6 +83,44 @@ def guardar_datos(datos: dict[str, Any], ruta: str | Path) -> Path:
         json.dumps(datos, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
     return destino
+
+
+def guardar_datos_atomico(
+    datos: dict[str, Any],
+    ruta: str | Path,
+    *,
+    huella_esperada: str | None = None,
+    comprobar_cambio: bool = False,
+) -> tuple[Path, str]:
+    """Valida y reemplaza un JSON de forma atómica, detectando cambios externos.
+
+    El temporal se crea en el mismo directorio para que ``os.replace`` no cruce
+    sistemas de archivos. La comparación usa el contenido, no sólo la fecha.
+    """
+    validar_datos(datos)
+    destino = Path(ruta)
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    if comprobar_cambio and huella_archivo(destino) != huella_esperada:
+        raise ConflictoArchivoExterno(
+            "La configuración cambió fuera de la aplicación. "
+            "Descarta y vuelve a cargar antes de guardar para no sobrescribirla."
+        )
+    contenido = (json.dumps(datos, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
+    temporal: Path | None = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="wb", dir=destino.parent, prefix=f".{destino.name}.",
+            suffix=".tmp", delete=False,
+        ) as archivo:
+            temporal = Path(archivo.name)
+            archivo.write(contenido)
+            archivo.flush()
+            os.fsync(archivo.fileno())
+        os.replace(temporal, destino)
+    finally:
+        if temporal is not None and temporal.exists():
+            temporal.unlink()
+    return destino, hashlib.sha256(contenido).hexdigest()
 
 
 def validar_datos(datos: dict[str, Any]) -> Problema:
@@ -250,6 +303,9 @@ def problema_desde_datos(datos: dict[str, Any]) -> Problema:
         raise ValueError("El umbral de jornada larga debe ser un entero positivo") from exc
     if umbral_jornada < 1:
         raise ValueError("El umbral de jornada larga debe ser un entero positivo")
+    preferencias_activas = restricciones.get("preferencias_docentes_activas", True)
+    if not isinstance(preferencias_activas, bool):
+        raise ValueError("preferencias_docentes_activas debe ser verdadero o falso")
 
     return Problema(
         dias=dias, horas=horas, salones=salones, grupos=grupos, docentes=docentes,
@@ -259,4 +315,5 @@ def problema_desde_datos(datos: dict[str, Any]) -> Problema:
         max_horas_consecutivas_docente=max_docente,
         umbral_jornada_larga=umbral_jornada,
         duracion_bloque_minutos=duracion_bloque,
+        preferencias_docentes_activas=preferencias_activas,
     )

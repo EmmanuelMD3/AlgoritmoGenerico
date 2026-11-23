@@ -425,7 +425,7 @@ def validar_escenario_detallado(datos: dict[str, Any]) -> ResultadoValidacionEsc
         return ResultadoValidacionEscenario(tuple(incidencias), {})
     try:
         problema = problema_desde_datos(deepcopy(datos))
-    except (ValueError, KeyError, TypeError) as exc:
+    except (ValueError, KeyError, TypeError, AttributeError) as exc:
         agregar("error", "modelo_invalido", str(exc))
         return ResultadoValidacionEscenario(tuple(incidencias), {})
 
