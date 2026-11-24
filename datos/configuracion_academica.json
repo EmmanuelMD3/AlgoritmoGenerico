@@ -1,5 +1,5 @@
 {
-  "descripcion": "DATOS SINTÉTICOS DE PRUEBA — Cuello de botella de laboratorios. NO representan horarios de la UAEMex.",
+  "descripcion": "Escenario sintético de prueba 02_pequeno: Recursos equilibrados y restricciones moderadas. No es un horario institucional real.",
   "dias": [
     "Lunes",
     "Martes",
@@ -17,14 +17,25 @@
     "13:00",
     "14:00",
     "15:00",
-    "16:00",
-    "17:00"
+    "16:00"
   ],
   "salones": [
     {
+      "id": "LAB01",
+      "nombre": "Laboratorio 1",
+      "capacidad": 60,
+      "tipo": "laboratorio"
+    },
+    {
+      "id": "LAB02",
+      "nombre": "Laboratorio 2",
+      "capacidad": 39,
+      "tipo": "laboratorio"
+    },
+    {
       "id": "A01",
       "nombre": "Aula 1",
-      "capacidad": 44,
+      "capacidad": 60,
       "tipo": "aula"
     },
     {
@@ -36,1459 +47,1068 @@
     {
       "id": "A03",
       "nombre": "Aula 3",
-      "capacidad": 44,
+      "capacidad": 59,
       "tipo": "aula"
     },
     {
-      "id": "LAB01",
-      "nombre": "Laboratorio 1",
-      "capacidad": 43,
-      "tipo": "laboratorio"
+      "id": "A04",
+      "nombre": "Aula 4",
+      "capacidad": 37,
+      "tipo": "aula"
     },
     {
-      "id": "LAB02",
-      "nombre": "Laboratorio 2",
-      "capacidad": 36,
-      "tipo": "laboratorio"
+      "id": "A05",
+      "nombre": "Aula 5",
+      "capacidad": 46,
+      "tipo": "aula"
     }
   ],
   "grupos": [
     {
-      "id": "ISC-301",
-      "nombre": "Ingeniería en Software — Grupo ISC-301",
+      "id": "G001",
+      "nombre": "Ingeniería en Software — Grupo 001",
       "alumnos": 31,
       "no_disponible": {
         "Lunes": [
-          "09:00"
+          "11:00"
         ],
         "Martes": [
-          "10:00"
-        ],
-        "Miércoles": [
+          "11:00",
           "14:00"
-        ],
-        "Jueves": [
-          "14:00"
-        ],
-        "Viernes": [
-          "15:00"
         ]
       },
-      "max_horas_consecutivas": 6
+      "max_horas_consecutivas": 5
     },
     {
-      "id": "ISC-302",
-      "nombre": "Ingeniería en Software — Grupo ISC-302",
-      "alumnos": 24,
+      "id": "G002",
+      "nombre": "Ingeniería en Software — Grupo 002",
+      "alumnos": 39,
       "no_disponible": {
         "Lunes": [
-          "10:00"
-        ],
-        "Martes": [
-          "16:00"
+          "15:00"
         ],
         "Miércoles": [
-          "16:00"
+          "08:00",
+          "11:00"
         ],
         "Jueves": [
-          "17:00"
+          "09:00",
+          "10:00"
         ],
         "Viernes": [
           "07:00"
         ]
       },
-      "max_horas_consecutivas": 6
+      "max_horas_consecutivas": 5
     },
     {
-      "id": "ISC-303",
-      "nombre": "Ingeniería en Software — Grupo ISC-303",
-      "alumnos": 24,
+      "id": "G003",
+      "nombre": "Ingeniería en Software — Grupo 003",
+      "alumnos": 29,
       "no_disponible": {
         "Lunes": [
+          "07:00",
+          "15:00"
+        ],
+        "Martes": [
+          "09:00"
+        ],
+        "Miércoles": [
+          "11:00"
+        ],
+        "Jueves": [
+          "11:00"
+        ]
+      },
+      "max_horas_consecutivas": 5
+    },
+    {
+      "id": "G004",
+      "nombre": "Ingeniería en Software — Grupo 004",
+      "alumnos": 44,
+      "no_disponible": {
+        "Lunes": [
+          "15:00"
+        ],
+        "Martes": [
+          "07:00",
           "08:00"
-        ],
-        "Martes": [
-          "17:00"
-        ],
-        "Miércoles": [
-          "16:00"
-        ],
-        "Jueves": [
-          "12:00"
-        ],
-        "Viernes": [
-          "15:00"
-        ]
-      },
-      "max_horas_consecutivas": 6
-    },
-    {
-      "id": "ISC-304",
-      "nombre": "Ingeniería en Software — Grupo ISC-304",
-      "alumnos": 23,
-      "no_disponible": {
-        "Lunes": [
-          "09:00"
-        ],
-        "Martes": [
-          "07:00"
         ],
         "Miércoles": [
           "08:00"
         ],
         "Jueves": [
-          "13:00"
-        ],
-        "Viernes": [
-          "14:00"
+          "09:00",
+          "16:00"
         ]
       },
-      "max_horas_consecutivas": 6
+      "max_horas_consecutivas": 5
     },
     {
-      "id": "ISC-305",
-      "nombre": "Ingeniería en Software — Grupo ISC-305",
-      "alumnos": 28,
-      "no_disponible": {
-        "Lunes": [
-          "12:00"
-        ],
-        "Martes": [
-          "17:00"
-        ],
-        "Miércoles": [
-          "09:00"
-        ],
-        "Jueves": [
-          "15:00"
-        ],
-        "Viernes": [
-          "07:00"
-        ]
-      },
-      "max_horas_consecutivas": 6
-    },
-    {
-      "id": "ISC-306",
-      "nombre": "Ingeniería en Software — Grupo ISC-306",
+      "id": "G005",
+      "nombre": "Ingeniería en Software — Grupo 005",
       "alumnos": 30,
       "no_disponible": {
         "Lunes": [
-          "07:00"
-        ],
-        "Martes": [
-          "13:00"
+          "14:00"
         ],
         "Miércoles": [
-          "16:00"
-        ],
-        "Jueves": [
-          "16:00"
-        ],
-        "Viernes": [
-          "10:00"
+          "14:00"
         ]
       },
-      "max_horas_consecutivas": 6
+      "max_horas_consecutivas": 5
     },
     {
-      "id": "ISC-307",
-      "nombre": "Ingeniería en Software — Grupo ISC-307",
-      "alumnos": 26,
+      "id": "G006",
+      "nombre": "Ingeniería en Software — Grupo 006",
+      "alumnos": 38,
       "no_disponible": {
-        "Lunes": [
-          "16:00"
-        ],
         "Martes": [
-          "11:00"
-        ],
-        "Miércoles": [
-          "13:00"
-        ],
-        "Jueves": [
-          "15:00"
-        ],
-        "Viernes": [
-          "17:00"
+          "11:00",
+          "13:00",
+          "14:00"
         ]
       },
-      "max_horas_consecutivas": 6
+      "max_horas_consecutivas": 5
     }
   ],
   "docentes": [
     {
-      "id": "D01",
-      "nombre": "Docente 01",
+      "id": "D001",
+      "nombre": "Docente 001",
       "no_disponible": {
         "Lunes": [
-          "10:00",
-          "11:00",
-          "17:00"
+          "08:00",
+          "13:00"
         ],
         "Martes": [
-          "07:00",
-          "11:00",
-          "14:00"
-        ],
-        "Miércoles": [
-          "10:00",
-          "11:00",
-          "15:00"
-        ],
-        "Jueves": [
-          "11:00",
-          "13:00",
-          "16:00"
-        ],
-        "Viernes": [
-          "10:00",
-          "13:00",
-          "15:00"
-        ]
-      },
-      "max_horas_consecutivas": 6
-    },
-    {
-      "id": "D02",
-      "nombre": "Docente 02",
-      "no_disponible": {
-        "Lunes": [
-          "13:00",
-          "14:00",
-          "16:00"
-        ],
-        "Martes": [
-          "07:00",
-          "08:00",
-          "10:00"
-        ],
-        "Miércoles": [
-          "09:00",
-          "11:00",
-          "17:00"
-        ],
-        "Jueves": [
-          "07:00",
-          "10:00",
-          "17:00"
-        ],
-        "Viernes": [
-          "07:00",
-          "13:00",
-          "17:00"
-        ]
-      },
-      "max_horas_consecutivas": 6
-    },
-    {
-      "id": "D03",
-      "nombre": "Docente 03",
-      "no_disponible": {
-        "Lunes": [
-          "07:00",
-          "08:00",
           "11:00"
         ],
-        "Martes": [
-          "08:00",
-          "11:00",
-          "17:00"
-        ],
         "Miércoles": [
-          "08:00",
-          "13:00",
-          "17:00"
+          "12:00"
         ],
         "Jueves": [
-          "11:00",
           "13:00",
+          "16:00"
+        ]
+      },
+      "max_horas_consecutivas": 5
+    },
+    {
+      "id": "D002",
+      "nombre": "Docente 002",
+      "no_disponible": {
+        "Lunes": [
+          "16:00"
+        ],
+        "Martes": [
+          "07:00",
+          "09:00",
+          "15:00",
+          "16:00"
+        ],
+        "Miércoles": [
+          "14:00",
+          "15:00"
+        ],
+        "Jueves": [
+          "10:00",
+          "15:00"
+        ],
+        "Viernes": [
+          "15:00"
+        ]
+      },
+      "max_horas_consecutivas": 5
+    },
+    {
+      "id": "D003",
+      "nombre": "Docente 003",
+      "no_disponible": {
+        "Lunes": [
+          "10:00",
+          "11:00",
+          "12:00",
+          "15:00"
+        ],
+        "Martes": [
+          "14:00"
+        ],
+        "Miércoles": [
+          "12:00",
+          "15:00"
+        ],
+        "Jueves": [
+          "09:00"
+        ],
+        "Viernes": [
+          "14:00",
+          "16:00"
+        ]
+      },
+      "max_horas_consecutivas": 5
+    },
+    {
+      "id": "D004",
+      "nombre": "Docente 004",
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "15:00"
+        ],
+        "Miércoles": [
+          "07:00",
+          "14:00"
+        ],
+        "Jueves": [
+          "09:00",
+          "14:00",
           "16:00"
         ],
         "Viernes": [
-          "07:00",
           "14:00",
-          "17:00"
+          "15:00",
+          "16:00"
         ]
       },
-      "max_horas_consecutivas": 6
+      "max_horas_consecutivas": 5
     },
     {
-      "id": "D04",
-      "nombre": "Docente 04",
+      "id": "D005",
+      "nombre": "Docente 005",
       "no_disponible": {
         "Lunes": [
-          "09:00",
           "11:00",
           "14:00"
         ],
         "Martes": [
+          "09:00",
+          "11:00",
+          "13:00"
+        ],
+        "Miércoles": [
+          "08:00"
+        ],
+        "Jueves": [
           "08:00",
+          "10:00",
           "12:00",
+          "15:00"
+        ],
+        "Viernes": [
+          "11:00",
+          "14:00"
+        ]
+      },
+      "max_horas_consecutivas": 5
+    },
+    {
+      "id": "D006",
+      "nombre": "Docente 006",
+      "no_disponible": {
+        "Lunes": [
+          "10:00",
+          "13:00"
+        ],
+        "Martes": [
+          "13:00",
+          "14:00"
+        ],
+        "Miércoles": [
+          "15:00",
+          "16:00"
+        ],
+        "Jueves": [
+          "08:00",
+          "11:00",
+          "13:00"
+        ],
+        "Viernes": [
+          "09:00",
+          "16:00"
+        ]
+      },
+      "max_horas_consecutivas": 5
+    },
+    {
+      "id": "D007",
+      "nombre": "Docente 007",
+      "no_disponible": {
+        "Lunes": [
+          "12:00",
+          "13:00",
+          "14:00"
+        ],
+        "Martes": [
+          "08:00",
+          "10:00",
+          "11:00",
+          "14:00",
+          "15:00"
+        ],
+        "Miércoles": [
+          "07:00",
+          "10:00"
+        ],
+        "Jueves": [
+          "10:00",
+          "14:00",
+          "16:00"
+        ],
+        "Viernes": [
+          "07:00"
+        ]
+      },
+      "max_horas_consecutivas": 5
+    },
+    {
+      "id": "D008",
+      "nombre": "Docente 008",
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00",
+          "14:00"
+        ],
+        "Martes": [
           "13:00"
         ],
         "Miércoles": [
           "07:00",
-          "13:00",
-          "15:00"
+          "11:00",
+          "14:00"
         ],
         "Jueves": [
-          "07:00",
-          "08:00",
-          "17:00"
+          "09:00",
+          "16:00"
         ],
         "Viernes": [
-          "08:00",
-          "09:00",
-          "17:00"
+          "07:00",
+          "12:00"
         ]
       },
-      "max_horas_consecutivas": 6
+      "max_horas_consecutivas": 5
     },
     {
-      "id": "D05",
-      "nombre": "Docente 05",
+      "id": "D009",
+      "nombre": "Docente 009",
       "no_disponible": {
         "Lunes": [
-          "11:00",
-          "12:00",
+          "13:00",
           "16:00"
         ],
         "Martes": [
-          "07:00",
-          "08:00",
-          "17:00"
+          "09:00"
         ],
         "Miércoles": [
-          "09:00",
-          "13:00",
-          "15:00"
+          "11:00"
         ],
         "Jueves": [
-          "09:00",
-          "10:00",
-          "17:00"
+          "15:00",
+          "16:00"
         ],
         "Viernes": [
           "07:00",
-          "10:00",
+          "11:00",
           "15:00"
         ]
       },
-      "max_horas_consecutivas": 6
+      "max_horas_consecutivas": 5
     },
     {
-      "id": "D06",
-      "nombre": "Docente 06",
+      "id": "D010",
+      "nombre": "Docente 010",
       "no_disponible": {
         "Lunes": [
-          "08:00",
-          "09:00",
-          "10:00"
+          "10:00",
+          "12:00",
+          "13:00"
         ],
         "Martes": [
           "08:00",
-          "11:00",
-          "13:00"
+          "12:00"
+        ],
+        "Miércoles": [
+          "09:00",
+          "15:00"
+        ],
+        "Jueves": [
+          "07:00"
+        ],
+        "Viernes": [
+          "07:00",
+          "09:00",
+          "11:00"
+        ]
+      },
+      "max_horas_consecutivas": 5
+    },
+    {
+      "id": "D011",
+      "nombre": "Docente 011",
+      "no_disponible": {
+        "Lunes": [
+          "07:00",
+          "08:00"
+        ],
+        "Martes": [
+          "07:00",
+          "10:00",
+          "11:00"
         ],
         "Miércoles": [
           "08:00",
-          "09:00",
-          "13:00"
+          "10:00"
         ],
         "Jueves": [
-          "07:00",
-          "11:00",
           "12:00"
         ],
         "Viernes": [
           "07:00",
-          "13:00",
-          "17:00"
-        ]
-      },
-      "max_horas_consecutivas": 6
-    },
-    {
-      "id": "D07",
-      "nombre": "Docente 07",
-      "no_disponible": {
-        "Lunes": [
-          "09:00",
-          "10:00",
-          "17:00"
-        ],
-        "Martes": [
-          "10:00",
-          "11:00",
-          "15:00"
-        ],
-        "Miércoles": [
-          "08:00",
-          "11:00",
-          "15:00"
-        ],
-        "Jueves": [
-          "07:00",
-          "10:00",
-          "11:00"
-        ],
-        "Viernes": [
-          "09:00",
-          "12:00",
-          "13:00"
-        ]
-      },
-      "max_horas_consecutivas": 6
-    },
-    {
-      "id": "D08",
-      "nombre": "Docente 08",
-      "no_disponible": {
-        "Lunes": [
-          "09:00",
-          "10:00",
-          "11:00"
-        ],
-        "Martes": [
-          "08:00",
-          "14:00",
-          "17:00"
-        ],
-        "Miércoles": [
-          "08:00",
-          "09:00",
-          "13:00"
-        ],
-        "Jueves": [
-          "13:00",
-          "14:00",
-          "16:00"
-        ],
-        "Viernes": [
-          "12:00",
-          "14:00",
-          "17:00"
-        ]
-      },
-      "max_horas_consecutivas": 6
-    },
-    {
-      "id": "D09",
-      "nombre": "Docente 09",
-      "no_disponible": {
-        "Lunes": [
           "08:00",
           "09:00",
           "16:00"
-        ],
-        "Martes": [
-          "09:00",
-          "11:00",
-          "16:00"
-        ],
-        "Miércoles": [
-          "11:00",
-          "13:00",
-          "14:00"
-        ],
-        "Jueves": [
-          "12:00",
-          "13:00",
-          "16:00"
-        ],
-        "Viernes": [
-          "11:00",
-          "13:00",
-          "17:00"
         ]
       },
-      "max_horas_consecutivas": 6
+      "max_horas_consecutivas": 5
     },
     {
-      "id": "D10",
-      "nombre": "Docente 10",
+      "id": "D012",
+      "nombre": "Docente 012",
       "no_disponible": {
         "Lunes": [
-          "13:00",
-          "15:00",
-          "17:00"
-        ],
-        "Martes": [
-          "11:00",
-          "12:00",
-          "13:00"
-        ],
-        "Miércoles": [
-          "07:00",
-          "08:00",
-          "17:00"
-        ],
-        "Jueves": [
-          "09:00",
-          "12:00",
-          "16:00"
-        ],
-        "Viernes": [
-          "09:00",
-          "12:00",
-          "15:00"
-        ]
-      },
-      "max_horas_consecutivas": 6
-    },
-    {
-      "id": "D11",
-      "nombre": "Docente 11",
-      "no_disponible": {
-        "Lunes": [
-          "11:00",
-          "15:00",
-          "16:00"
-        ],
-        "Martes": [
-          "10:00",
-          "11:00",
-          "13:00"
-        ],
-        "Miércoles": [
-          "09:00",
-          "10:00",
-          "15:00"
-        ],
-        "Jueves": [
-          "11:00",
-          "14:00",
-          "17:00"
-        ],
-        "Viernes": [
-          "10:00",
-          "12:00",
-          "14:00"
-        ]
-      },
-      "max_horas_consecutivas": 6
-    },
-    {
-      "id": "D12",
-      "nombre": "Docente 12",
-      "no_disponible": {
-        "Lunes": [
-          "08:00",
-          "12:00",
-          "17:00"
-        ],
-        "Martes": [
-          "10:00",
-          "14:00",
-          "15:00"
-        ],
-        "Miércoles": [
-          "11:00",
-          "15:00",
-          "16:00"
-        ],
-        "Jueves": [
-          "08:00",
-          "09:00",
-          "17:00"
-        ],
-        "Viernes": [
-          "07:00",
-          "11:00",
-          "13:00"
-        ]
-      },
-      "max_horas_consecutivas": 6
-    },
-    {
-      "id": "D13",
-      "nombre": "Docente 13",
-      "no_disponible": {
-        "Lunes": [
-          "07:00",
-          "12:00",
-          "14:00"
-        ],
-        "Martes": [
-          "10:00",
-          "13:00",
-          "14:00"
-        ],
-        "Miércoles": [
-          "07:00",
-          "08:00",
-          "15:00"
-        ],
-        "Jueves": [
-          "08:00",
-          "12:00",
-          "15:00"
-        ],
-        "Viernes": [
-          "07:00",
-          "11:00",
-          "15:00"
-        ]
-      },
-      "max_horas_consecutivas": 6
-    },
-    {
-      "id": "D14",
-      "nombre": "Docente 14",
-      "no_disponible": {
-        "Lunes": [
-          "08:00",
-          "11:00",
-          "13:00"
-        ],
-        "Martes": [
-          "09:00",
-          "12:00",
-          "13:00"
-        ],
-        "Miércoles": [
-          "11:00",
-          "13:00",
-          "15:00"
-        ],
-        "Jueves": [
-          "08:00",
-          "15:00",
-          "17:00"
-        ],
-        "Viernes": [
-          "11:00",
-          "12:00",
-          "15:00"
-        ]
-      },
-      "max_horas_consecutivas": 6
-    },
-    {
-      "id": "D15",
-      "nombre": "Docente 15",
-      "no_disponible": {
-        "Lunes": [
-          "08:00",
-          "14:00",
-          "17:00"
-        ],
-        "Martes": [
-          "13:00",
-          "14:00",
-          "15:00"
-        ],
-        "Miércoles": [
-          "10:00",
-          "15:00",
-          "16:00"
-        ],
-        "Jueves": [
-          "10:00",
-          "15:00",
-          "16:00"
-        ],
-        "Viernes": [
-          "07:00",
-          "08:00",
-          "13:00"
-        ]
-      },
-      "max_horas_consecutivas": 6
-    },
-    {
-      "id": "D16",
-      "nombre": "Docente 16",
-      "no_disponible": {
-        "Lunes": [
-          "11:00",
-          "12:00",
-          "13:00"
-        ],
-        "Martes": [
-          "11:00",
-          "12:00",
-          "17:00"
-        ],
-        "Miércoles": [
-          "14:00",
-          "15:00",
-          "17:00"
-        ],
-        "Jueves": [
-          "10:00",
-          "12:00",
-          "17:00"
-        ],
-        "Viernes": [
-          "07:00",
-          "12:00",
-          "13:00"
-        ]
-      },
-      "max_horas_consecutivas": 6
-    },
-    {
-      "id": "D17",
-      "nombre": "Docente 17",
-      "no_disponible": {
-        "Lunes": [
-          "09:00",
-          "13:00",
-          "14:00"
+          "12:00"
         ],
         "Martes": [
           "08:00",
-          "09:00",
+          "11:00",
           "12:00"
         ],
         "Miércoles": [
-          "07:00",
-          "08:00",
-          "16:00"
+          "08:00"
         ],
         "Jueves": [
-          "10:00",
-          "13:00",
+          "08:00",
+          "09:00",
+          "13:00"
+        ],
+        "Viernes": [
+          "07:00",
+          "08:00",
+          "11:00",
           "15:00"
-        ],
-        "Viernes": [
-          "07:00",
-          "08:00",
-          "10:00"
         ]
       },
-      "max_horas_consecutivas": 6
+      "max_horas_consecutivas": 5
     },
     {
-      "id": "D18",
-      "nombre": "Docente 18",
+      "id": "D013",
+      "nombre": "Docente 013",
       "no_disponible": {
         "Lunes": [
-          "09:00",
-          "13:00",
-          "16:00"
+          "10:00",
+          "11:00"
         ],
         "Martes": [
-          "09:00",
-          "13:00",
-          "16:00"
-        ],
-        "Miércoles": [
-          "08:00",
-          "16:00",
-          "17:00"
-        ],
-        "Jueves": [
-          "09:00",
-          "12:00",
-          "14:00"
-        ],
-        "Viernes": [
-          "07:00",
-          "13:00",
-          "17:00"
-        ]
-      },
-      "max_horas_consecutivas": 6
-    },
-    {
-      "id": "D19",
-      "nombre": "Docente 19",
-      "no_disponible": {
-        "Lunes": [
-          "07:00",
-          "08:00",
-          "16:00"
-        ],
-        "Martes": [
-          "07:00",
-          "08:00",
+          "10:00",
           "13:00"
         ],
         "Miércoles": [
-          "08:00",
-          "09:00",
-          "17:00"
+          "07:00",
+          "13:00",
+          "15:00"
         ],
         "Jueves": [
-          "10:00",
-          "12:00",
+          "13:00",
+          "14:00"
+        ],
+        "Viernes": [
+          "16:00"
+        ]
+      },
+      "max_horas_consecutivas": 5
+    },
+    {
+      "id": "D014",
+      "nombre": "Docente 014",
+      "no_disponible": {
+        "Lunes": [
+          "08:00",
+          "14:00",
+          "16:00"
+        ],
+        "Miércoles": [
+          "13:00",
+          "14:00"
+        ],
+        "Jueves": [
           "16:00"
         ],
         "Viernes": [
           "07:00",
+          "10:00",
+          "12:00",
+          "14:00",
+          "16:00"
+        ]
+      },
+      "max_horas_consecutivas": 5
+    },
+    {
+      "id": "D015",
+      "nombre": "Docente 015",
+      "no_disponible": {
+        "Lunes": [
+          "09:00",
+          "16:00"
+        ],
+        "Martes": [
+          "14:00"
+        ],
+        "Miércoles": [
+          "07:00",
+          "10:00"
+        ],
+        "Jueves": [
+          "10:00",
+          "12:00"
+        ],
+        "Viernes": [
           "09:00",
           "14:00"
         ]
       },
-      "max_horas_consecutivas": 6
-    },
-    {
-      "id": "D20",
-      "nombre": "Docente 20",
-      "no_disponible": {
-        "Lunes": [
-          "09:00",
-          "14:00",
-          "16:00"
-        ],
-        "Martes": [
-          "12:00",
-          "15:00",
-          "17:00"
-        ],
-        "Miércoles": [
-          "13:00",
-          "14:00",
-          "16:00"
-        ],
-        "Jueves": [
-          "10:00",
-          "12:00",
-          "16:00"
-        ],
-        "Viernes": [
-          "08:00",
-          "15:00",
-          "17:00"
-        ]
-      },
-      "max_horas_consecutivas": 6
+      "max_horas_consecutivas": 5
     }
   ],
   "clases": [
     {
-      "id": "C01-01",
-      "materia_id": "MAT-01",
-      "materia": "Matemáticas Aplicadas",
-      "grupo": "ISC-301",
-      "docente": "D06",
+      "id": "C001-01",
+      "materia_id": "MAT-001",
+      "materia": "Álgebra Lineal",
+      "grupo": "G001",
+      "docente": "D013",
       "sesiones_semana": 2,
       "duracion_bloques": 1,
       "tipo_salon": "aula"
     },
     {
-      "id": "C01-02",
-      "materia_id": "MAT-02",
-      "materia": "Programación Avanzada",
-      "grupo": "ISC-301",
-      "docente": "D09",
+      "id": "C001-02",
+      "materia_id": "MAT-002",
+      "materia": "Investigación",
+      "grupo": "G001",
+      "docente": "D008",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C001-03",
+      "materia_id": "MAT-003",
+      "materia": "Programación Web",
+      "grupo": "G001",
+      "docente": "D006",
       "sesiones_semana": 2,
       "duracion_bloques": 2,
       "tipo_salon": "laboratorio"
     },
     {
-      "id": "C01-03",
-      "materia_id": "MAT-03",
-      "materia": "Bases de Datos",
-      "grupo": "ISC-301",
-      "docente": "D07",
+      "id": "C001-04",
+      "materia_id": "MAT-004",
+      "materia": "Estructuras de Datos",
+      "grupo": "G001",
+      "docente": "D007",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C001-05",
+      "materia_id": "MAT-005",
+      "materia": "Bases de Datos II",
+      "grupo": "G001",
+      "docente": "D001",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C001-06",
+      "materia_id": "MAT-006",
+      "materia": "Optimización",
+      "grupo": "G001",
+      "docente": "D015",
       "sesiones_semana": 2,
       "duracion_bloques": 2,
-      "tipo_salon": "laboratorio"
+      "tipo_salon": "aula"
     },
     {
-      "id": "C01-04",
-      "materia_id": "MAT-04",
-      "materia": "Redes de Computadoras",
-      "grupo": "ISC-301",
-      "docente": "D15",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "laboratorio"
-    },
-    {
-      "id": "C01-05",
-      "materia_id": "MAT-05",
-      "materia": "Ingeniería de Software",
-      "grupo": "ISC-301",
-      "docente": "D03",
+      "id": "C002-01",
+      "materia_id": "MAT-001",
+      "materia": "Seguridad Informática",
+      "grupo": "G002",
+      "docente": "D001",
       "sesiones_semana": 2,
       "duracion_bloques": 1,
       "tipo_salon": "aula"
     },
     {
-      "id": "C01-06",
-      "materia_id": "MAT-06",
-      "materia": "Sistemas Operativos",
-      "grupo": "ISC-301",
-      "docente": "D16",
+      "id": "C002-02",
+      "materia_id": "MAT-002",
+      "materia": "Álgebra Lineal",
+      "grupo": "G002",
+      "docente": "D005",
       "sesiones_semana": 2,
       "duracion_bloques": 1,
       "tipo_salon": "laboratorio"
     },
     {
-      "id": "C01-07",
-      "materia_id": "MAT-07",
-      "materia": "Estadística",
-      "grupo": "ISC-301",
-      "docente": "D14",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "aula"
-    },
-    {
-      "id": "C02-01",
-      "materia_id": "MAT-01",
-      "materia": "Matemáticas Aplicadas",
-      "grupo": "ISC-302",
-      "docente": "D01",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "aula"
-    },
-    {
-      "id": "C02-02",
-      "materia_id": "MAT-02",
-      "materia": "Programación Avanzada",
-      "grupo": "ISC-302",
-      "docente": "D04",
+      "id": "C002-03",
+      "materia_id": "MAT-003",
+      "materia": "Métodos Numéricos",
+      "grupo": "G002",
+      "docente": "D013",
       "sesiones_semana": 2,
       "duracion_bloques": 2,
-      "tipo_salon": "laboratorio"
-    },
-    {
-      "id": "C02-03",
-      "materia_id": "MAT-03",
-      "materia": "Bases de Datos",
-      "grupo": "ISC-302",
-      "docente": "D12",
-      "sesiones_semana": 2,
-      "duracion_bloques": 2,
-      "tipo_salon": "laboratorio"
-    },
-    {
-      "id": "C02-04",
-      "materia_id": "MAT-04",
-      "materia": "Redes de Computadoras",
-      "grupo": "ISC-302",
-      "docente": "D05",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "laboratorio"
-    },
-    {
-      "id": "C02-05",
-      "materia_id": "MAT-05",
-      "materia": "Ingeniería de Software",
-      "grupo": "ISC-302",
-      "docente": "D13",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "aula"
-    },
-    {
-      "id": "C02-06",
-      "materia_id": "MAT-06",
-      "materia": "Sistemas Operativos",
-      "grupo": "ISC-302",
-      "docente": "D11",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "laboratorio"
-    },
-    {
-      "id": "C02-07",
-      "materia_id": "MAT-07",
-      "materia": "Estadística",
-      "grupo": "ISC-302",
-      "docente": "D19",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "aula"
-    },
-    {
-      "id": "C03-01",
-      "materia_id": "MAT-01",
-      "materia": "Matemáticas Aplicadas",
-      "grupo": "ISC-303",
-      "docente": "D11",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "aula"
-    },
-    {
-      "id": "C03-02",
-      "materia_id": "MAT-02",
-      "materia": "Programación Avanzada",
-      "grupo": "ISC-303",
-      "docente": "D19",
-      "sesiones_semana": 2,
-      "duracion_bloques": 2,
-      "tipo_salon": "laboratorio",
+      "tipo_salon": "aula",
       "periodos_permitidos": {
         "Lunes": [
-          "11:00",
-          "12:00",
-          "14:00"
-        ],
-        "Jueves": [
           "08:00",
-          "09:00",
-          "15:00"
-        ]
-      }
-    },
-    {
-      "id": "C03-03",
-      "materia_id": "MAT-03",
-      "materia": "Bases de Datos",
-      "grupo": "ISC-303",
-      "docente": "D02",
-      "sesiones_semana": 2,
-      "duracion_bloques": 2,
-      "tipo_salon": "laboratorio"
-    },
-    {
-      "id": "C03-04",
-      "materia_id": "MAT-04",
-      "materia": "Redes de Computadoras",
-      "grupo": "ISC-303",
-      "docente": "D20",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "laboratorio"
-    },
-    {
-      "id": "C03-05",
-      "materia_id": "MAT-05",
-      "materia": "Ingeniería de Software",
-      "grupo": "ISC-303",
-      "docente": "D18",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "aula"
-    },
-    {
-      "id": "C03-06",
-      "materia_id": "MAT-06",
-      "materia": "Sistemas Operativos",
-      "grupo": "ISC-303",
-      "docente": "D01",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "laboratorio",
-      "periodos_permitidos": {
-        "Lunes": [
           "11:00",
           "13:00",
+          "14:00",
+          "15:00",
           "16:00"
         ],
         "Martes": [
-          "08:00",
-          "10:00",
-          "15:00"
-        ],
-        "Viernes": [
-          "10:00",
-          "11:00",
-          "14:00",
-          "17:00"
-        ]
-      }
-    },
-    {
-      "id": "C03-07",
-      "materia_id": "MAT-07",
-      "materia": "Estadística",
-      "grupo": "ISC-303",
-      "docente": "D14",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "aula"
-    },
-    {
-      "id": "C04-01",
-      "materia_id": "MAT-01",
-      "materia": "Matemáticas Aplicadas",
-      "grupo": "ISC-304",
-      "docente": "D16",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "aula"
-    },
-    {
-      "id": "C04-02",
-      "materia_id": "MAT-02",
-      "materia": "Programación Avanzada",
-      "grupo": "ISC-304",
-      "docente": "D09",
-      "sesiones_semana": 2,
-      "duracion_bloques": 2,
-      "tipo_salon": "laboratorio"
-    },
-    {
-      "id": "C04-03",
-      "materia_id": "MAT-03",
-      "materia": "Bases de Datos",
-      "grupo": "ISC-304",
-      "docente": "D17",
-      "sesiones_semana": 2,
-      "duracion_bloques": 2,
-      "tipo_salon": "laboratorio"
-    },
-    {
-      "id": "C04-04",
-      "materia_id": "MAT-04",
-      "materia": "Redes de Computadoras",
-      "grupo": "ISC-304",
-      "docente": "D10",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "laboratorio"
-    },
-    {
-      "id": "C04-05",
-      "materia_id": "MAT-05",
-      "materia": "Ingeniería de Software",
-      "grupo": "ISC-304",
-      "docente": "D08",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "aula"
-    },
-    {
-      "id": "C04-06",
-      "materia_id": "MAT-06",
-      "materia": "Sistemas Operativos",
-      "grupo": "ISC-304",
-      "docente": "D06",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "laboratorio"
-    },
-    {
-      "id": "C04-07",
-      "materia_id": "MAT-07",
-      "materia": "Estadística",
-      "grupo": "ISC-304",
-      "docente": "D04",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "aula"
-    },
-    {
-      "id": "C05-01",
-      "materia_id": "MAT-01",
-      "materia": "Matemáticas Aplicadas",
-      "grupo": "ISC-305",
-      "docente": "D06",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "aula"
-    },
-    {
-      "id": "C05-02",
-      "materia_id": "MAT-02",
-      "materia": "Programación Avanzada",
-      "grupo": "ISC-305",
-      "docente": "D14",
-      "sesiones_semana": 2,
-      "duracion_bloques": 2,
-      "tipo_salon": "laboratorio"
-    },
-    {
-      "id": "C05-03",
-      "materia_id": "MAT-03",
-      "materia": "Bases de Datos",
-      "grupo": "ISC-305",
-      "docente": "D12",
-      "sesiones_semana": 2,
-      "duracion_bloques": 2,
-      "tipo_salon": "laboratorio",
-      "periodos_permitidos": {
-        "Lunes": [
           "07:00",
           "08:00",
-          "11:00"
-        ],
-        "Martes": [
           "10:00",
-          "12:00",
-          "15:00",
-          "17:00"
-        ],
-        "Miércoles": [
-          "10:00",
-          "13:00",
-          "14:00"
-        ],
-        "Jueves": [
+          "11:00",
           "13:00",
           "14:00",
           "16:00"
+        ],
+        "Miércoles": [
+          "07:00",
+          "08:00",
+          "12:00",
+          "14:00",
+          "16:00"
+        ],
+        "Jueves": [
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "15:00",
+          "16:00"
+        ],
+        "Viernes": [
+          "08:00",
+          "12:00",
+          "14:00",
+          "15:00"
         ]
       }
     },
     {
-      "id": "C05-04",
-      "materia_id": "MAT-04",
+      "id": "C002-04",
+      "materia_id": "MAT-004",
+      "materia": "Inteligencia Artificial",
+      "grupo": "G002",
+      "docente": "D008",
+      "sesiones_semana": 2,
+      "duracion_bloques": 2,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C002-05",
+      "materia_id": "MAT-005",
       "materia": "Redes de Computadoras",
-      "grupo": "ISC-305",
-      "docente": "D20",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "laboratorio"
-    },
-    {
-      "id": "C05-05",
-      "materia_id": "MAT-05",
-      "materia": "Ingeniería de Software",
-      "grupo": "ISC-305",
-      "docente": "D13",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "aula"
-    },
-    {
-      "id": "C05-06",
-      "materia_id": "MAT-06",
-      "materia": "Sistemas Operativos",
-      "grupo": "ISC-305",
-      "docente": "D16",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "laboratorio"
-    },
-    {
-      "id": "C05-07",
-      "materia_id": "MAT-07",
-      "materia": "Estadística",
-      "grupo": "ISC-305",
-      "docente": "D04",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "aula"
-    },
-    {
-      "id": "C06-01",
-      "materia_id": "MAT-01",
-      "materia": "Matemáticas Aplicadas",
-      "grupo": "ISC-306",
-      "docente": "D01",
+      "grupo": "G002",
+      "docente": "D010",
       "sesiones_semana": 2,
       "duracion_bloques": 1,
       "tipo_salon": "aula",
       "periodos_permitidos": {
         "Lunes": [
-          "15:00"
-        ],
-        "Martes": [
-          "08:00",
-          "16:00"
-        ],
-        "Jueves": [
-          "08:00",
-          "11:00",
-          "12:00"
-        ],
-        "Viernes": [
           "07:00",
-          "11:00"
-        ]
-      }
-    },
-    {
-      "id": "C06-02",
-      "materia_id": "MAT-02",
-      "materia": "Programación Avanzada",
-      "grupo": "ISC-306",
-      "docente": "D19",
-      "sesiones_semana": 2,
-      "duracion_bloques": 2,
-      "tipo_salon": "laboratorio"
-    },
-    {
-      "id": "C06-03",
-      "materia_id": "MAT-03",
-      "materia": "Bases de Datos",
-      "grupo": "ISC-306",
-      "docente": "D07",
-      "sesiones_semana": 2,
-      "duracion_bloques": 2,
-      "tipo_salon": "laboratorio",
-      "periodos_permitidos": {
-        "Lunes": [
-          "07:00",
-          "09:00",
-          "15:00",
-          "16:00"
-        ],
-        "Viernes": [
-          "07:00",
-          "09:00",
-          "14:00",
-          "15:00",
-          "17:00"
-        ]
-      }
-    },
-    {
-      "id": "C06-04",
-      "materia_id": "MAT-04",
-      "materia": "Redes de Computadoras",
-      "grupo": "ISC-306",
-      "docente": "D10",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "laboratorio"
-    },
-    {
-      "id": "C06-05",
-      "materia_id": "MAT-05",
-      "materia": "Ingeniería de Software",
-      "grupo": "ISC-306",
-      "docente": "D03",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "aula"
-    },
-    {
-      "id": "C06-06",
-      "materia_id": "MAT-06",
-      "materia": "Sistemas Operativos",
-      "grupo": "ISC-306",
-      "docente": "D11",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "laboratorio"
-    },
-    {
-      "id": "C06-07",
-      "materia_id": "MAT-07",
-      "materia": "Estadística",
-      "grupo": "ISC-306",
-      "docente": "D04",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "aula"
-    },
-    {
-      "id": "C07-01",
-      "materia_id": "MAT-01",
-      "materia": "Matemáticas Aplicadas",
-      "grupo": "ISC-307",
-      "docente": "D01",
-      "sesiones_semana": 2,
-      "duracion_bloques": 1,
-      "tipo_salon": "aula"
-    },
-    {
-      "id": "C07-02",
-      "materia_id": "MAT-02",
-      "materia": "Programación Avanzada",
-      "grupo": "ISC-307",
-      "docente": "D14",
-      "sesiones_semana": 2,
-      "duracion_bloques": 2,
-      "tipo_salon": "laboratorio"
-    },
-    {
-      "id": "C07-03",
-      "materia_id": "MAT-03",
-      "materia": "Bases de Datos",
-      "grupo": "ISC-307",
-      "docente": "D02",
-      "sesiones_semana": 2,
-      "duracion_bloques": 2,
-      "tipo_salon": "laboratorio",
-      "periodos_permitidos": {
-        "Lunes": [
-          "12:00",
-          "14:00"
-        ],
-        "Miércoles": [
           "09:00",
           "10:00",
           "15:00",
           "16:00"
         ],
+        "Martes": [
+          "10:00",
+          "13:00",
+          "16:00"
+        ],
+        "Miércoles": [
+          "08:00",
+          "13:00",
+          "15:00",
+          "16:00"
+        ],
         "Jueves": [
+          "10:00",
+          "11:00",
+          "12:00",
+          "14:00",
+          "16:00"
+        ],
+        "Viernes": [
+          "07:00",
+          "08:00",
+          "11:00",
+          "12:00",
+          "16:00"
+        ]
+      }
+    },
+    {
+      "id": "C002-06",
+      "materia_id": "MAT-006",
+      "materia": "Ingeniería de Software",
+      "grupo": "G002",
+      "docente": "D015",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C003-01",
+      "materia_id": "MAT-001",
+      "materia": "Diseño de Software",
+      "grupo": "G003",
+      "docente": "D003",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "laboratorio"
+    },
+    {
+      "id": "C003-02",
+      "materia_id": "MAT-002",
+      "materia": "Arquitectura de Computadoras",
+      "grupo": "G003",
+      "docente": "D007",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "laboratorio"
+    },
+    {
+      "id": "C003-03",
+      "materia_id": "MAT-003",
+      "materia": "Sistemas Embebidos",
+      "grupo": "G003",
+      "docente": "D015",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "laboratorio"
+    },
+    {
+      "id": "C003-04",
+      "materia_id": "MAT-004",
+      "materia": "Bases de Datos",
+      "grupo": "G003",
+      "docente": "D008",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C003-05",
+      "materia_id": "MAT-005",
+      "materia": "Estructuras de Datos",
+      "grupo": "G003",
+      "docente": "D012",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C003-06",
+      "materia_id": "MAT-006",
+      "materia": "Cálculo Integral",
+      "grupo": "G003",
+      "docente": "D012",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C004-01",
+      "materia_id": "MAT-001",
+      "materia": "Cálculo Integral",
+      "grupo": "G004",
+      "docente": "D014",
+      "sesiones_semana": 2,
+      "duracion_bloques": 2,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C004-02",
+      "materia_id": "MAT-002",
+      "materia": "Matemáticas Discretas",
+      "grupo": "G004",
+      "docente": "D009",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C004-03",
+      "materia_id": "MAT-003",
+      "materia": "Estadística",
+      "grupo": "G004",
+      "docente": "D007",
+      "sesiones_semana": 2,
+      "duracion_bloques": 2,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C004-04",
+      "materia_id": "MAT-004",
+      "materia": "Minería de Datos",
+      "grupo": "G004",
+      "docente": "D014",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "laboratorio"
+    },
+    {
+      "id": "C004-05",
+      "materia_id": "MAT-005",
+      "materia": "Diseño de Software",
+      "grupo": "G004",
+      "docente": "D004",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula",
+      "periodos_permitidos": {
+        "Lunes": [
+          "07:00",
+          "08:00",
           "09:00",
+          "12:00",
+          "15:00",
+          "16:00"
+        ],
+        "Martes": [
+          "09:00",
+          "10:00",
+          "12:00",
+          "15:00"
+        ],
+        "Miércoles": [
+          "07:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00"
+        ],
+        "Jueves": [
+          "07:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "13:00",
+          "15:00"
+        ],
+        "Viernes": [
+          "07:00",
+          "08:00",
+          "10:00",
           "12:00",
           "13:00"
         ]
       }
     },
     {
-      "id": "C07-04",
-      "materia_id": "MAT-04",
-      "materia": "Redes de Computadoras",
-      "grupo": "ISC-307",
-      "docente": "D15",
+      "id": "C004-06",
+      "materia_id": "MAT-006",
+      "materia": "Estructuras de Datos",
+      "grupo": "G004",
+      "docente": "D009",
       "sesiones_semana": 2,
       "duracion_bloques": 1,
       "tipo_salon": "laboratorio"
     },
     {
-      "id": "C07-05",
-      "materia_id": "MAT-05",
-      "materia": "Ingeniería de Software",
-      "grupo": "ISC-307",
-      "docente": "D18",
+      "id": "C005-01",
+      "materia_id": "MAT-001",
+      "materia": "Matemáticas Discretas",
+      "grupo": "G005",
+      "docente": "D011",
       "sesiones_semana": 2,
       "duracion_bloques": 1,
       "tipo_salon": "aula"
     },
     {
-      "id": "C07-06",
-      "materia_id": "MAT-06",
-      "materia": "Sistemas Operativos",
-      "grupo": "ISC-307",
-      "docente": "D11",
+      "id": "C005-02",
+      "materia_id": "MAT-002",
+      "materia": "Bases de Datos II",
+      "grupo": "G005",
+      "docente": "D006",
       "sesiones_semana": 2,
       "duracion_bloques": 1,
-      "tipo_salon": "laboratorio",
+      "tipo_salon": "aula",
       "periodos_permitidos": {
         "Lunes": [
+          "08:00",
+          "09:00",
+          "12:00",
+          "14:00",
+          "16:00"
+        ],
+        "Martes": [
+          "08:00",
+          "10:00",
           "11:00",
-          "16:00",
-          "17:00"
+          "15:00",
+          "16:00"
         ],
         "Miércoles": [
-          "08:00",
+          "07:00",
+          "10:00",
           "11:00",
-          "13:00",
-          "16:00",
-          "17:00"
+          "14:00",
+          "15:00"
         ],
         "Jueves": [
           "09:00",
-          "16:00"
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00"
+        ],
+        "Viernes": [
+          "10:00",
+          "12:00",
+          "15:00"
         ]
       }
     },
     {
-      "id": "C07-07",
-      "materia_id": "MAT-07",
-      "materia": "Estadística",
-      "grupo": "ISC-307",
-      "docente": "D09",
+      "id": "C005-03",
+      "materia_id": "MAT-003",
+      "materia": "Métodos Numéricos",
+      "grupo": "G005",
+      "docente": "D003",
+      "sesiones_semana": 2,
+      "duracion_bloques": 2,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C005-04",
+      "materia_id": "MAT-004",
+      "materia": "Álgebra Lineal",
+      "grupo": "G005",
+      "docente": "D013",
       "sesiones_semana": 2,
       "duracion_bloques": 1,
       "tipo_salon": "aula"
+    },
+    {
+      "id": "C005-05",
+      "materia_id": "MAT-005",
+      "materia": "Administración de Proyectos",
+      "grupo": "G005",
+      "docente": "D011",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C005-06",
+      "materia_id": "MAT-006",
+      "materia": "Minería de Datos",
+      "grupo": "G005",
+      "docente": "D010",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "laboratorio"
+    },
+    {
+      "id": "C006-01",
+      "materia_id": "MAT-001",
+      "materia": "Ingeniería de Requisitos",
+      "grupo": "G006",
+      "docente": "D009",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "laboratorio"
+    },
+    {
+      "id": "C006-02",
+      "materia_id": "MAT-002",
+      "materia": "Calidad de Software",
+      "grupo": "G006",
+      "docente": "D002",
+      "sesiones_semana": 2,
+      "duracion_bloques": 2,
+      "tipo_salon": "laboratorio"
+    },
+    {
+      "id": "C006-03",
+      "materia_id": "MAT-003",
+      "materia": "Análisis de Sistemas",
+      "grupo": "G006",
+      "docente": "D004",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C006-04",
+      "materia_id": "MAT-004",
+      "materia": "Estructuras de Datos",
+      "grupo": "G006",
+      "docente": "D002",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "laboratorio"
+    },
+    {
+      "id": "C006-05",
+      "materia_id": "MAT-005",
+      "materia": "Sistemas Distribuidos",
+      "grupo": "G006",
+      "docente": "D010",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "aula"
+    },
+    {
+      "id": "C006-06",
+      "materia_id": "MAT-006",
+      "materia": "Programación",
+      "grupo": "G006",
+      "docente": "D014",
+      "sesiones_semana": 2,
+      "duracion_bloques": 1,
+      "tipo_salon": "laboratorio"
     }
   ],
   "restricciones": {
-    "franjas_no_lectivas": {
-      "Miércoles": [
-        "12:00"
-      ],
-      "Viernes": [
-        "16:00"
-      ]
-    },
-    "max_horas_consecutivas_docente": 6,
-    "max_horas_consecutivas_grupo": 6,
+    "franjas_no_lectivas": {},
+    "max_horas_consecutivas_docente": 5,
+    "max_horas_consecutivas_grupo": 5,
     "umbral_jornada_larga": 7
   },
   "metadatos": {
-    "nombre": "Cuello de botella de laboratorios",
-    "tipo": "prueba_sintetica",
+    "nombre": "02 pequeno — Recursos equilibrados y restricciones moderadas — réplica 1",
+    "tipo": "escenario_sintetico_factible",
+    "perfil": "equilibrado",
+    "semilla_escenario": 41001,
     "duracion_bloque_minutos": 60,
-    "semilla_escenario": 6202,
-    "perfil": "estres",
-    "nota": "Incluye una solución factible construida internamente, NO incluida en el JSON. El algoritmo debe encontrarla por sí mismo."
+    "factibilidad": "Existe solución construida y validada internamente; el testigo NO está incluido en el JSON.",
+    "uso": "Pruebas y comparación de algoritmos; datos ficticios."
   }
 }

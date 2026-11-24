@@ -9,6 +9,7 @@ from typing import Callable, Mapping, Sequence
 
 from horarios_ga.fitness import Evaluacion, PESOS_BLANDOS, PESOS_DUROS
 from horarios_ga.genetico import Configuracion, Registro, Resultado
+from horarios_ga.diagnostico import DiagnosticoHorario, formatear_diagnostico
 from .componentes import PanelDesplazable, SeccionPlegable, TarjetaKPI
 from .estilos import (
     ADVERTENCIA, AZUL, AZUL_MEDIO, EXITO, PANEL, PELIGRO, SECUNDARIO, TEXTO,
@@ -37,6 +38,8 @@ PARAMETROS_POR_SECCION = (
     ("Inicialización híbrida", False, (
         ("inicializacion_heuristica", "Activar inicialización heurística", "Sólo actúa en modo híbrido y no conoce soluciones testigo."),
         ("porcentaje_inicializacion_heuristica", "Fracción heurística", "Proporción constructiva de la población inicial (0 a 0.5)."),
+        ("reparacion_avanzada", "Reparación dirigida avanzada", "Explora dominios críticos y movimientos coordinados; el modo clásico conserva la reparación histórica."),
+        ("reinicio_estancamiento", "Reinicio parcial por estancamiento", "Inyecta un 12 % de individuos nuevos en pulsos periódicos sin reemplazar élites."),
     )),
     ("Búsqueda local híbrida", False, (
         ("busqueda_local", "Activar búsqueda local", "Refina candidatos sin aceptar retrocesos lexicográficos."),
@@ -123,6 +126,12 @@ def configuracion_desde_textos(valores: Mapping[str, str]) -> Configuracion:
             factor_incremento_mutacion=float(valores.get("factor_incremento_mutacion", str(defaults.factor_incremento_mutacion))),
             factor_recuperacion_mutacion=float(valores.get("factor_recuperacion_mutacion", str(defaults.factor_recuperacion_mutacion))),
             presupuesto_evaluaciones=int(valores.get("presupuesto_evaluaciones", str(defaults.presupuesto_evaluaciones))),
+            reparacion_avanzada=valores.get(
+                "reparacion_avanzada", str(defaults.reparacion_avanzada),
+            ).strip().lower() in {"1", "true", "sí", "si"},
+            reinicio_estancamiento=valores.get(
+                "reinicio_estancamiento", str(defaults.reinicio_estancamiento),
+            ).strip().lower() in {"1", "true", "sí", "si"},
         )
     except (KeyError, TypeError, ValueError) as exc:
         raise ValueError("Los parámetros contienen un valor no válido") from exc
@@ -435,6 +444,8 @@ class VistaOptimizacion(ttk.Frame):
             "inicializacion_heuristica": ("False", "True"),
             "busqueda_local": ("False", "True"),
             "mutacion_adaptativa": ("False", "True"),
+            "reparacion_avanzada": ("False", "True"),
+            "reinicio_estancamiento": ("False", "True"),
             "estrategia_busqueda_local": ("mejores", "aleatoria", "estancamiento"),
             "vecindario_busqueda_local": ("reasignacion", "intercambio", "mixta"),
             "criterio_busqueda_local": ("primera", "mejor"),
@@ -575,9 +586,11 @@ class VistaOptimizacion(ttk.Frame):
         pagina_desglose = ttk.Frame(vistas, style="Panel.TFrame", padding=5)
         pagina_comparacion = ttk.Frame(vistas, style="Panel.TFrame", padding=5)
         pagina_resumen = ttk.Frame(vistas, style="Panel.TFrame", padding=7)
+        pagina_diagnostico = ttk.Frame(vistas, style="Panel.TFrame", padding=7)
         vistas.add(pagina_desglose, text="Desglose académico")
         vistas.add(pagina_comparacion, text="Inicial vs. final")
         vistas.add(pagina_resumen, text="Resumen de finalización")
+        vistas.add(pagina_diagnostico, text="Diagnóstico de conflictos")
         self._crear_desglose(pagina_desglose)
         self._crear_comparacion(pagina_comparacion)
         self.resumen_texto = tk.Text(
@@ -586,6 +599,12 @@ class VistaOptimizacion(ttk.Frame):
         )
         self.resumen_texto.pack(fill="both", expand=True)
         self.resumen_texto.configure(state="disabled")
+        self.diagnostico_texto = tk.Text(
+            pagina_diagnostico, wrap="word", relief="flat", bg=PANEL, fg=TEXTO,
+            font=("Segoe UI", 9), padx=8, pady=6, height=5,
+        )
+        self.diagnostico_texto.pack(fill="both", expand=True)
+        self.diagnostico_texto.configure(state="disabled")
 
     def _crear_desglose(self, padre: tk.Misc) -> None:
         columnas = ("tipo", "criterio", "cantidad", "peso", "contribucion")
@@ -692,7 +711,10 @@ class VistaOptimizacion(ttk.Frame):
             self._redibujar(forzar=True)
             self._ultimo_redibujo = ahora
 
-    def finalizar(self, resultado: Resultado, segundos: float, cancelada: bool = False) -> None:
+    def finalizar(
+        self, resultado: Resultado, segundos: float, cancelada: bool = False,
+        diagnostico: DiagnosticoHorario | None = None,
+    ) -> None:
         self.resultado = resultado
         self.registros = list(resultado.historial)
         self._aplicar_metricas(metricas_resultado(resultado, segundos, cancelada))
@@ -713,6 +735,11 @@ class VistaOptimizacion(ttk.Frame):
         self._actualizar_desglose(evaluacion)
         self._actualizar_comparacion(resultado)
         self._escribir_resumen(resumen_finalizacion(resultado, cancelada))
+        self._escribir_diagnostico(
+            formatear_diagnostico(diagnostico)
+            if diagnostico is not None else
+            "El diagnóstico detallado no está disponible para este resultado."
+        )
         self.boton_ejecutar.configure(state="normal")
         self.boton_detener.configure(state="disabled")
         self._redibujar(forzar=True)
@@ -751,6 +778,10 @@ class VistaOptimizacion(ttk.Frame):
             )
         if hasattr(self, "resumen_texto"):
             self._escribir_resumen("Sin resultados. La comparación y las razones de factibilidad aparecerán al finalizar.")
+        if hasattr(self, "diagnostico_texto"):
+            self._escribir_diagnostico(
+                "Sin resultados. Las asignaciones conflictivas y sus alternativas aparecerán al finalizar."
+            )
         self._redibujar(forzar=True)
 
     def _aplicar_metricas(self, metricas: Mapping[str, tuple[str, str, str]]) -> None:
@@ -780,6 +811,12 @@ class VistaOptimizacion(ttk.Frame):
         self.resumen_texto.delete("1.0", "end")
         self.resumen_texto.insert("1.0", contenido)
         self.resumen_texto.configure(state="disabled")
+
+    def _escribir_diagnostico(self, contenido: str) -> None:
+        self.diagnostico_texto.configure(state="normal")
+        self.diagnostico_texto.delete("1.0", "end")
+        self.diagnostico_texto.insert("1.0", contenido)
+        self.diagnostico_texto.configure(state="disabled")
 
     def _set_estado_chip(self, texto: str, tono: str) -> None:
         estilos = {

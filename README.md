@@ -68,10 +68,27 @@ En modo `hibrido` se pueden activar por separado:
 - **Búsqueda local:** vecindarios de reasignación, intercambio o ambos; selección de los mejores individuos, una muestra aleatoria o activación durante estancamiento; primera o mejor mejora; frecuencia, proporción, evaluaciones y mejoras máximas configurables. Un movimiento sólo se acepta si mejora `(-D, -B, Fitness)`.
 - **Mutación adaptativa:** mantiene una tasa dentro de límites mínimo/máximo. La incrementa al detectar estancamiento o diversidad baja y la aproxima de nuevo a la tasa base cuando desaparecen esas señales. El historial conserva la tasa realmente usada en cada generación.
 - **Presupuesto máximo:** `0` significa sin límite. Otro valor detiene cooperativamente la corrida antes de superar el número indicado de evaluaciones completas. Debe ser al menos igual al tamaño de población.
+- **Reparación dirigida avanzada:** usa dominios compatibles con las restricciones estáticas, prioriza destinos con menor ocupación conflictiva y puede liberar un bloqueador mediante un movimiento coordinado corto. Sólo se aplica al híbrido.
+- **Reinicio por estancamiento:** aumenta temporalmente los inmigrantes al 12 % sin reemplazar élites. La reparación también puede pulir el mejor individuo en pulsos periódicos. Ambos controles son configurables y el AG clásico conserva sus operadores de referencia.
 
 El resumen y `resumen.json` separan evaluaciones y tiempos de inicialización, evolución y búsqueda local. `evolucion.csv` añade tasa de mutación, evaluaciones acumuladas, aplicaciones/mejoras locales y marcas de mejora global/estancamiento. Las cifras de tiempo son observaciones del equipo, no parte de la prioridad del optimizador.
 
 La búsqueda local es memética: puede mejorar una solución, pero no demuestra optimalidad. Del mismo modo, agotar generaciones o presupuesto sin hallar factibilidad no demuestra que el escenario sea matemáticamente imposible.
+
+### Diagnóstico de factibilidad
+
+Al finalizar, la cuarta vista del panel inferior de **Optimización** identifica cada sesión implicada en una violación dura, explica el recurso o periodo afectado y prueba alternativas individuales con la misma función de evaluación. Si ninguna reubicación individual mejora el resultado, lo informa como necesidad de un movimiento coordinado; no lo etiqueta como imposible. `resumen.json` conserva el estado, las sesiones y las alternativas, y `diagnostico_factibilidad.txt` ofrece la versión legible.
+
+Los estados posibles son **solución factible encontrada**, **no se encontró solución dentro del presupuesto**, **imposibilidad demostrada** y **verificación inconclusa**. La imposibilidad sólo se usa para una contradicción necesaria válida —por ejemplo, una sesión sin dominio o demanda de un recurso superior a una cota de capacidad— o para el estado `INFEASIBLE` del verificador completo opcional.
+
+El verificador `horarios_ga.verificador_cp_sat` modela todas las restricciones duras mediante OR-Tools CP-SAT y vuelve a someter cualquier solución al evaluador oficial. Es opcional:
+
+```powershell
+python -m pip install -r requirements-optional.txt
+python main.py --diagnostico --verificar-cp-sat --tiempo-cp-sat 30
+```
+
+Si OR-Tools no está disponible o agota el límite sin solución ni prueba, el resultado es **inconcluso**. Nunca se acepta una solución de un modelo reducido como certificado del modelo completo. El análisis reproducible del escenario actual, sus conflictos concretos y las mediciones antes/después están en [`DIAGNOSTICO_FACTIBILIDAD.md`](DIAGNOSTICO_FACTIBILIDAD.md).
 
 ### Cargar y editar datos académicos
 
@@ -285,7 +302,7 @@ python main.py --modo hibrido --poblacion 40 --generaciones 40 `
   --mutacion-adaptativa --presupuesto-evaluaciones 5000
 ```
 
-La consola imprime el fitness inicial/final, el desglose de conflictos y los archivos generados. `resultados/` contiene `horario_sesiones.csv`, `horarios_por_grupo.html`, `evolucion.csv`, `evolucion.png` y `resumen.json`.
+La consola imprime el fitness inicial/final, el desglose de conflictos y los archivos generados. `--diagnostico` añade las asignaciones conflictivas y sus alternativas; `--verificar-cp-sat` activa el verificador opcional. `resultados/` contiene `horario_sesiones.csv`, `horarios_por_grupo.html`, `evolucion.csv`, `evolucion.png`, `resumen.json` y `diagnostico_factibilidad.txt`.
 
 ## Algoritmo y restricciones implementadas
 
@@ -369,7 +386,7 @@ Ejecutar:
 python -m unittest discover -s tests -v
 ```
 
-Las 150 pruebas cubren el motor original, compatibilidad JSON, reproducibilidad, operadores, exportaciones, parámetros de interfaz, callback, cancelación cooperativa, sesiones multibloque, disponibilidades limitadas, dashboard, experimentación, escenarios y estadísticas. La Fase 5 añade generación 0, copias inmutables, frecuencia de captura, diferencias y exportaciones PNG/GIF. La corrección de evolución en vivo añade callbacks desde el trabajador, orden G0→Gn en clásico e híbrido, consumo acotado de eventos, confirmación de presentación didáctica, paso exacto, separación de tiempos y reutilización de celdas. La Fase 6 añade compatibilidad estricta del modo clásico, población mixta, vecindarios locales, cotas adaptativas, presupuesto global, métricas por fase, comparación clásico/híbrido y ablaciones A–E. La Fase 7 añade bloques variables, generación reproducible, perfiles, testigo oculto, validación con errores/advertencias, gestión segura y lotes cancelables. La Fase 7.1 añade carga canónica, escritura atómica, recuperación ante fallos de reemplazo, detección de cambios externos, estado sucio y descarte, persistencia tras reinicio, conversión de cuadrícula, periodos permitidos, poda temporal, instantáneas históricas, selección canónica en consola y verificación de siete secciones. La Fase 7.2 agrega estado binario, cálculo de horas con bloques variables, carga automática, cambio de entidad con borradores, guardado aislado de docentes/grupos, fusión segura ante conflictos externos, migración de preferencias sin borrado, persistencia al reiniciar e integración del mismo contrato con optimización y experimentación. La Fase 7.3 añade selección y cancelación, vista previa, compatibilidad heredada, referencias inválidas, límites de tamaño, fallos de lectura/escritura, conflictos externos, atomicidad, persistencia al reinicio, propagación a las vistas y ejecución clásica/híbrida sobre el escenario importado.
+Las pruebas cubren el motor original, compatibilidad JSON, reproducibilidad, operadores, exportaciones, parámetros de interfaz, callback, cancelación cooperativa, sesiones multibloque, disponibilidades limitadas, dashboard, experimentación, escenarios y estadísticas. La Fase 5 añade generación 0, copias inmutables, frecuencia de captura, diferencias y exportaciones PNG/GIF. La corrección de evolución en vivo añade callbacks desde el trabajador, orden G0→Gn en clásico e híbrido, consumo acotado de eventos, confirmación de presentación didáctica, paso exacto, separación de tiempos y reutilización de celdas. La Fase 6 añade compatibilidad estricta del modo clásico, población mixta, vecindarios locales, cotas adaptativas, presupuesto global, métricas por fase, comparación clásico/híbrido y ablaciones A–E. La Fase 7 añade bloques variables, generación reproducible, perfiles, testigo oculto, validación con errores/advertencias, gestión segura y lotes cancelables. La Fase 7.1 añade carga canónica, escritura atómica, recuperación ante fallos de reemplazo, detección de cambios externos, estado sucio y descarte, persistencia tras reinicio, conversión de cuadrícula, periodos permitidos, poda temporal, instantáneas históricas, selección canónica en consola y verificación de siete secciones. La Fase 7.2 agrega estado binario, cálculo de horas con bloques variables, carga automática, cambio de entidad con borradores, guardado aislado de docentes/grupos, fusión segura ante conflictos externos, migración de preferencias sin borrado, persistencia al reiniciar e integración del mismo contrato con optimización y experimentación. La Fase 7.3 añade selección y cancelación, vista previa, compatibilidad heredada, referencias inválidas, límites de tamaño, fallos de lectura/escritura, conflictos externos, atomicidad, persistencia al reinicio, propagación a las vistas y ejecución clásica/híbrida sobre el escenario importado. El diagnóstico de factibilidad añade cotas necesarias, dominios vacíos, conflictos nominales, alternativas verificadas, cuatro estados explícitos, CP-SAT opcional, reparación coordinada y comparación antes/después con igual presupuesto.
 
 ## Organización
 
@@ -393,6 +410,9 @@ HorariosGeneticos/
 │   ├── estadisticas.py
 │   ├── evolucion.py
 │   ├── exportaciones_evolucion.py
+│   ├── diagnostico.py
+│   ├── verificador_cp_sat.py
+│   ├── experimento_factibilidad.py
 │   └── reportes.py
 ├── interfaz/
 │   ├── aplicacion.py
@@ -413,7 +433,7 @@ El motor no depende de Tkinter. `ejecutar()` mantiene su firma compatible y aña
 
 No se modelan todavía descansos dependientes de carrera, máximo de carga diaria independiente de la jornada, distribución obligatoria de sesiones de una materia en días distintos, precedencias entre materias, aulas compartidas externas ni prioridades por semestre. El balance semanal usa el rango entre el día más y menos cargado; es una heurística, no una política institucional universal.
 
-No existe un demostrador general de factibilidad. Si el algoritmo termina con violaciones, la aplicación informa cuáles persisten, pero no concluye que el problema sea matemáticamente imposible. La reparación es local y la búsqueda genética no garantiza el óptimo global.
+Las cotas integradas y el preprocesamiento sólo demuestran algunos casos imposibles. CP-SAT puede demostrar otros cuando termina con `INFEASIBLE`, pero su ejecución es opcional y acotada: `UNKNOWN`, dependencia ausente o discrepancia con el evaluador significan verificación inconclusa. La reparación sigue siendo local y la búsqueda genética no garantiza el óptimo global.
 
 Los pesos son iniciales y experimentales. Una sola ejecución no constituye evidencia estadística de desempeño: para un estudio conviene repetir con varias semillas y comparar fitness, conflictos, tiempo y variabilidad.
 

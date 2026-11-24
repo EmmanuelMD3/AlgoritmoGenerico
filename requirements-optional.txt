@@ -1,0 +1,2 @@
+# Verificación independiente y opcional de factibilidad completa.
+ortools>=9.10

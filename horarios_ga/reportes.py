@@ -9,6 +9,7 @@ from dataclasses import asdict
 from datetime import datetime, timedelta
 from pathlib import Path
 
+from .diagnostico import DiagnosticoHorario, diagnosticar_horario, formatear_diagnostico
 from .genetico import Resultado
 from .fitness import indices_conflictivos
 from .modelo import Problema
@@ -73,10 +74,16 @@ def exportar_horarios_html(
     return ruta
 
 
-def exportar(problema: Problema, resultado: Resultado, carpeta: str | Path) -> tuple[Path, ...]:
+def exportar(
+    problema: Problema,
+    resultado: Resultado,
+    carpeta: str | Path,
+    diagnostico: DiagnosticoHorario | None = None,
+) -> tuple[Path, ...]:
     carpeta = Path(carpeta)
     carpeta.mkdir(parents=True, exist_ok=True)
     archivos: list[Path] = []
+    diagnostico = diagnostico or diagnosticar_horario(problema, resultado.cromosoma)
 
     ruta = exportar_horario_csv(problema, resultado, carpeta / "horario_sesiones.csv")
     archivos.append(ruta)
@@ -95,12 +102,30 @@ def exportar(problema: Problema, resultado: Resultado, carpeta: str | Path) -> t
         "criterios_blandos": resultado.evaluacion.desglose_blando(),
         "penalizacion_blanda": resultado.evaluacion.penalizacion_blanda,
         "factible": resultado.evaluacion.factible,
+        "estado_factibilidad": diagnostico.estado.value,
         "razones_no_factible": resultado.evaluacion.razones_no_factible(),
+        "sesiones_conflictivas": [
+            {
+                "sesion": conflicto.sesion_id,
+                "clase": conflicto.clase_id,
+                "razones": list(conflicto.razones),
+                "alternativas_individuales": [asdict(alternativa) for alternativa in conflicto.alternativas],
+            }
+            for conflicto in diagnostico.asignaciones_conflictivas
+        ],
+        "sesiones_sin_posicion_estatica": list(diagnostico.sesiones_sin_posicion_estatica),
+        "contradicciones_necesarias_demostradas": [
+            asdict(cota) for cota in diagnostico.contradicciones_demostrables
+        ],
         "motivo_parada": resultado.motivo_parada,
         "estadisticas_ejecucion": asdict(resultado.estadisticas),
         "generaciones_ejecutadas": resultado.historial[-1].generacion,
         "nota": "Datos de demostracion simulados; resultados reales del algoritmo sobre esos datos.",
     }, ensure_ascii=False, indent=2), encoding="utf-8")
+    archivos.append(ruta)
+
+    ruta = carpeta / "diagnostico_factibilidad.txt"
+    ruta.write_text(formatear_diagnostico(diagnostico) + "\n", encoding="utf-8")
     archivos.append(ruta)
 
     ruta = exportar_horarios_html(problema, resultado, carpeta / "horarios_por_grupo.html")

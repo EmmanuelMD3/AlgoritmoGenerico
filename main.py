@@ -5,6 +5,7 @@ import argparse
 from pathlib import Path
 
 from horarios_ga.datos import cargar_problema
+from horarios_ga.diagnostico import diagnosticar_horario, formatear_diagnostico
 from horarios_ga.genetico import Configuracion, ejecutar
 from horarios_ga.reportes import exportar
 
@@ -52,6 +53,23 @@ def main() -> None:
     parser.add_argument("--factor-incremento-mutacion", type=float, default=1.5)
     parser.add_argument("--factor-recuperacion-mutacion", type=float, default=0.85)
     parser.add_argument("--presupuesto-evaluaciones", type=int, default=0)
+    parser.add_argument(
+        "--reparacion-avanzada", action=argparse.BooleanOptionalAction, default=True,
+        help="Activa la reparación dirigida avanzada sólo en modo híbrido",
+    )
+    parser.add_argument(
+        "--reinicio-estancamiento", action=argparse.BooleanOptionalAction, default=True,
+        help="Activa reinicios parciales periódicos sólo en modo híbrido",
+    )
+    parser.add_argument(
+        "--diagnostico", action="store_true",
+        help="Explica sesiones conflictivas y reubicaciones que reducen violaciones",
+    )
+    parser.add_argument(
+        "--verificar-cp-sat", action="store_true",
+        help="Ejecuta el verificador opcional completo de OR-Tools CP-SAT",
+    )
+    parser.add_argument("--tiempo-cp-sat", type=float, default=30.0)
     args = parser.parse_args()
 
     problema = cargar_problema(args.datos)
@@ -82,6 +100,8 @@ def main() -> None:
         factor_incremento_mutacion=args.factor_incremento_mutacion,
         factor_recuperacion_mutacion=args.factor_recuperacion_mutacion,
         presupuesto_evaluaciones=args.presupuesto_evaluaciones,
+        reparacion_avanzada=args.reparacion_avanzada,
+        reinicio_estancamiento=args.reinicio_estancamiento,
     )
     print("\nALGORITMO GENETICO PARA HORARIOS UNIVERSITARIOS")
     print(f"Sesiones: {len(problema.sesiones)} | Grupos: {len(problema.grupos)} "
@@ -104,6 +124,22 @@ def main() -> None:
     print("Estado:", "HORARIO FACTIBLE" if e.factible else "HORARIO CON CONFLICTOS (ajustar parametros)")
     if not e.factible:
         print("Razones:", "; ".join(e.razones_no_factible()))
+    diagnostico = None
+    if args.diagnostico:
+        diagnostico = diagnosticar_horario(problema, resultado.cromosoma)
+        print("\nDIAGNÓSTICO DE CONFLICTOS")
+        print(formatear_diagnostico(diagnostico))
+    if args.verificar_cp_sat:
+        from horarios_ga.verificador_cp_sat import verificar_factibilidad
+
+        verificacion = verificar_factibilidad(
+            problema, limite_segundos=args.tiempo_cp_sat,
+        )
+        print("\nVERIFICACIÓN CP-SAT")
+        print("Estado:", verificacion.estado.value)
+        print("Solver:", verificacion.estado_solver)
+        print("Detalle:", verificacion.mensaje)
+        print(f"Tiempo: {verificacion.segundos:.3f} s | Variables: {verificacion.variables_booleanas}")
     print(f"Parada: {resultado.motivo_parada} en generacion {resultado.historial[-1].generacion}")
     s = resultado.estadisticas
     print(
@@ -112,7 +148,7 @@ def main() -> None:
         f"Busqueda local: {s.aplicaciones_busqueda_local} aplicaciones, "
         f"{s.mejoras_busqueda_local} mejoras"
     )
-    archivos = exportar(problema, resultado, args.salida)
+    archivos = exportar(problema, resultado, args.salida, diagnostico=diagnostico)
     print("\nArchivos generados:")
     for archivo in archivos:
         print(" -", archivo.resolve())

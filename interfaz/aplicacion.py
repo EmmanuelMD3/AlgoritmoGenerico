@@ -9,6 +9,7 @@ from time import monotonic
 from tkinter import messagebox, ttk
 
 from horarios_ga.genetico import Configuracion, EjecucionCancelada, Resultado, ejecutar
+from horarios_ga.diagnostico import diagnosticar_horario
 from horarios_ga.constructor_escenarios import resumen_escenario
 from .datos_academicos import ModeloDatosAcademicos, VistaDatosAcademicos
 from .estilos import AZUL, EXITO, FONDO, PANEL, SECUNDARIO, configurar_estilos
@@ -317,11 +318,13 @@ Es factible respecto al modelo cuando la suma de violaciones duras es cero. Pued
                     ),
                 )
             except EjecucionCancelada as exc:
-                self.cola.put(("cancelada", exc.resultado))
+                diagnostico = diagnosticar_horario(problema, exc.resultado.cromosoma)
+                self.cola.put(("cancelada", (exc.resultado, diagnostico)))
             except Exception as exc:  # el detalle técnico no se expone como traza al usuario
                 self.cola.put(("error", exc))
             else:
-                self.cola.put(("completa", resultado))
+                diagnostico = diagnosticar_horario(problema, resultado.cromosoma)
+                self.cola.put(("completa", (resultado, diagnostico)))
 
         self.hilo = threading.Thread(target=trabajador, name="algoritmo-genetico", daemon=True)
         self.hilo.start()
@@ -367,9 +370,12 @@ Es factible respecto al modelo cuando la suma de violaciones duras es cero. Pued
             elif tipo in {"completa", "cancelada"}:
                 terminado = True
                 presentar_rapido = False
-                resultado = contenido
+                resultado, diagnostico = contenido
                 self.resultado = resultado
-                self.optimizacion.finalizar(resultado, segundos, cancelada=tipo == "cancelada")
+                self.optimizacion.finalizar(
+                    resultado, segundos, cancelada=tipo == "cancelada",
+                    diagnostico=diagnostico,
+                )
                 self.horarios.establecer_resultado(self.problema_ejecucion, resultado)
                 self.historial.establecer_resultado(resultado)
                 self.evolucion.finalizar(resultado, cancelada=tipo == "cancelada")

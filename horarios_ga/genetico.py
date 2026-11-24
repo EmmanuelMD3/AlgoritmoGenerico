@@ -8,6 +8,7 @@ from time import perf_counter
 from typing import Callable
 
 from .fitness import Evaluacion, evaluar, evaluar_detallado
+from .diagnostico import candidatos_estaticos
 from .modelo import Cromosoma, Gen, Problema
 
 
@@ -44,6 +45,10 @@ class Configuracion:
     factor_incremento_mutacion: float = 1.5
     factor_recuperacion_mutacion: float = 0.85
     presupuesto_evaluaciones: int = 0
+    # Sólo se aplican al modo híbrido; el modo clásico conserva sus operadores
+    # históricos para seguir siendo una referencia experimental estable.
+    reparacion_avanzada: bool = True
+    reinicio_estancamiento: bool = True
 
     def validar(self) -> None:
         if self.poblacion < 4 or self.generaciones < 1:
@@ -88,6 +93,10 @@ class Configuracion:
             raise ValueError("El presupuesto de evaluaciones no puede ser negativo")
         if 0 < self.presupuesto_evaluaciones < self.poblacion:
             raise ValueError("El presupuesto debe ser cero o al menos igual a la población")
+        if not isinstance(self.reparacion_avanzada, bool) or not isinstance(
+            self.reinicio_estancamiento, bool,
+        ):
+            raise ValueError("Las mejoras híbridas deben ser verdaderas o falsas")
 
 
 @dataclass(frozen=True)
@@ -203,6 +212,8 @@ def mutar(
     prob_dirigida: float = 0.0,
     al_evaluar: Callable[[Evaluacion], None] | None = None,
     evaluador_detallado: Callable[[Cromosoma], tuple[Evaluacion, frozenset[int]]] | None = None,
+    dirigida_avanzada: bool = False,
+    dominios_estaticos: tuple[tuple[Gen, ...], ...] | None = None,
 ) -> Cromosoma:
     genes = list(cromosoma)
     forzados: set[int] = set()
@@ -220,6 +231,38 @@ def mutar(
     for idx, (dia, hora, salon) in enumerate(genes):
         if idx not in forzados and rng.random() >= prob_mutacion:
             continue
+        if idx in forzados and dirigida_avanzada:
+            sesion = problema.sesiones[idx]
+
+            def colisiones_directas(gen: Gen) -> int:
+                nuevo_dia, nuevo_inicio, nuevo_salon = gen
+                bloques = set(range(nuevo_inicio, nuevo_inicio + sesion.duracion))
+                total = 0
+                for otro_idx, (otro_dia, otro_inicio, otro_salon) in enumerate(genes):
+                    if otro_idx == idx or otro_dia != nuevo_dia:
+                        continue
+                    otra = problema.sesiones[otro_idx]
+                    solapamiento = len(bloques.intersection(
+                        range(otro_inicio, otro_inicio + otra.duracion),
+                    ))
+                    total += solapamiento * (
+                        int(sesion.docente == otra.docente)
+                        + int(sesion.grupo == otra.grupo)
+                        + int(nuevo_salon == otro_salon)
+                    )
+                return total
+
+            base_dominio = (
+                dominios_estaticos[idx]
+                if dominios_estaticos is not None else candidatos_estaticos(problema, idx)
+            )
+            dominio = [gen for gen in base_dominio if gen != genes[idx]]
+            if dominio:
+                rng.shuffle(dominio)
+                mejor_impacto = min(colisiones_directas(gen) for gen in dominio)
+                mejores = [gen for gen in dominio if colisiones_directas(gen) == mejor_impacto]
+                genes[idx] = rng.choice(mejores)
+                continue
         tipo = rng.choice(("dia", "hora", "salon", "completo"))
         nuevo = gen_aleatorio(problema, idx, rng)
         if tipo == "dia":
@@ -290,7 +333,10 @@ def ejecutar(
     config.validar()
     if capturar_cada < 1:
         raise ValueError("La frecuencia de captura debe ser al menos una generación")
-    from .hibrido import busqueda_local, individuo_constructivo, tasa_mutacion_adaptativa
+    from .hibrido import (
+        busqueda_local, individuo_constructivo, reparar_dirigido_avanzado,
+        tasa_mutacion_adaptativa,
+    )
 
     inicio_calculo = perf_counter()
     tiempo_artificial = 0.0
@@ -302,6 +348,10 @@ def ejecutar(
         if modo_hibrido and config.inicializacion_heuristica else 0
     )
     cantidad_aleatoria = config.poblacion - cantidad_heuristica
+    dominios_reparacion = (
+        tuple(candidatos_estaticos(problema, i) for i in range(len(problema.sesiones)))
+        if modo_hibrido and config.reparacion_avanzada else None
+    )
     if modo_hibrido:
         poblacion = [individuo_aleatorio(problema, rng) for _ in range(cantidad_aleatoria)]
         vistos = set(poblacion)
@@ -465,6 +515,23 @@ def ejecutar(
 
             nueva = list(orden[: config.elitismo])
 
+            if (
+                modo_hibrido and config.reparacion_avanzada
+                and generaciones_sin_mejora >= config.estancamiento_mutacion
+                and generaciones_sin_mejora % config.estancamiento_mutacion == 0
+            ):
+                # Pulido explícito del mejor individuo: la reparación histórica
+                # sólo actuaba sobre descendientes ya alterados por cruza/mutación,
+                # por lo que una mejora obvia del élite podía no probarse nunca.
+                pulido = reparar_dirigido_avanzado(
+                    problema, orden[0], rng, evaluador=eval_cache,
+                    evaluador_detallado=eval_detallado,
+                    dominios_estaticos=dominios_reparacion,
+                    priorizar_impacto=True,
+                )
+                if eval_cache(pulido).prioridad() > eval_cache(nueva[0]).prioridad():
+                    nueva[0] = pulido
+
             def seleccionar() -> Cromosoma:
                 candidatos = rng.sample(poblacion, k=config.torneo)
                 return max(candidatos, key=lambda c: eval_cache(c).prioridad())
@@ -478,28 +545,64 @@ def ejecutar(
                 hijo_a = mutar(
                     problema, hijo_a, tasa_mutacion, rng, config.mutacion_dirigida,
                     evaluador_detallado=eval_detallado,
+                    dirigida_avanzada=modo_hibrido and config.reparacion_avanzada,
+                    dominios_estaticos=dominios_reparacion,
                 )
                 if rng.random() < config.prob_reparacion:
-                    hijo_a = reparar_individuo(
-                        problema, hijo_a, rng, evaluador=eval_cache,
-                        evaluador_detallado=eval_detallado,
+                    hijo_a = (
+                        reparar_dirigido_avanzado(
+                            problema, hijo_a, rng, evaluador=eval_cache,
+                            evaluador_detallado=eval_detallado,
+                            dominios_estaticos=dominios_reparacion,
+                        )
+                        if modo_hibrido and config.reparacion_avanzada else
+                        reparar_individuo(
+                            problema, hijo_a, rng, evaluador=eval_cache,
+                            evaluador_detallado=eval_detallado,
+                        )
                     )
                 nueva.append(hijo_a)
                 if len(nueva) < config.poblacion:
                     hijo_b = mutar(
                         problema, hijo_b, tasa_mutacion, rng, config.mutacion_dirigida,
                         evaluador_detallado=eval_detallado,
+                        dirigida_avanzada=modo_hibrido and config.reparacion_avanzada,
+                        dominios_estaticos=dominios_reparacion,
                     )
                     if rng.random() < config.prob_reparacion:
-                        hijo_b = reparar_individuo(
-                            problema, hijo_b, rng, evaluador=eval_cache,
-                            evaluador_detallado=eval_detallado,
+                        hijo_b = (
+                            reparar_dirigido_avanzado(
+                                problema, hijo_b, rng, evaluador=eval_cache,
+                                evaluador_detallado=eval_detallado,
+                                dominios_estaticos=dominios_reparacion,
+                            )
+                            if modo_hibrido and config.reparacion_avanzada else
+                            reparar_individuo(
+                                problema, hijo_b, rng, evaluador=eval_cache,
+                                evaluador_detallado=eval_detallado,
+                            )
                         )
                     nueva.append(hijo_b)
             cantidad_inmigrantes = min(
                 config.poblacion - config.elitismo,
                 round(config.poblacion * config.inmigrantes),
             )
+            reinicio = (
+                modo_hibrido and config.reinicio_estancamiento
+                and generaciones_sin_mejora > 0
+                and generaciones_sin_mejora % config.estancamiento_mutacion == 0
+            )
+            if reinicio:
+                # Reinicio parcial periódico: no elimina élites y no altera el
+                # clásico. Evita que una diversidad nominal alta oculte que los
+                # genes críticos permanecen congelados durante muchas generaciones.
+                cantidad_inmigrantes = max(
+                    cantidad_inmigrantes,
+                    min(
+                        config.poblacion - config.elitismo,
+                        round(config.poblacion * 0.12),
+                    ),
+                )
             for desplazamiento in range(cantidad_inmigrantes):
                 nueva[-1 - desplazamiento] = individuo_aleatorio(problema, rng)
 

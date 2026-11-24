@@ -76,9 +76,18 @@ class TestsAlgoritmo(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             archivos = exportar(self.problema, r, tmp)
             nombres = {p.name for p in archivos}
-            self.assertTrue({"horario_sesiones.csv", "horarios_por_grupo.html", "evolucion.csv", "resumen.json"} <= nombres)
+            self.assertTrue({
+                "horario_sesiones.csv", "horarios_por_grupo.html", "evolucion.csv",
+                "resumen.json", "diagnostico_factibilidad.txt",
+            } <= nombres)
             contenido = json.loads((Path(tmp)/"resumen.json").read_text(encoding="utf-8"))
             self.assertEqual(contenido["sesiones"], 36)
+            self.assertIn(contenido["estado_factibilidad"], {
+                "solucion_factible_encontrada",
+                "no_se_encontro_solucion_en_el_presupuesto",
+                "imposibilidad_demostrada",
+            })
+            self.assertIn("sesiones_conflictivas", contenido)
 
 
 if __name__ == "__main__":
